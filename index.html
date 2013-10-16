@@ -17,6 +17,7 @@
 
 
 <style>
+
 ul.container {
   width: 100%;
   padding: 0;
@@ -76,7 +77,7 @@ ul.container li span{
                 <li><a href="./info/philosophy/index.html">Philosophy</a></li>
                 <li><a href="thoughts.html">Thoughts</a></li>
                 <li > <a href="destinations.html">Destinations</a></li>
-                <li><a href="team.html">Team</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
 
@@ -97,6 +98,7 @@ ul.container li span{
 
         <!-- FEATURED DESTINATIONS -->
         <div id="home-features" class="fade-in">
+          <h2>Destinations</h2>
 
 <a href="destinations.html"><ul class="container">
   <li><span>Argentina</span><img src="placeholders/home-featured/01.jpg"/></li>
@@ -104,6 +106,10 @@ ul.container li span{
   <li><span>Argentina</span><img src="placeholders/home-featured/03.jpg"/></li>
   <li><span>Thailand</span><img src="placeholders/home-featured/04.jpg"/></li>
   <li><span>Fiji</span><img src="placeholders/home-featured/05.jpg"/></li>
+  <li><span>Argentina</span><img src="placeholders/home-featured/01.jpg"/></li>
+  <li><span>Iceland</span><img src="placeholders/home-featured/02.jpg"/></li>
+  <li><span>Argentina</span><img src="placeholders/home-featured/03.jpg"/></li>
+  <li><span>Thailand</span><img src="placeholders/home-featured/04.jpg"/></li>
 </ul></a>
     
 
@@ -113,14 +119,14 @@ ul.container li span{
 <div id="home-content" style="font-family: 'Roboto', sans-serif;font-weight:400;">
 <div id="home-circle"></div>
     <p>
-        <span style="font-size:28px;position:relative;top:0px;text-transform:uppercase;left:20px;">Wildlands Collective</span><br/>
+        <span style="font-size:28px;position:relative;top:0px;text-transform:uppercase;left:20px;">Go Where it's Wild</span><br/>
         <span style="font-size:21px;position:relative;top:-4px;text-transform:uppercase;left:20px;"><span style="color:#fed800">Destinations</span> · <span style="color:#fed800">Adventures</span> · <span style="color:#fed800">People</span></span> <br/>
-        <span style="position:relative;top:30px;left:20px;"><a href="destinations.html"><button class="btn fadein">Find destinations</button><span style="position:relative;top:30px;left:20px;margin-left:8px;"><a href="thoughts.html"><button class="btn fadein">Recent Stories</button></a></span>
+        <span style="position:relative;top:30px;left:20px;"><a href="destinations.html"><button class="btn fadein" style="width:228px !important;">Explore Destinations</button><span style="position:relative;top:30px;left:20px;margin-left:8px;"><a href="thoughts.html"><button class="btn fadein">Recent Stories</button></a></span>
     </p>
 </div>
 
 		<ul class="slideshow__data">
-			<li data-thumb="placeholders/130x100/1.jpg" data-src="placeholders/backgrounds/01.jpg" data-cover="cover">
+			<li data-thumb="placeholders/130x100/1.jpg" data-src="placeholders/backgrounds/07.jpg" data-cover="cover">
                 <div id="home-slide-wrap">
 				<span class="typewriter" id="home-type">"Nature is beauty.."</span><br/>
 
@@ -152,8 +158,8 @@ var x = 0,
     container = $('.container'),
     items = container.find('li'),
     containerHeight = 0,
-    numberVisible = 5,
-    intervalSec = 3000;
+    numberVisible = 15,
+    intervalSec = 6000;
 
 if(!container.find('li:first').hasClass("first")){
   container.find('li:first').addClass("first");

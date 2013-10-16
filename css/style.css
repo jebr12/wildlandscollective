@@ -684,6 +684,9 @@ html .button {
     .cover-parent.large-break {
       display: none; } }
 
+
+
+
 .background-image {
   position: absolute;
   width: 100%;
@@ -2020,7 +2023,7 @@ html .button {
     transform: translate(0, 0); } }
 
 .grid--portfolio {
-  background: #111; padding-bottom: 62px;}
+  background: none; padding-bottom: 62px;}
   .grid--portfolio article {
     width: 33.33%;}
     @media screen and (max-width: 1520px) {
@@ -2360,6 +2363,24 @@ opacity: 1;
   border-bottom: dotted 1px #f0d30f;
   text-align: center;
 }
+.grid__caption .overlay .content > #activities{
+  height: 30px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3px;
+  position: relative;
+  display: inline-block;
+  
+}
+.grid__caption .overlay .content > #activities > #ico-wrap{
+  margin-left: auto;
+  margin-right: auto;
+  width: auto !important;
+  height: 30px;
+  position: relative;
+  display: inline-block;
+
+}
 .grid__caption .overlay .content > #location span{
   font-size: 15px;
     position: relative;
@@ -2373,6 +2394,7 @@ opacity: 1;
   text-transform: uppercase;
   width: 100%;
   height: auto;
+  min-height: 28px;
   line-height: 45px;
   text-align: center;
   margin-top: 16px;
@@ -3752,14 +3774,27 @@ background:rgba(0,0,0,0) url("../img/blog-arrows.png") 0px -28px no-repeat;
 /*   HOME FEATURES   */
 #home-features{
   width:156px;
-  height:80%;
+  height:100%;
   display:block;
   position:absolute;
-  top:4px;
+  bottom:0px;
   right:4px;
-  z-index:999999;
+  z-index:100;
   cursor:pointer;
+  overflow: hidden !important;
 }
+#home-features h2{
+  height: 38px !important;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 6px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0,0,0,.4);
+}
+
 #home-content{
   display:block;
   z-index:9999 !important;
@@ -3832,6 +3867,7 @@ background:rgba(0,0,0,0) url("../img/blog-arrows.png") 0px -28px no-repeat;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   -o-border-radius: 12px;
+  position: relative;
 }
 #content-page > #right{
   background:rgba(0,0,0,.75);
@@ -3840,7 +3876,7 @@ background:rgba(0,0,0,0) url("../img/blog-arrows.png") 0px -28px no-repeat;
   overflow: hidden;
   overflow-y:scroll;
   position: absolute;
-  bottom: 0px;
+  top: 185px;
   right: 0px;
   padding:10px;
   float: right;
@@ -3863,7 +3899,7 @@ background:rgba(0,0,0,0) url("../img/blog-arrows.png") 0px -28px no-repeat;
 #content-page > #title > #location {
   display: block;
   float: left;
-  font-size: 26px;
+  font-size: 24px;
   color: #fff;
   font-weight: 400;
   width: 550px;
@@ -3872,7 +3908,7 @@ background:rgba(0,0,0,0) url("../img/blog-arrows.png") 0px -28px no-repeat;
 #content-page > #title > #name {
   display: block;
   float: left;
-  font-size: 58px;
+  font-size: 52px;
   color: #fed800;
   font-weight: 700;
   width: 550px;
@@ -3883,7 +3919,7 @@ background:rgba(0,0,0,0) url("../img/blog-arrows.png") 0px -28px no-repeat;
 #content-page > #title > #price {
   display: block;
   float: left;
-  font-size: 40px;
+  font-size: 36px;
   color: #fff;
   font-weight: 700;
   width: 550px;
@@ -4101,5 +4137,36 @@ padding: 10px;
 font-size: 14px;
 font-weight: 500;
 color:rgba(255,255,255,.8);
+}
+
+
+/* ACTIVITY ICONS */
+.ico-trek{
+    display: block;width: 25px;height: 25px;float: left;margin-right: 5px;
+    background: url("../img/activity-icons.png") 0px 0px no-repeat;position: relative;
+}
+.ico-fish{
+    display: block;width: 25px;height: 25px;float: left;margin-right: 5px;
+    background: url("../img/activity-icons.png") -25px 0px no-repeat;position: relative;
+}
+.ico-horse{
+    display: block;width: 25px;height: 25px;float: left;margin-right: 5px;
+    background: url("../img/activity-icons.png") -50px 0px no-repeat;position: relative;
+}
+.ico-kayak{
+    display: block;width: 25px;height: 25px;float: left;margin-right: 5px;
+    background: url("../img/activity-icons.png") -75px 0px no-repeat;position: relative;
+}
+.ico-ski{
+    display: block;width: 25px;height: 25px;float: left;margin-right: 5px;
+    background: url("../img/activity-icons.png") -100px 0px no-repeat;position: relative;
+}
+.ico-bike{
+    display: block;width: 25px;height: 25px;float: left;margin-right: 5px;
+    background: url("../img/activity-icons.png") -125px 0px no-repeat;position: relative;
+}
+.ico-sail{
+    display: block;width: 25px;height: 25px;float: left;margin-right: 5px;
+    background: url("../img/activity-icons.png") -150px 0px no-repeat;position: relative;
 }
 
