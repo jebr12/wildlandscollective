@@ -52,7 +52,7 @@ html,body{
                 <li><a href="./info/philosophy/index.html">Philosophy</a></li>
                 <li class="selected"><a href="thoughts.html">Thoughts</a></li>
                 <li> <a href="destinations.html">Destinations</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" onclick='javascript:makevisible();'>Contact</a></li>
             </ul>
         </nav>
 
@@ -62,18 +62,37 @@ html,body{
 
     </header>
 
+
+<!-- START CONTACT -->
+<div id="contactwrap">
+  <div class="content">
+    <a href="#" onclick='javascript:makeinvisible();'><div id="close"></div></a>
+    <iframe src="http://startuphouse.com/wc/contact/" width="400px" height="500px" scrolling="no"></iframe>
+  </div>
+</div>
+<a href="#" onclick='javascript:makevisible();'><div class="contactme">
+</div></a>
+<script>
+function makevisible() {
+  var tidy = document.getElementById("contactwrap");
+  tidy.style.display = 'block';   
+}
+function makeinvisible() {
+  var tidy = document.getElementById("contactwrap");
+  tidy.style.display = 'none';   
+}
+</script>
+<!-- END CONTACT -->
+
+
+
+
 <!-- BEGIN PAGE -->
 <div class="cover-screen" style="overflow:visible !important;width:100% !important;">
 
 
 
-<!--CONTACT FORM -->
-<div id="contactable"></div>
-<script type="text/javascript" src="http://anygoogle.com/contactable/jquery.validate.pack.js"></script>
-<script type="text/javascript" src="http://anygoogle.com/contactable/jquery.contactable.js"></script>
-<link rel="stylesheet" href="css/contactable.css" type="text/css" />
-<script>$(function(){$('#contactable').contactable({subject: 'feedback URL:'+location.href});});</script>
-<!--END CONTACT FORM -->
+
 
 <style>
 .blog-logo{

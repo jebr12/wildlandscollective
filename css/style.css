@@ -4170,3 +4170,65 @@ color:rgba(255,255,255,.8);
     background: url("../img/activity-icons.png") -150px 0px no-repeat;position: relative;
 }
 
+
+
+
+
+
+
+/* CONTACT ME */
+
+.contactme{
+  display: block;
+  width: 40px;
+  height: 100px;
+  position: fixed;
+  left: 0px;
+  top: 50%;
+  margin-top: -50px;
+  background: url("../img/contact.jpg") top left no-repeat;
+  z-index: 99999 !important;
+  border-radius:0px 12px 12px 0px;
+  -webkit-border-radius:0px 12px 12px 0px;
+  -moz-border-radius:0px 12px 12px 0px;
+  -o-border-radius:0px 12px 12px 0px;
+}
+#contactwrap{
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  z-index: 99999999;
+}
+#contactwrap > .content{
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  height: 500px;
+  background: #333;
+  margin-top: -250px;
+  margin-left: -200px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+#contactwrap > .content #close{
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  background: url("../img/contact-close.jpg") top left no-repeat;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -o-border-radius: 40px;
+  z-index: 999999 !important;
+}
