@@ -11,22 +11,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="favicon.png">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet'type='text/css'>
     <script src="js/vendor/modernizr-latest.js"></script>
     <script src="js/vendor/jquery-1.10.2.min.js"></script>
     <link type="text/css" href="css/base.css" rel="stylesheet" />
     <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
     <script src="js/vendor/js-image-slider.js" type="text/javascript"></script>
     <script src="js/vendor/jquery-1.7.1.min.js" type="text/javascript"></script> 
-
-    <script src="js/vendor/jquery.easytabs.min.js" type="text/javascript"></script>
- 
-<script type="text/javascript">
-      $(document).ready( function() {
-        $('#tab-container').easytabs();
-      });
-</script>
-
 </head>
 <style>
 html,body{
@@ -36,15 +27,16 @@ html,body{
 <body>
 
     <!-- START PAGE -->
+    <!-- START HEADER -->
     <header class="headertop black">
         <h1>
             <a href="index.html">
                 <!-- LOGO -->
-                <span style="position:fixed;top:-2px !important;left:5px;"><img src="img/logo.png" style="height:50px;" alt="Showlight"></span>
+                <span class="logosite"><img src="img/logo.png" style="height:50px;" alt="Showlight"></span>
             </a>
         </h1>
 
-        <!-- NAVIGATION -->
+        <!-- START MENU -->
         <nav>
             <ul class="nav nav--primary">
                 <li><a href="index.html">Home</a></li>
@@ -55,23 +47,89 @@ html,body{
                 <li><a href="#" onclick='javascript:makevisible();'>Contact</a></li>
             </ul>
         </nav>
-
-       <!-- FOOTER -->
-        <!--<div id="global-footer">© 2013 Wildlands Collective</div>
-        <div id="global-social"></div>-->
+        <!-- END MENU -->
 
     </header>
+    <!-- END HEADER -->
 
 
-<!-- START CONTACT -->
-<div id="contactwrap">
-  <div class="content">
-    <a href="#" onclick='javascript:makeinvisible();'><div id="close"></div></a>
-    <iframe src="http://startuphouse.com/wc/contact/" width="400px" height="500px" scrolling="no"></iframe>
-  </div>
-</div>
-<a href="#" onclick='javascript:makevisible();'><div class="contactme">
-</div></a>
+    <!-- START CONTACT -->
+    <div id="contactwrap">
+      <div class="content">
+        <a href="#" onclick='javascript:makeinvisible();'><div id="close"></div></a>
+        <iframe src="http://startuphouse.com/wc/contact/" width="400px" height="500px" scrolling="no"></iframe>
+      </div>
+    </div>
+    <a href="#" onclick='javascript:makevisible();'><div class="contactme"></div></a>
+    <!-- END CONTACT -->
+
+
+
+
+    <!-- BEGIN CONTENT -->
+    <div class="cover-screen" style="overflow:visible !important;width:100% !important;">
+    <div id="content-page" style="">
+
+    <!-- BACK BUTTON -->
+    <div class="blog-back">
+        <a href="thoughts.html">
+            <button class="btn" style="width:110px !Important;height:38px !important;font-size:13px !important;padding-left:22px !Important;">
+            <div class="blog-back-arrow"></div>Back to articles</button></a>
+    </div>
+    <!-- BACK BUTTON -->
+
+    <!-- LOGO -->
+    <div class="blog-logo">
+        <img src="img/logo-blog.png" alt="Showlight">
+    </div>
+    <!-- LOGO -->
+
+    <!-- BLOG TITLE -->
+    <div class="blog-title">Into The Wilderness</div>
+    <div class="blog-date">Posted on October 16, 2013</div>
+    <!-- BLOG TITLE -->
+
+    <!-- BLOG CONTENT -->
+    <div class="blog-content">
+
+        <!-- START BLOG COLUMN LEFT -->
+        <div class="blog-content-left">
+            Add some writing here
+            <br/><br/>
+            You can use as much space as you want!!
+            <br/><br/>
+            <img src="http://pre.cloudfront.goodinc.com/posts/full_1369939447photo2(2).JPG"/>
+            <br/><br/>
+            And even add images and videos!
+            <br/><br/>
+            <blockquote>
+                “Include a quote..”
+            </blockquote>
+        </div>
+        <!-- END BLOG COLUMN LEFT -->
+
+        <!-- START BLOG COLUMN RIGHT -->
+        <div class="blog-content-right">
+            You can use this column too!
+            <br/><br/>
+            <iframe width="560" height="315" src="//www.youtube.com/embed/tt2AYafET68?rel=0" frameborder="0" allowfullscreen></iframe>
+            <br/><br/>
+            Check out the video! Embed your own!
+            <br/><br/>
+            <blockquote>"Here is another quote"</blockquote>
+            <br/><br/>
+            Try me for yourself!
+            <br/><br/>
+        </div>
+        <!-- END BLOG COLUMN RIGHT -->
+
+        </div>
+        <!-- END BLOG CONTENT -->
+    </div>
+    <!-- END PAGE -->
+
+
+<script src="js/script.js"></script>
 <script>
 function makevisible() {
   var tidy = document.getElementById("contactwrap");
@@ -82,203 +140,5 @@ function makeinvisible() {
   tidy.style.display = 'none';   
 }
 </script>
-<!-- END CONTACT -->
-
-
-
-
-<!-- BEGIN PAGE -->
-<div class="cover-screen" style="overflow:visible !important;width:100% !important;">
-
-
-
-
-
-<style>
-.blog-logo{
-    width: 100%;
-    height: 110px;
-    text-align: center;
-    float: left;
-}
-.blog-title{
-    width: 100%;
-    float: left;
-    text-align: center;
-    height: 34px;
-    font-style: italic;
-    font-size: 34px;
-    color: #ffd500;
-    margin-top: 3px;
-}
-.blog-date{
-    width: 100%;
-    float: left;
-    text-align: center;
-    color: #eee;
-    font-size: 13px;
-    font-style: italic;
-    height: 16px;
-    margin-top: 10px;
-}
-.blog-content{
-    width: 100%;
-    float: left;
-    height: auto;
-    padding-bottom: 10px;
-    margin-top: 35px;
-}
-.blog-content-left{
-    width: 50%;
-    float: left;
-    height: auto;
-    min-height: 100px;
-    border-right: dotted 1px #444;
-    padding: 35px;
-    text-align: justify;
-    padding-top: 0px !important;
-    font-family: 'Droid Serif', Georgia, 'Times New Roman', Times, serif;
-    font-size: 13px;
-    line-height: 22px;
-    color: rgba(255,255,255,.8);
-    text-rendering: optimizelegibility;
-    font-weight: 100;
-}
-.blog-content-right{
-    width: 50%;
-    float: right;
-    height: auto;
-    min-height: 100px;
-    padding: 35px;
-    text-align: justify;
-    padding-top: 0px !important;
-    font-family: 'Droid Serif', Georgia, 'Times New Roman', Times, serif;
-    font-size: 13px;
-    line-height: 22px;
-    color: rgba(255,255,255,.8);
-    text-rendering: optimizelegibility;
-    font-weight: 100;
-}
-.blog-content-left img,
-.blog-content-right img{
-    width: 100%;
-}
-
-.blog-content-left blockquote ,
-.blog-content-right blockquote {
-   font-style: none;
-   font-weight: 100;
-   font-family: 'Droid Serif', Georgia, 'Times New Roman', Times, serif;
-   font-size: 18px;
-   line-height: 22px;
-   text-rendering: optimizelegibility;
-   color: #ffd500;
-}
-.blog-content-left iframe ,
-.blog-content-right iframe {
-    width: 100% !important;
-    height: 250px !important;
-    display: inline-block;
-    position: relative;
-}
-.blog-back{
-    position: absolute;
-    top: 0px;
-    left: 35px;
-    width: 90px;
-    height: 55px;
-   
-}
-.blog-back-arrow{
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 10px;
-    width: 14px;
-    height: 38px;
-    background:url("img/blog-back-arrow.png") top left no-repeat;
-
-}
-</style>
-
-
-<div id="content-page" style="">
-
-
-<div class="blog-back">
-    <a href="thoughts.html"><button class="btn" style="width:110px !Important;height:38px !important;font-size:13px !important;padding-left:22px !Important;"><div class="blog-back-arrow"></div>Back to articles</button></a>
-</div>
-
-
-<div class="blog-logo">
-    <img src="img/logo-blog.png" alt="Showlight">
-</div>
-
-<div class="blog-title">Into The Wilderness</div>
-<div class="blog-date">Posted on October 16, 2013</div>
-
-<div class="blog-content">
-    <div class="blog-content-left">
-        Jed is my closest friend that I’ve spent the least amount of time with. We’ve sailed to the Channel Islands together, spent hours dreaming and talking of life and adventures and now he is heading out on a truly epic adventure of his own. A 7000 mile bike ride from Oregon to Patagonia. We are proud to be sharing his story here at WC and will be posting regularly about his adventures. The rest, I’ll leave in his capable words.
-        <br/><br/>
-        If you need conversation material at parties, I suggest planning a seven thousand mile bike ride. It gives you the ability to talk to anybody. It’s a story that spreads on its own. People will just walk right up to you and ask, “Is it true? Holy shit.”
-        <br/><br/>
-        <img src="http://pre.cloudfront.goodinc.com/posts/full_1369939447photo2(2).JPG"/>
-        <br/><br/>
-        I just turned 30, and I’ve decided to use this year to radically shape the rest of my life. I am about to leave my job and ride a bicycle for seventeen months, from Oregon to Patagonia. The need to do it (and it really felt like a need) hit me about three years ago when I read a quote from famed naturalist John Muir.
-        <br/><br/>
-        <blockquote>
-            “I am losing precious days. I am degenerating into a machine for making money. I am learning nothing in this trivial world of men. I must break away and get out into the mountains to learn the news.”
-        </blockquote>
-        <br/><br/>
-        Now, I hardly make any money, and I don’t feel like this “trivial world of men” has nothing to teach me. But there was something about drawing close to 30 that felt like I was losing something. The newness of life and career and cities and friends began to find their comfortable patterns, and once you see the pattern, time speeds up. That’s why we hear old people always warning us of how fast life passes. It really doesn’t pass by any faster than those long childhood summers, but we just lose fascination, or I should say we lose wonder. We are no longer astonished by the way the world works.
-        <br/><br/>
-        A famous cure for that is travel.
-        <br/><br/>
-        Many of my friends do not find it surprising that I would do this trip, though my conviction to do it surprised me. I never thought I’d follow in my parents’ footsteps.
-        <br/><br/>
-        <img src="http://pre.cloudfront.goodinc.com/posts/full_1369939344photo1(6).JPG"/>
-        <br/><br/>
-        I am not original. I am a sequel. In the 1970s, my father finished college and his unrest with America—thanks to the Vietnam War—inspired him to walk across it. He felt such distaste for his country, and at the same time, a discomfort with his own ignorance of it. He realized he didn’t really know his home. He thought, “What better way to discover a place than to walk through it?” He left from New York state and walked to New Orleans over two years, where he met my mother, seduced her out of seminary, and they walked together to the coast of Oregon. It was a five-year journey in total, one they wrote about for the cover story of National Geographic magazine in 1979.
-        <br/><br/>
-        <img src="http://pre.cloudfront.goodinc.com/posts/full_1369939728natgeo.jpg"/>
-        <br/><br/>
-        My parents never pressured me to be a writer or a traveller. They 
-
-    </div>
-    <div class="blog-content-right">
-        never really pressured me to be anything other than myself. But they did send me to college and then to law school hoping that I’d contribute something meaningful. Maybe it was intentional, maybe it wasn’t, but the assembly line of education and career gave me the very same discontent that America gave my father 35 years ago.
-        <br/><br/>
-        <iframe width="560" height="315" src="//www.youtube.com/embed/tt2AYafET68?rel=0" frameborder="0" allowfullscreen></iframe>
-        <br/><br/>
-        Don’t mistake me. I loved my education, I loved my twenties, and I love my job. My journey is not a reaction to distaste. It is a reaction to an observable trend: human beings amass comfort and minimize risk as they age. I get it. I can see the value in that. But both of those things have a tendency to diminish character. I have enjoyed living my life in dynamic seasons, and I intend to continue that. It is a choice to look squarely at the decisions we all feel like we have to make and the priorities we all forget.
-        <br/><br/>
-        <blockquote>I am 30 now, and I don’t want a mortgage. I don’t want property-based responsibility because I think it’ll change my brain chemistry. It makes you focus on protecting what you have rather than fighting for what could be. It seems like the observable transition from idealism to conservatism. As for now, I do not want that.</blockquote>
-        <br/><br/>
-        I want to pursue wonder, appreciation, and adventure. I want to meet people and learn from them and write their stories and tell others. I want to become a man that pursues virtue and character and color and romance. It feels like the people in our lives who seem to have done that are the ones we love most. If I have a family some day, I want to give them a father full of stories and whimsy and love for being alive. I see too little of that.
-        <br/><br/>
-        <img src="http://pre.cloudfront.goodinc.com/posts/full_1369939994photo1(5).JPG"/>
-        <br/><br/>
-        You may think I am prolonging adolescence and avoiding responsibility. Well, I can simply say that I am not impressed by grownups or their society. But I will also say that I disagree with you. The choice to pursue a dream, at the destruction of my comfort, with the loss of safety and certainty, all for the purpose of doing something that inspires others to a fuller life of wonder and creativity and quality, to me that is a burden of responsibility worth carrying. To me, that is growing up.
-        <br/><br/>
-        Benjamin Franklin once said, “either write something worth reading or do something worth writing.” I like that. I intend to do both. When I am finished, I want to write a book about it all. I hope you will follow my journey and maybe meet up with me along the way for a drink or a meal. I leave August 25, 2013 from Florence, Oregon. I would love to learn from you and tell you what I’ve seen.
-        <br/><br/>
-        Words by Jedidiah Jenkins,  first published this at GOOD magazine: http://www.good.is/posts/why-biking-7-000-miles-to-patagonia-is-essential-for-creative-living
-        <br/><br/>
-        <iframe width="420" height="315" src="//www.youtube.com/embed/UXK9aQIXy54?rel=0" frameborder="0" allowfullscreen></iframe>
-
-
-
-    </div>
-
-</div>
-
-
-
-
-</div>
-
-
-<script src="js/script.js"></script>
 </body>
 </html>

@@ -9,14 +9,13 @@
     <title>Wildlands Collective</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet'type='text/css'>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="favicon.png">
     <script src="js/vendor/modernizr-latest.js"></script>
 </head>
 <style>
 .header.black {background: rgba(0,0,0,.8) !important;}
-
 html,body{
     background:url("placeholders/backgrounds/grad.jpg") top center repeat-y;
 }
@@ -24,15 +23,16 @@ html,body{
 <body>
 
     <!-- START PAGE -->
+    <!-- START HEADER -->
     <header class="headertop black">
         <h1>
             <a href="index.html">
                 <!-- LOGO -->
-                <span style="position:fixed;top:-2px !important;left:5px;"><img src="img/logo.png" style="height:50px;" alt="Showlight"></span>
+                <span class="logosite"><img src="img/logo.png" style="height:50px;" alt="Showlight"></span>
             </a>
         </h1>
 
-        <!-- NAVIGATION -->
+        <!-- START MENU -->
         <nav>
             <ul class="nav nav--primary">
                 <li><a href="index.html">Home</a></li>
@@ -43,85 +43,43 @@ html,body{
                 <li><a href="#" onclick='javascript:makevisible();'>Contact</a></li>
             </ul>
         </nav>
-
-        <!-- FOOTER 
-        <div id="global-footer">© 2013 Wildlands Collective</div>
-        <div id="global-social"></div>-->
+        <!-- END MENU -->
 
     </header>
+    <!-- END HEADER -->
 
+    <!-- START CONTACT -->
+    <div id="contactwrap">
+      <div class="content">
+        <a href="#" onclick='javascript:makeinvisible();'><div id="close"></div></a>
+        <iframe src="http://startuphouse.com/wc/contact/" width="400px" height="500px" scrolling="no"></iframe>
+      </div>
+    </div>
+    <a href="#" onclick='javascript:makevisible();'><div class="contactme"></div></a>
+    <!-- END CONTACT -->
 
-<!-- START CONTACT -->
-<div id="contactwrap">
-  <div class="content">
-    <a href="#" onclick='javascript:makeinvisible();'><div id="close"></div></a>
-    <iframe src="http://startuphouse.com/wc/contact/" width="400px" height="500px" scrolling="no"></iframe>
-  </div>
-</div>
-<a href="#" onclick='javascript:makevisible();'><div class="contactme">
-</div></a>
-<script>
-function makevisible() {
-  var tidy = document.getElementById("contactwrap");
-  tidy.style.display = 'block';   
-}
-function makeinvisible() {
-  var tidy = document.getElementById("contactwrap");
-  tidy.style.display = 'none';   
-}
-</script>
-<!-- END CONTACT -->
-
-<!-- BEGIN DESTINATIONS -->
-<div class="grid grid--portfolio">
-	<div style="display:block;float:left;width:100%;height:240px;opacity:1 !important;background:none;text-align:center !important;">
-
-
-
-<div id="map-caption"></div>
+    <!-- BEGIN DESTINATIONS -->
+    <div class="grid grid--portfolio">
+	   <div class="destinations-wrapper">
+        
+        <!-- START MAP -->
+        <!-- DONT TOUCH ANYTHING HERE -->
+        <div id="map-caption"></div>
         <div id="map-widget">
-
-<ul class="category-filter">
-    <li style="position:absolute;top:129px;left:-10px;font-size:35px;opacity:0;" class="selected" ><a href="#all">%</a></li>
-    <li style="position:absolute;top:50px;left:55px;font-size:60px;opacity:0;"><a href="#america">#</a></li>
-    <li style="position:absolute;top:10px;left:35px;font-size:40px;opacity:0;"><a href="#canada">-----</a></li>
-    <li style="position:absolute;top:10px;left:120px;font-size:34px;opacity:0;"><a href="#arctic">%</a></li>
-    <li style="position:absolute;top:100px;left:260px;font-size:50px;opacity:0;"><a href="#australia">%</a></li>
-    <li style="position:absolute;top:60px;left:145px;font-size:80px;opacity:0;"><a href="#africa">%</a></li>
-    <li style="position:absolute;top:10px;left:205px;font-size:100px;opacity:0;"><a href="#asia">%</a></li>
-    <li style="position:absolute;top:35px;left:159px;font-size:40px;opacity:0;"><a href="#europe">@</a></li>
-    <li style="position:absolute;top:90px;left:80px;font-size:80px;opacity:0;"><a href="#southamerica">%</a></li>
-</ul>
-
-
+            <ul class="category-filter">
+                <li style="position:absolute;top:129px;left:-10px;font-size:35px;opacity:0;" class="selected" ><a href="#all">%</a></li>
+                <li style="position:absolute;top:50px;left:55px;font-size:60px;opacity:0;"><a href="#america">#</a></li>
+                <li style="position:absolute;top:10px;left:35px;font-size:40px;opacity:0;"><a href="#canada">-----</a></li>
+                <li style="position:absolute;top:10px;left:120px;font-size:34px;opacity:0;"><a href="#arctic">%</a></li>
+                <li style="position:absolute;top:100px;left:260px;font-size:50px;opacity:0;"><a href="#australia">%</a></li>
+                <li style="position:absolute;top:60px;left:145px;font-size:80px;opacity:0;"><a href="#africa">%</a></li>
+                <li style="position:absolute;top:10px;left:205px;font-size:100px;opacity:0;"><a href="#asia">%</a></li>
+                <li style="position:absolute;top:35px;left:159px;font-size:40px;opacity:0;"><a href="#europe">@</a></li>
+                <li style="position:absolute;top:90px;left:80px;font-size:80px;opacity:0;"><a href="#southamerica">%</a></li>
+            </ul>
+            <!-- DONT TOUCH ANYTHING HERE -->
         </div>
 
-
-
-
-
-        <style>
-            #map-widget{
-                position: absolute;
-                top: 60px;
-                left: 50%;
-                margin-left: -190px;
-                width: 380px;
-                height: 170px;
-                background: url("img/map-widget.png") top left no-repeat;
-                z-index: 99999;
-            }
-            #map-caption{
-                display: none;
-                position: absolute;
-                top: 60px;
-                right: 390px;
-                width: 280px;
-                height: 170px;
-                background: rgba(0,0,0,.8) url("img/map-caption.png") top left no-repeat;;
-                z-index: 99999;
-            }
-        </style>
     </div>
 
     <!-- ICON GUIDE
@@ -133,8 +91,6 @@ function makeinvisible() {
         <div class="ico-bike"></div>    ~ Bike/Cycling icon
         <div class="ico-sail"></div>    ~ Sailing icon
     -->
-
-
 
 
     <!-- START DESTINATION -->
@@ -209,12 +165,20 @@ function makeinvisible() {
 		</a>
 	</article>
     <!-- END DESTINATION -->
-
-
-
 </div>
+<!-- END PAGE -->
 
 <script src="js/vendor/jquery-1.10.2.min.js"></script>
 <script src="js/script.js"></script>
+<script>
+function makevisible() {
+  var tidy = document.getElementById("contactwrap");
+  tidy.style.display = 'block';   
+}
+function makeinvisible() {
+  var tidy = document.getElementById("contactwrap");
+  tidy.style.display = 'none';   
+}
+</script>
 </body>
 </html>

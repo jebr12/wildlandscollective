@@ -14,60 +14,20 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet'type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700' rel='stylesheet' type='text/css'>
-
-
-<style>
-
-ul.container {
-  width: 100%;
-  padding: 0;
-  margin: auto 0;
-
-}
-
-ul.container li {
-  background: #000;
-  color: #ddd;
-  list-style-type: none;
-  height: 7em;
-  margin: 0;
-  transition: background-color 1s;
-  position: relative;
-}
-
-ul.container li:nth-child(2) span {
-  color: #FFF;
-}
-ul.container li span{
-    width: 100%;
-    height: 70px;
-    background: url("placeholders/home-featured/grad.png") bottom center repeat-x;
-    position: absolute;
-    bottom: 0px;
-    z-index: 100000;
-    font-size: 13px;
-    font-weight: 400;
-    color:#f0d30f;
-    text-transform: uppercase;
-    padding-top: 48px;
-    padding-left: 6px;
-}
-</style>
-
 </head>
 <body>
 
     <!-- START PAGE -->
-
+    <!-- START HEADER -->
     <header class="header black">
         <h1>
             <a href="index.html">
                 <!-- LOGO -->
-                <span style="position:fixed;top:20px !important;left:25px;"><img src="img/logo.png" style="height:50px;" alt="Showlight"></span>
+                <span class="logosite"><img src="img/logo.png" alt="Showlight"></span>
             </a>
         </h1>
 
-        <!-- NAVIGATION -->
+        <!-- START MENU -->
         <nav>
             <ul class="nav nav--primary">
                 <li class="selected"><a href="index.html">Home</a></li>
@@ -78,102 +38,107 @@ ul.container li span{
                 <li><a href="#" onclick='javascript:makevisible();'>Contact</a></li>
             </ul>
         </nav>
+        <!-- END MENU -->
 
-        <!-- FOOTER -->
+        <!-- START FOOTER -->
         <div id="global-footer">© 2013 Wildlands Collective</div>
         <div id="global-social"></div>
+        <!-- END FOOTER -->
 
     </header>
+    <!-- END HEADER -->
+
+    <!-- START CONTACT -->
+    <div id="contactwrap">
+      <div class="content">
+        <a href="#" onclick='javascript:makeinvisible();'><div id="close"></div></a>
+        <iframe src="http://startuphouse.com/wc/contact/" width="400px" height="500px" scrolling="no"></iframe>
+      </div>
+    </div>
+    <a href="#" onclick='javascript:makevisible();'><div class="contactme"></div></a>
+    <!-- END CONTACT -->
 
 
+    <!-- START SLIDESHOW -->
+    <div class="cover-screen slideshow-break">
+    	<div class="slideshow slideshow--bullets slideshow--animation" data-interval="7000">
 
-<!-- START CONTACT -->
-<div id="contactwrap">
-  <div class="content">
-    <a href="#" onclick='javascript:makeinvisible();'><div id="close"></div></a>
-    <iframe src="http://startuphouse.com/wc/contact/" width="400px" height="500px" scrolling="no"></iframe>
-  </div>
-</div>
-<a href="#" onclick='javascript:makevisible();'><div class="contactme">
-</div></a>
-<script>
-function makevisible() {
-  var tidy = document.getElementById("contactwrap");
-  tidy.style.display = 'block';   
-}
-function makeinvisible() {
-  var tidy = document.getElementById("contactwrap");
-  tidy.style.display = 'none';   
-}
-</script>
-<!-- END CONTACT -->
+        <!-- START FEATURE DESTINATIONS -->
+            <div id="home-features" class="fade-in">
+              <h2>Destinations</h2>
+                <a href="destinations.html"><ul class="container">
+                  <li><span>Argentina</span><img src="placeholders/home-featured/01.jpg"/></li>
+                  <li><span>Iceland</span><img src="placeholders/home-featured/02.jpg"/></li>
+                  <li><span>Argentina</span><img src="placeholders/home-featured/03.jpg"/></li>
+                  <li><span>Thailand</span><img src="placeholders/home-featured/04.jpg"/></li>
+                  <li><span>Fiji</span><img src="placeholders/home-featured/05.jpg"/></li>
+                  <li><span>Argentina</span><img src="placeholders/home-featured/01.jpg"/></li>
+                  <li><span>Iceland</span><img src="placeholders/home-featured/02.jpg"/></li>
+                  <li><span>Argentina</span><img src="placeholders/home-featured/03.jpg"/></li>
+                  <li><span>Thailand</span><img src="placeholders/home-featured/04.jpg"/></li>
+                </ul></a>
+            </div>
+        <!-- END FEATURE DESTINATIONS -->
 
+    <!-- START HOMEPAGE -->
+    <div id="home-content">
+    <div id="home-circle"></div>
+        <p>
+            <span class="home-content-title">Go Where it's Wild</span><br/>
+            <span class="home-content-subtitle">
+              <span>Destinations</span> · 
+              <span>Adventures</span> · 
+              <span>People</span></span><br/>
+              <span class="home-content-btn">
+                <a href="destinations.html">
+                  <button class="btn fadein" style="width:228px !important;">Explore Destinations</button>
+                  <span>
+                    <a href="thoughts.html">
+                      <button class="btn fadein">Recent Stories</button>
+                    </a>
+                  </span>
+        </p>
+    </div>
 
+    <!-- START BACKGROUND IMAGES -->
+    		<ul class="slideshow__data">
 
+          <!-- START IMAGE -->
+    			<li data-thumb="placeholders/130x100/1.jpg" data-src="placeholders/backgrounds/07.jpg" data-cover="cover">
+            <div id="home-slide-wrap">
+    				  <span class="typewriter" id="home-type">"Nature is beauty.."</span><br/>
+            </div>
+    			</li>
+          <!-- END IMAGE -->
 
-<!-- SLIDESHOW -->
-<div class="cover-screen slideshow-break">
-	<div class="slideshow slideshow--bullets slideshow--animation" data-interval="7000">
+          <!-- START IMAGE -->
+    			<li data-thumb="placeholders/130x100/3.jpg" data-src="placeholders/backgrounds/03.jpg" data-cover="cover">
+            <div id="home-slide-wrap">
+              <span class="typewriter" id="home-type">"In wilderness is the preservation of the world"</span><br/>
+            </div>
+    			</li>
+          <!-- END IMAGE -->
 
+          <!-- START IMAGE -->
+    			<li data-thumb="placeholders/130x100/4.jpg" data-src="placeholders/backgrounds/02.jpg" data-cover="cover">
+            <div id="home-slide-wrap">
+              <span class="typewriter" id="home-type">"Sometimes you have to get lost to get found."</span><br/>
+            </div>
+    			</li>
+          <!-- END IMAGE -->
 
+    		</ul>
+        <!-- END BACKGROUND IMAGES -->
 
+    	</div>
 
-        <!-- FEATURED DESTINATIONS -->
-        <div id="home-features" class="fade-in">
-          <h2>Destinations</h2>
+      <!-- END HOMEPAGE -->
 
-<a href="destinations.html"><ul class="container">
-  <li><span>Argentina</span><img src="placeholders/home-featured/01.jpg"/></li>
-  <li><span>Iceland</span><img src="placeholders/home-featured/02.jpg"/></li>
-  <li><span>Argentina</span><img src="placeholders/home-featured/03.jpg"/></li>
-  <li><span>Thailand</span><img src="placeholders/home-featured/04.jpg"/></li>
-  <li><span>Fiji</span><img src="placeholders/home-featured/05.jpg"/></li>
-  <li><span>Argentina</span><img src="placeholders/home-featured/01.jpg"/></li>
-  <li><span>Iceland</span><img src="placeholders/home-featured/02.jpg"/></li>
-  <li><span>Argentina</span><img src="placeholders/home-featured/03.jpg"/></li>
-  <li><span>Thailand</span><img src="placeholders/home-featured/04.jpg"/></li>
-</ul></a>
-    
-
-        </div>
-
-<!-- HOMEPAGE CONTENT -->
-<div id="home-content" style="font-family: 'Roboto', sans-serif;font-weight:400;">
-<div id="home-circle"></div>
-    <p>
-        <span style="font-size:28px;position:relative;top:0px;text-transform:uppercase;left:20px;">Go Where it's Wild</span><br/>
-        <span style="font-size:21px;position:relative;top:-4px;text-transform:uppercase;left:20px;"><span style="color:#fed800">Destinations</span> · <span style="color:#fed800">Adventures</span> · <span style="color:#fed800">People</span></span> <br/>
-        <span style="position:relative;top:30px;left:20px;"><a href="destinations.html"><button class="btn fadein" style="width:228px !important;">Explore Destinations</button><span style="position:relative;top:30px;left:20px;margin-left:8px;"><a href="thoughts.html"><button class="btn fadein">Recent Stories</button></a></span>
-    </p>
-</div>
-
-		<ul class="slideshow__data">
-			<li data-thumb="placeholders/130x100/1.jpg" data-src="placeholders/backgrounds/07.jpg" data-cover="cover">
-                <div id="home-slide-wrap">
-				<span class="typewriter" id="home-type">"Nature is beauty.."</span><br/>
-
-                </div>
-			</li>
-
-			<li data-thumb="placeholders/130x100/3.jpg" data-src="placeholders/backgrounds/03.jpg" data-cover="cover">
-                <div id="home-slide-wrap">
-                <span class="typewriter" id="home-type">"In wilderness is the preservation of the world"</span><br/>
-                </div>
-			</li>
-
-			<li data-thumb="placeholders/130x100/4.jpg" data-src="placeholders/backgrounds/02.jpg" data-cover="cover">
-                <div id="home-slide-wrap">
-                <span class="typewriter" id="home-type">"Sometimes you have to get lost to get found."</span><br/>
-                </div>
-			</li>
-		</ul>
-	</div>
-</div>
-<!-- END PAGE -->
+    </div>
+    <!-- END PAGE -->
 
 
 <script src="js/vendor/jquery-1.10.2.min.js"></script>
-
 <script src="js/script.js"></script>
 <script>
 var x = 0,
@@ -216,7 +181,15 @@ container.hover(function(){
   init = setInterval("vertCycle()",intervalSec);
 });
 </script>
-
-
+<script>
+    function makevisible() {
+      var tidy = document.getElementById("contactwrap");
+      tidy.style.display = 'block';   
+    }
+    function makeinvisible() {
+      var tidy = document.getElementById("contactwrap");
+      tidy.style.display = 'none';   
+    }
+</script>
 </body>
 </html>
