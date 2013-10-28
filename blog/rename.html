@@ -73,20 +73,75 @@ html,body{
     <style>
     #blog-cover{
         width: 100%;
-        height: 280px;
+        height: 350px;
         background: rgba(0,0,0,.4);
         position: absolute;
         top: 0px;
         left: 0px;
+        overflow: hidden;
+        float: left;
+    }
+    #blog-cover img{
+        width: 100%;
+        height: auto;
+        -webkit-filter: blur(0px);
+        opacity: .7;
+        position: relative;
+        top: -280px;
+    }
+    #content-page{
+        position: absolute !important;
+        top: 365px !important;
+        left: 50%;
+        margin-left: -490px;
+    }
+    #blog-cover > .info{
+        position: absolute;
+        bottom: 18px;
+        left: 50%;
+        width: 460px;
+        margin-left: -230px;
+        height: auto;
+        min-height: 60px;
+        z-index: 99999;
+        text-align: center;
+    }
+    #blog-cover > .info > .title{
+        width: auto;
+        height: auto;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+        background: rgba(0,0,0,.7);
+        padding: 5px;
+        text-transform: uppercase;
+    }
+    #blog-cover > .info > .author{
+        width: auto;
+        height: auto;
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(255,255,255,.85);
+        background: rgba(0,0,0,.7);
+        padding: 5px;
+        padding-bottom: 9px !important;
+        text-transform: uppercase;
+        border-top: dotted 1px rgba(255,255,255,.1);
     }
     </style>
-    <div id="blog-cover"></div>
+    <div id="blog-cover">
+        <div class="info">
+            <div class="title">Jimmy Chin: Beyond The Shark’s Fin</div>
+            <div class="author">By Justin Randolf</div>
+        </div>
+        <img src="http://www.neverstopexploring.com/.a/6a00d834f4a66953ef01539240a388970b-pi"/>
+    </div>
 
 
 
-    <div id="content-page" style="">
+    <div id="content-page">
 
-    <!-- BACK BUTTON -->
+    <!-- BACK BUTTON 
     <div class="blog-back">
         <a href="../thoughts.html">
             <button class="btn" style="width:110px !Important;height:38px !important;font-size:13px !important;padding-left:22px !Important;">
@@ -94,47 +149,43 @@ html,body{
     </div>
     <!-- BACK BUTTON -->
 
-    <!-- LOGO -->
-    <div class="blog-logo">
-        <img src="../img/logo-blog.png" alt="Showlight">
-    </div>
-    <!-- LOGO -->
 
-    <!-- BLOG TITLE -->
-    <div class="blog-title">Into The Wilderness</div>
-    <div class="blog-date">Posted on October 16, 2013</div>
-    <!-- BLOG TITLE -->
 
     <!-- BLOG CONTENT -->
     <div class="blog-content">
 
         <!-- START BLOG COLUMN LEFT -->
-        <div class="blog-content-left">
-            Add some writing here
+        <div class="blog-content-left" >
+            <img src="http://blog.theclymb.com/wp-content/uploads/2013/06/jimmy_chin_interview-featured.jpg"/>
             <br/><br/>
-            You can use as much space as you want!!
+            Pho­tog­ra­pher and film­maker Jimmy Chin is every bit as much an artist as he is an adven­turer. Com­bin­ing his pas­sions for tak­ing pic­tures with scal­ing high moun­tains in remote loca­tions around the world, he has cre­ated a unique form of sto­ry­telling in which he and his climb­ing part­ners are cast as char­ac­ters who record on film the nar­ra­tive of their jour­ney even as it unfolds.
             <br/><br/>
-            <img src="http://pre.cloudfront.goodinc.com/posts/full_1369939447photo2(2).JPG"/>
+            Return­ing from an unsuc­cess­ful attempt to ascend one of the few remain­ing unclimbed peaks in the Garhwal Himalaya in 2008, Chin along with pro­fes­sional climbers Con­rad Anker and  Renan Ozturk made it to the sum­mit of Mount Meru in 2011. A 20,700-foot ver­ti­cal wall of rock known as the Shark’s Fin, Meru pushed each mem­ber of the expe­di­tion to their phys­i­cal lim­its even before the climb began. Ozturk was badly injured in a dev­as­tat­ing ski­ing acci­dent just months ear­lier. And a few weeks later Chin sur­vived an avalanche that by all accounts should have killed him. And Anker, hav­ing lived through another avalanche that claimed his best friend back in the 90s, con­tin­u­ally strug­gles to bal­ance his life as a moun­taineer with his respon­si­bil­i­ties as a hus­band and father of three sons.
             <br/><br/>
-            And even add images and videos!
+            <img src="http://rodmclean.com/wordpress/wp-content/uploads/2013/07/Revo_JC_PortraitHanging.jpg"/>
+            <br/><br/>
+            With such intri­cately com­plex life sto­ries the climb itself seems to be merely the back­drop of an incred­i­ble tale of per­sonal tri­umph. Now about to enter the final stages of edit­ing for the com­ple­tion of a feature-length doc­u­men­tary called Meru, Jimmy Chin reflects upon his lat­est adven­ture and shares his thoughts with the Clymb in this can­did interview.
             <br/><br/>
             <blockquote>
-                “Include a quote..”
+                “There are a few things that I’m very moti­vated by in the Meru film. I think prob­a­bly one of the big inspi­ra­tions is Con­rad who has been just an incred­i­ble friend and an incred­i­ble men­tor. And I think that this film gives me the oppor­tu­nity to share this idea of men­tor­ship and what it means, because in climb­ing men­tor­ship also involves a lot of respon­si­bil­ity. In a lot of ways you’re tak­ing someone’s life in your hands because you’re teach­ing them how to climb and where to push your­self, not only in climb­ing but in life.”
             </blockquote>
+            <br/><br/>
+            <img src="http://benvanderveen.files.wordpress.com/2011/08/screen-shot-2011-08-18-at-10-12-12-am.png"/>
+            <br/><br/>
         </div>
         <!-- END BLOG COLUMN LEFT -->
 
         <!-- START BLOG COLUMN RIGHT -->
         <div class="blog-content-right">
-            You can use this column too!
+            <iframe id="vvq-12630-vimeo-1" src="http://player.vimeo.com/video/68476731?title=1&amp;byline=1&amp;portrait=0&amp;fullscreen=1&amp;color=00CCFF" width="663" height="373" frameborder="0">&lt;a href="http://www.vimeo.com/68476731" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://www.vimeo.com/68476731']);"&gt;http://www.vimeo.com/68476731&lt;/a&gt;</iframe>
             <br/><br/>
-            <iframe width="560" height="315" src="//www.youtube.com/embed/tt2AYafET68?rel=0" frameborder="0" allowfullscreen></iframe>
+            Hav­ing been up 99 per­cent of the route was very help­ful. We also got hit by prob­a­bly the worst pos­si­ble con­di­tions we could have encoun­tered on the first climb. So we had a really good sense of what it would take to climb Meru. We didn’t take any­thing for granted. We trained really hard. We thought through all the strate­gies, the food, every aspect, the gear, every aspect of the climb. We spent a ton of time con­tem­plat­ing the solu­tions to every prob­lem, etc. I think what made it really chal­leng­ing was Renan’s injury and of course the avalanche I got caught in. I never should have sur­vived that avalanche. It was a mas­sive wet slab avalanche.
             <br/><br/>
-            Check out the video! Embed your own!
+            <img src="http://rodmclean.com/wordpress/wp-content/uploads/2013/07/Revo_JC_TruckPortrait.jpg"/>
             <br/><br/>
-            <blockquote>"Here is another quote"</blockquote>
+            <blockquote>"It’s funny. I just saw Jeremy Jones a few months ago. Jeremy Jones, big moun­tain snow­boarder, he’s been around the block and he came up to me after this event in San Fran­cisco. We were just rem­i­nisc­ing about that day and he turn to me and said, “You know what Jimmy, that is still the gnarli­est thing I have ever seen in the moun­tains.” And I thought about that for a moment and thought well it must have been pretty bad. He did tell me when he got to the bot­tom and he found me that he thought he was 100 per­cent sure that I was dead. He just didn’t think it was sur­viv­able. Com­ing back from that, just the head space you need to be in was really chal­leng­ing for me as well as. And then there’s Con­rad, he’s watch­ing two of his friends go through this and he’s car­ry­ing a lot of respon­si­bil­ity of it all. He under­stands respon­si­bil­ity. He’s a father. So I think all three of us were jug­gling quite a bit when we embarked on the trip to India"</blockquote>
             <br/><br/>
-            Try me for yourself!
+            I would say there were a few of course. When we were really far up on the route at our high camp there were a few moments in our ledge camps where we’re just hang­ing off the wall.  Up high on the route you’re in a port-a-ledge at 20,000 feet in the Garhwal Himalayas. It’s at night and you’ve finally got­ten into your sleep­ing bag and all of the tasks for the day are done. You’ve fin­ished melt­ing the water. You’ve put every­thing away and you’ve finally got­ten into your sleep­ing bag and it’s warmed up and you’re look­ing out of the port-a-ledge win­dow. You’ve got your elbows propped up on the edge and you’re look­ing up across one of the most spec­tac­u­lar moun­tain ranges in the world, the Garhwal Himalayas! You’re look­ing at Shiv­ling and the Bha­gi­rathis and this huge glac­ier. There are those moments of quiet when you’re able to con­tem­plate where you are and when you do you real­ize that this is com­pletely insane! But it also feels really nat­ural and you know that this is an extra­or­di­nary expe­ri­ence and it will be dif­fi­cult or nearly impos­si­ble to repli­cate. 
             <br/><br/>
         </div>
         <!-- END BLOG COLUMN RIGHT -->
