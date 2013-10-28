@@ -1,0 +1,399 @@
+
+/** 
+-------------------------
+* Grid system
+------------------------- */
+.container-section {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-section:before,
+.container-section:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.container-section:after {
+  clear: both;
+}
+/** 
+-------------------------
+* Buttons
+------------------------- */
+/** Brand Button
+------------------------- */
+.btn-brand {
+  color: #ffffff;
+  background-color: #ffd500;
+  border-color: #ffd500;
+}
+.btn-brand:hover,
+.btn-brand:focus,
+.btn-brand:active,
+.btn-brand.active {
+  background-color: #18a789;
+  border-color: #ffd500;
+}
+.btn-brand.disabled,
+.btn-brand[disabled],
+fieldset[disabled] .btn-brand,
+.btn-brand.disabled:hover,
+.btn-brand[disabled]:hover,
+fieldset[disabled] .btn-brand:hover,
+.btn-brand.disabled:focus,
+.btn-brand[disabled]:focus,
+fieldset[disabled] .btn-brand:focus,
+.btn-brand.disabled:active,
+.btn-brand[disabled]:active,
+fieldset[disabled] .btn-brand:active,
+.btn-brand.disabled.active,
+.btn-brand[disabled].active,
+fieldset[disabled] .btn-brand.active {
+  background-color: #ffd500;
+  border-color: #ffd500;
+}
+/** 
+-------------------------
+* Skeleton
+------------------------- */
+/** Global Section
+------------------------- */
+.global-section {
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  min-height: 705px;
+}
+.global-section .section-header {
+  margin-bottom: 50px;
+}
+.global-section .section-header .section-header-title,
+.global-section .section-header-text .section-header-title {
+  margin-bottom: 15px;
+}
+.global-section .section-header .section-header-body-lead,
+.global-section .section-header-text .section-header-body-lead {
+  font-size: 16.099999999999998px;
+  line-height: 1.6428571433499999;
+  padding: 55px;
+  font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif !important;
+}
+.global-section .section-header .nav-pills-centered,
+.global-section .section-header-text .nav-pills-centered {
+  margin-top: 30px;
+}
+@media screen and (max-width: 480px) {
+  .global-section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+/** Footer Section
+------------------------- */
+.footer-section {
+  text-align: center;
+  background-color: #ffd500;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.footer-section .footer-copyright {
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+/** Contact Section
+------------------------- */
+.contact-section {
+  background-color: #ffffff;
+}
+/** Feedback Section
+------------------------- */
+.feedback-section {
+  padding-bottom: 60px;
+}
+.address-subsection {
+  text-align: center;
+  margin-top: 50px;
+}
+.address-subsection .address-icon {
+  color: #ffd500;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 30px;
+}
+.address-subsection .address-title {
+  margin-bottom: 15px;
+}
+.address-subsection .address-desc {
+  margin-bottom: 30px;
+}
+/** Staff Section
+------------------------- */
+.staff-section {
+  background-color: #f5f5f5;
+}
+.staff-section .staff-image {
+  margin-bottom: 20px;
+}
+.staff-section .staff-designation {
+  margin-bottom: 20px;
+}
+
+/** About Section
+------------------------- */
+.about-section {
+  background-color: #111;
+  background: url('http://blog.theclymb.com/wp-content/themes/theclymbstories/images/gradient-bg.jpg')center repeat-y;
+  background-size:  100% auto;
+}
+/** Portfolio Section
+------------------------- */
+
+.portfolio-section .isotope {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+.portfolio-section .isotope .isotope-item {
+  z-index: 2;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: top, left, opacity;
+  transition-property: transform, opacity;
+}
+.portfolio-section .isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+.projects-caption figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+.projects-caption figure img {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+.projects-caption figure.cs-hover img {
+  -webkit-transform: translateY(-50px);
+  -moz-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+.projects-caption figure.cs-hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+.projects-caption figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  background: #111;
+  color: #ed4e6e;
+  height: 100px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+.projects-caption figcaption .projects-caption-title {
+  margin: 0 0 5px 0;
+  padding: 0;
+  color: #ffffff;
+}
+.projects-caption figcaption .projects-caption-icon {
+  color: #ffd500;
+  font-size: 24px;
+}
+.projects-caption figcaption .projects-caption-icon:hover,
+.projects-caption figcaption .projects-caption-icon:focus {
+  color: #117a64;
+}
+.projects-caption figcaption .projects-caption-icon.projects-caption-view {
+  margin-right: 10px;
+}
+.no-touch .projects-caption figure:hover img {
+  -webkit-transform: translateY(-50px);
+  -moz-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+.no-touch .projects-caption figure:hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+/** Services Section
+------------------------- */
+.services-section {
+  background-color: #111;
+  background: url('../../images/big-page1.jpg')center center;t
+  background-size:  100% auto;
+}
+.portfolio-section {
+  background-color: #111;
+  background: url('../../images/big-page2.jpg')center center;t
+  background-size:  100% auto;
+}
+.intro-section {
+  background-color: #111;
+  background: url('../../images/big-intro.jpg')center center;
+  background-size:  100% auto;
+}
+.outro-section {
+  background-color: #111;
+  background: url('../../images/big-outro.jpg')center center;
+  background-size:  100% auto;
+}
+
+/** Parallax Section
+------------------------- */
+.parallax-section .parallax-title {
+  color: #fff !important;
+  font-size: 25px;
+  font-weight: 100;
+  line-height: 38px;
+  margin-bottom: 0px;
+  font-style: italic;
+  
+
+
+}
+.parallax-section .parallax-body {
+  color: #ffd500;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.parallax-section-1 {
+  text-align: center;
+  padding: 90px 130px;
+  background: url("../../images/parallax1.jpg") ;
+  box-shadow:0 -10px 10px -10px #000000;
+
+}
+.parallax-section-2 {
+  text-align: center;
+  padding: 90px 130px;
+  background: url("../../images/parallax2.jpg");
+  box-shadow:0 -10px 10px -10px #000000;
+}
+.parallax-section-3 {
+  text-align: center;
+  padding: 90px 130px;
+  background: url("../../images/parallax3.jpg");
+  box-shadow:0 -10px 10px -10px #000000;
+}
+.parallax-section-4 {
+  text-align: center;
+  padding: 90px 130px;
+  background: url("../../images/parallax4.jpg");
+  box-shadow:0 -10px 10px -10px #000000;
+}
+@media screen and (max-width: 480px) {
+  .parallax-section .parallax-title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+  .parallax-section .parallax-body {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .parallax-section-1 {
+    padding: 50px 0;
+  }
+}
+.intro-title{
+  display: block;
+  float: left;
+  width: 693px;
+  height: 489px;
+  margin-left: 35px;
+  text-align: left;
+  position: absolute;
+  left: 50%;
+  margin-left: -346px;
+  margin-top: 50px;
+}
+.float-right{
+  margin-right: 35px !important;
+  margin-left: none !important;
+  float: right !important;
+  text-align: right !important;
+}
+.centered{
+  float: none !important;
+  position: absolute;
+  left: 50%;
+  margin-left: -375px !important;
+  text-align: center !important; 
+}
+.page-body{
+  display: block;
+  float: left;
+  width: 780px;
+  height: auto;
+  background: rgba(0,0,0,0);
+  color:#111 !important;
+  margin-left: 35px;
+  position: relative;
+  top:-20px;
+  text-align: left;
+  font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif;
+  font-size: 16px;
+  padding: 39px;
+}
+.width-small{
+    width: 780px !important;
+}
+.color-white{
+  color: #ccc !important;
+}
+.background-black{
+  background: rgba(0,0,0,.85);
+}
+.background-white{
+  background: rgba(255,255,255,.90);
+}

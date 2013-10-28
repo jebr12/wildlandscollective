@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!--[if lt IE 9]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
+    <title>Wildlands Collective</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet'type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.png">
+    <script src="js/vendor/modernizr-latest.js"></script>
+</head>
+<style>
+.header.black {background: rgba(0,0,0,.8) !important;}
+html,body{
+    background:url("placeholders/backgrounds/grad.jpg") top center repeat-y;
+}
+</style>
+<body>
+
+    <!-- START PAGE -->
+    <!-- START HEADER -->
+    <header class="headertop black">
+        <h1>
+            <a href="index.html">
+                <!-- LOGO -->
+                <span class="logosite"><img src="img/logo.png" style="height:50px;" alt="Showlight">
+                <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FWildlandsCollective%3Fref%3Dhl&amp;width=100&amp;height=21&amp;colorscheme=dark&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;send=false&amp;appId=351466678306680" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></span>
+            </a>
+        </h1>
+
+        <!-- START MENU -->
+        <nav>
+            <ul class="nav nav--primary">
+                <li class="selected"><a href="index.html"><img src="img/nav-home.png"/></a></li>
+                <li><a href="./info/concept/index.html"><img src="img/nav-concept.png"/></a></li>
+                <li><a href="./info/philosophy/index.html"><img src="img/nav-philosophy.png"/></a></li>
+                <li><a href="thoughts.html"><img src="img/nav-thoughts.png"/></a></li>
+                <li > <a href="destinations.html"><img src="img/nav-destinations-select.png"/></a></li>
+                <li><a href="#" onclick='javascript:makevisible();'><img src="img/nav-contact.png"/></a></li>
+            </ul>
+        </nav>
+        <!-- END MENU -->
+
+    </header>
+    <!-- END HEADER -->
+
+    <!-- START CONTACT -->
+    <div id="contactwrap">
+      <div class="content">
+        <a href="#" onclick='javascript:makeinvisible();'><div id="close"></div></a>
+        <iframe src="http://startuphouse.com/wc/contact/" width="400px" height="500px" scrolling="no"></iframe>
+      </div>
+    </div>
+    <a href="#" onclick='javascript:makevisible();'><div class="contactme"></div></a>
+    <!-- END CONTACT -->
+
+    <!-- BEGIN DESTINATIONS -->
+    <div class="grid grid--portfolio">
+
+	   <div class="destinations-wrapper">
+        
+        <!-- START MAP -->
+        <!-- DONT TOUCH ANYTHING HERE -->
+        <div id="map-caption"></div>
+        <div id="map-widget">
+            <ul class="category-filter">
+                <li style="position:absolute;top:129px;left:-10px;font-size:35px;opacity:0;" class="selected" ><a href="#all">%</a></li>
+                <li style="position:absolute;top:50px;left:55px;font-size:60px;opacity:0;"><a href="#america">#</a></li>
+                <li style="position:absolute;top:10px;left:35px;font-size:40px;opacity:0;"><a href="#canada">-----</a></li>
+                <li style="position:absolute;top:10px;left:120px;font-size:34px;opacity:0;"><a href="#arctic">%</a></li>
+                <li style="position:absolute;top:100px;left:260px;font-size:50px;opacity:0;"><a href="#australia">%</a></li>
+                <li style="position:absolute;top:60px;left:145px;font-size:80px;opacity:0;"><a href="#africa">%</a></li>
+                <li style="position:absolute;top:10px;left:205px;font-size:100px;opacity:0;"><a href="#asia">%</a></li>
+                <li style="position:absolute;top:35px;left:159px;font-size:40px;opacity:0;"><a href="#europe">@</a></li>
+                <li style="position:absolute;top:90px;left:80px;font-size:80px;opacity:0;"><a href="#southamerica">%</a></li>
+            </ul>
+            <!-- DONT TOUCH ANYTHING HERE -->
+        </div>
+
+    </div>
+
+    <!-- ICON GUIDE
+        <div class="ico-trek"></div>    ~ trekking icon
+        <div class="ico-fish"></div>    ~ fishing icon
+        <div class="ico-horse"></div>   ~ horse icon
+        <div class="ico-kayak"></div>   ~ kayak icon
+        <div class="ico-ski"></div>     ~ Skiing icon
+        <div class="ico-bike"></div>    ~ Bike/Cycling icon
+        <div class="ico-sail"></div>    ~ Sailing icon
+    -->
+
+
+    <!-- START DESTINATION -->
+
+	<article class="grid__caption" data-category="all southamerica">
+		<a href="destinations/destination1_rename.html" class="overlay" data-background="http://www.bugbog.com/images/galleries/argentina_pictures/1000/Calafate-glacier-group.jpg">
+            <div class="caption">
+                <div class="location">Argentina</div><br/>
+                <div class="tag">Explore the Patagonian wild lands</div>
+            </div>
+			<div class="content">
+				<div id="logo"></div>
+                <div id="activities">
+                    <div id="ico-wrap">
+                        <div class="ico-trek"></div>
+                        <div class="ico-fish"></div>
+                        <div class="ico-sail"></div>
+                    </div>
+                </div>
+				<div id="location">El Calafate</br><span>Argentina</span></div>
+				<div id="price">$299</div>
+				<div id="btn"></div>
+			</div>
+		</a>
+	</article>
+    <!-- END DESTINATION -->
+
+    <!-- START DESTINATION -->
+	<article class="grid__caption" data-category="all arctic europe">
+		<a href="destinations/destination1_rename.html" class="overlay" data-background="http://www.rei.com/graphics/adventures/trips/europe/iceland_trippic1.jpg">
+            <div class="caption">
+                <div class="location">Iceland</div><br/>
+                <div class="tag">Trek through the heart of Iceland</div>
+            </div>
+			<div class="content">
+				<div id="logo"></div>
+                <div id="activities">
+                    <div id="ico-wrap">
+                        <div class="ico-horse"></div>
+                        <div class="ico-trek"></div>
+                        <div class="ico-bike"></div>
+                        <div class="ico-sail"></div>
+                        <div class="ico-kayak"></div>
+                    </div>
+                </div>
+				<div id="location">Hornstrandir</br><span>Iceland</span></div>
+				<div id="price">$399</div>
+				<div id="btn"></div>
+			</div>
+		</a>
+	</article>
+    <!-- END DESTINATION -->
+
+    <!-- START DESTINATION -->
+	<article class="grid__caption" data-category="all southamerica">
+		<a href="destinations/destination1_rename.html" class="overlay" data-background="http://d1smo01m4xb9gu.cloudfront.net/production/master_assets/138506/front-05f236-detail.jpg">
+            <div class="caption">
+                <div class="location">Argentina</div><br/>
+                <div class="tag">Explore the mountainous kingdom</div>
+            </div>
+			<div class="content">
+				<div id="logo"></div>
+                <div id="activities">
+                    <div id="ico-wrap">
+                        <div class="ico-trek"></div>
+                        <div class="ico-ski"></div>
+                    </div>
+                </div>
+				<div id="location">Perito Moreno</br><span>Argentina</span></div>
+				<div id="price">$599</div>
+				<div id="btn"></div>
+			</div>
+		</a>
+	</article>
+    <!-- END DESTINATION -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</div>
+<!-- END PAGE -->
+
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+function makevisible() {
+  var tidy = document.getElementById("contactwrap");
+  tidy.style.display = 'block';   
+}
+function makeinvisible() {
+  var tidy = document.getElementById("contactwrap");
+  tidy.style.display = 'none';   
+}
+</script>
+</body>
+</html>
