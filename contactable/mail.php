@@ -22,7 +22,7 @@
 	</div>";
 
 	// Send and check the message status
-	$response = (mail('nick@sceene.com', $subject, $contactMessage, $headers) ) ? "success" : "failure" ;
+	$response = (mail('Randolph.justin@gmail.com', $subject, $contactMessage, $headers) ) ? "success" : "failure" ;
 	$output = json_encode(array("response" => $response));
 	
 	header('content-type: application/json; charset=utf-8');
