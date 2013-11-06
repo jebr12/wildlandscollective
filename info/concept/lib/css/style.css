@@ -296,6 +296,7 @@ fieldset[disabled] .btn-brand.active {
   line-height: 38px;
   margin-bottom: 0px;
   font-style: italic;
+  font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif !important;
   
 
 
