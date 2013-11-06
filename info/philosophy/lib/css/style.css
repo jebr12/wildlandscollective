@@ -79,7 +79,8 @@ fieldset[disabled] .btn-brand.active {
 .global-section .section-header-text .section-header-body-lead {
   font-size: 16.099999999999998px;
   line-height: 1.6428571433499999;
-  padding-top: 15px;
+  padding: 55px;
+  font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif !important;
 }
 .global-section .section-header .nav-pills-centered,
 .global-section .section-header-text .nav-pills-centered {
@@ -289,12 +290,14 @@ fieldset[disabled] .btn-brand.active {
 /** Parallax Section
 ------------------------- */
 .parallax-section .parallax-title {
-  color: #f4d848;
-  font-size: 40px;
+  color: #fff !important;
+  font-size: 25px;
   font-weight: 100;
-  line-height: 50px;
-  margin-bottom: 20px;
+  line-height: 38px;
+  margin-bottom: 0px;
   font-style: italic;
+  font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif !important;
+  
 
 
 }
@@ -306,26 +309,26 @@ fieldset[disabled] .btn-brand.active {
 
 .parallax-section-1 {
   text-align: center;
-  padding: 90px 50px;
+  padding: 90px 130px;
   background: url("../../images/parallax1.jpg") ;
   box-shadow:0 -10px 10px -10px #000000;
 
 }
 .parallax-section-2 {
   text-align: center;
-  padding: 90px 50px;
+  padding: 90px 130px;
   background: url("../../images/parallax2.jpg");
   box-shadow:0 -10px 10px -10px #000000;
 }
 .parallax-section-3 {
   text-align: center;
-  padding: 90px 50px;
+  padding: 90px 130px;
   background: url("../../images/parallax3.jpg");
   box-shadow:0 -10px 10px -10px #000000;
 }
 .parallax-section-4 {
   text-align: center;
-  padding: 90px 50px;
+  padding: 90px 130px;
   background: url("../../images/parallax4.jpg");
   box-shadow:0 -10px 10px -10px #000000;
 }
@@ -342,4 +345,56 @@ fieldset[disabled] .btn-brand.active {
   .parallax-section-1 {
     padding: 50px 0;
   }
+}
+.intro-title{
+  display: block;
+  float: left;
+  width: 693px;
+  height: 489px;
+  margin-left: 35px;
+  text-align: left;
+  position: absolute;
+  left: 50%;
+  margin-left: -346px;
+  margin-top: 50px;
+}
+.float-right{
+  margin-right: 35px !important;
+  margin-left: none !important;
+  float: right !important;
+  text-align: right !important;
+}
+.centered{
+  float: none !important;
+  position: absolute;
+  left: 50%;
+  margin-left: -375px !important;
+  text-align: center !important; 
+}
+.page-body{
+  display: block;
+  float: left;
+  width: 780px;
+  height: auto;
+  background: rgba(0,0,0,0);
+  color:#111 !important;
+  margin-left: 35px;
+  position: relative;
+  top:-20px;
+  text-align: left;
+  font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif;
+  font-size: 16px;
+  padding: 39px;
+}
+.width-small{
+    width: 780px !important;
+}
+.color-white{
+  color: #ccc !important;
+}
+.background-black{
+  background: rgba(0,0,0,.85);
+}
+.background-white{
+  background: rgba(255,255,255,.90);
 }

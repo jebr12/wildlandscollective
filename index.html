@@ -8,22 +8,73 @@
     <!--[if lt IE 9]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
     <title>Wildlands Collective</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="favicon.png">
-    <script src="js/vendor/modernizr-latest.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet'type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/home/css/style.css">
+    <link rel="shortcut icon" href="assets/home/favicon.png">
+    <script src="assets/home/js/vendor/modernizr-latest.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300' rel='stylesheet' type='text/css'>
+
+    
 </head>
 <body>
 
+
+  <!--start contactable -->
+<div id="my-contact-div"><!-- contactable html placeholder --></div>
+
+<link rel="stylesheet" href="assets/contactable/contactable.css" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="assets/contactable/jquery.contactable.js"></script>
+
+<script>
+  jQuery(function(){
+    jQuery('#my-contact-div').contactable(
+        {
+            subject: 'Wildlands New Message ',
+            url: 'assets/contactable/mail.php',
+            name: 'Name',
+            email: 'Email',
+            dropdownTitle: 'Subject',
+            dropdownOptions: ['General', 'Feedback', 'Inquiry'],
+            message : 'Message',
+            submit : 'SEND',
+            recievedMsg : 'Thank you for your message',
+            notRecievedMsg : 'Sorry but your message could not be sent, try again later',
+            disclaimer: 'Please feel free to get in touch, we value your feedback',
+            hideOnSubmit: false
+        });
+  });
+</script>
+<!--end contactable -->
+
+
+
+  <style>
+  .nav--primary {line-height: 48px !important; }
+  #contactable-inner {
+  left:0;
+  margin-left:-5px; 
+  *margin-left:-5px; 
+  top:50%;
+  margin-top:-51px;
+  *margin-top:-51px;
+
+}
+#contactable-contactForm {
+  height:490px !important;
+  margin-top:-245px;
+  width:394px !important;
+}
+  </style>
+
     <!-- START PAGE -->
     <!-- START HEADER -->
+    
     <header class="header black">
         <h1>
             <a href="index.html">
                 <!-- LOGO -->
-                <span class="logosite"><img src="img/logo.png" alt="Showlight"></span>
+                <span class="logosite"><img src="assets/home/img/logo-home.png" alt="Showlight"></span>
+
             </a>
         </h1>
 
@@ -35,7 +86,7 @@
                 <li><a href="./info/philosophy/index.html">Philosophy</a></li>
                 <li><a href="thoughts.html">Thoughts</a></li>
                 <li > <a href="destinations.html">Destinations</a></li>
-                <li><a href="#" onclick='javascript:makevisible();'>Contact</a></li>
+                <li><a href="#" id="contact-top">Contact</a></li>
             </ul>
         </nav>
         <!-- END MENU -->
@@ -48,55 +99,23 @@
     </header>
     <!-- END HEADER -->
 
-    <!-- START CONTACT -->
-    <div id="contactwrap">
-      <div class="content">
-        <a href="#" onclick='javascript:makeinvisible();'><div id="close"></div></a>
-        <iframe src="http://startuphouse.com/wc/contact/" width="400px" height="500px" scrolling="no"></iframe>
-      </div>
-    </div>
-    <a href="#" onclick='javascript:makevisible();'><div class="contactme"></div></a>
-    <!-- END CONTACT -->
 
 
     <!-- START SLIDESHOW -->
     <div class="cover-screen slideshow-break">
     	<div class="slideshow slideshow--bullets slideshow--animation" data-interval="7000">
 
-        <!-- START FEATURE DESTINATIONS -->
-            <div id="home-features" class="fade-in">
-              <h2>Destinations</h2>
-                <a href="destinations.html"><ul class="container">
-                  <li><span>Argentina</span><img src="placeholders/home-featured/01.jpg"/></li>
-                  <li><span>Iceland</span><img src="placeholders/home-featured/02.jpg"/></li>
-                  <li><span>Argentina</span><img src="placeholders/home-featured/03.jpg"/></li>
-                  <li><span>Thailand</span><img src="placeholders/home-featured/04.jpg"/></li>
-                  <li><span>Fiji</span><img src="placeholders/home-featured/05.jpg"/></li>
-                  <li><span>Argentina</span><img src="placeholders/home-featured/01.jpg"/></li>
-                  <li><span>Iceland</span><img src="placeholders/home-featured/02.jpg"/></li>
-                  <li><span>Argentina</span><img src="placeholders/home-featured/03.jpg"/></li>
-                  <li><span>Thailand</span><img src="placeholders/home-featured/04.jpg"/></li>
-                </ul></a>
-            </div>
-        <!-- END FEATURE DESTINATIONS -->
 
     <!-- START HOMEPAGE -->
     <div id="home-content">
-    <div id="home-circle"></div>
         <p>
-            <span class="home-content-title">Go Where it's Wild</span><br/>
-            <span class="home-content-subtitle">
-              <span>Destinations</span> · 
-              <span>Adventures</span> · 
-              <span>People</span></span><br/>
+            <span class="home-content-title">GO WHERE IT'S WILD</span><br/>
+            <span class="home-content-subtitle"><strong style="color:#fed42d;">DESTINATIONS</strong> · <strong style="color:#fed42d;">ADVENTURES</strong> · <strong style="color:#fed42d;">PEOPLE</strong></span><br/>
               <span class="home-content-btn">
                 <a href="destinations.html">
-                  <button class="btn fadein" style="width:228px !important;">Explore Destinations</button>
-                  <span>
-                    <a href="thoughts.html">
-                      <button class="btn fadein">Recent Stories</button>
-                    </a>
-                  </span>
+                  <img src="assets/home/img/explorebtn.jpg"/>
+
+                  </span></a>
         </p>
     </div>
 
@@ -104,7 +123,7 @@
     		<ul class="slideshow__data">
 
           <!-- START IMAGE -->
-    			<li data-thumb="placeholders/130x100/1.jpg" data-src="placeholders/backgrounds/07.jpg" data-cover="cover">
+    			<li data-thumb="assets/home/placeholders/130x100/1.jpg" data-src="assets/home/placeholders/backgrounds/home01.jpg" data-cover="cover">
             <div id="home-slide-wrap">
     				  <span class="typewriter" id="home-type">"Nature is beauty.."</span><br/>
             </div>
@@ -112,7 +131,7 @@
           <!-- END IMAGE -->
 
           <!-- START IMAGE -->
-    			<li data-thumb="placeholders/130x100/3.jpg" data-src="placeholders/backgrounds/03.jpg" data-cover="cover">
+    			<li data-thumb="assets/home/placeholders/130x100/3.jpg" data-src="assets/home/placeholders/backgrounds/home02.jpg" data-cover="cover">
             <div id="home-slide-wrap">
               <span class="typewriter" id="home-type">"In wilderness is the preservation of the world"</span><br/>
             </div>
@@ -120,11 +139,27 @@
           <!-- END IMAGE -->
 
           <!-- START IMAGE -->
-    			<li data-thumb="placeholders/130x100/4.jpg" data-src="placeholders/backgrounds/02.jpg" data-cover="cover">
+    			<li data-thumb="assets/home/placeholders/130x100/4.jpg" data-src="assets/home/placeholders/backgrounds/home03.jpg" data-cover="cover">
             <div id="home-slide-wrap">
               <span class="typewriter" id="home-type">"Sometimes you have to get lost to get found."</span><br/>
             </div>
     			</li>
+          <!-- END IMAGE -->
+
+          <!-- START IMAGE -->
+          <li data-thumb="assets/home/placeholders/130x100/3.jpg" data-src="assets/home/placeholders/backgrounds/home04.jpg" data-cover="cover">
+            <div id="home-slide-wrap">
+              <span class="typewriter" id="home-type">"In wilderness is the preservation of the world"</span><br/>
+            </div>
+          </li>
+          <!-- END IMAGE -->
+
+          <!-- START IMAGE -->
+          <li data-thumb="assets/home/placeholders/130x100/4.jpg" data-src="assets/home/placeholders/backgrounds/home05.jpg" data-cover="cover">
+            <div id="home-slide-wrap">
+              <span class="typewriter" id="home-type">"Sometimes you have to get lost to get found."</span><br/>
+            </div>
+          </li>
           <!-- END IMAGE -->
 
     		</ul>
@@ -138,49 +173,9 @@
     <!-- END PAGE -->
 
 
-<script src="js/vendor/jquery-1.10.2.min.js"></script>
-<script src="js/script.js"></script>
-<script>
-var x = 0,
-    container = $('.container'),
-    items = container.find('li'),
-    containerHeight = 0,
-    numberVisible = 15,
-    intervalSec = 6000;
 
-if(!container.find('li:first').hasClass("first")){
-  container.find('li:first').addClass("first");
-}
+<script src="assets/home/js/script.js"></script>
 
-items.each(function(){
-  if(x < numberVisible){
-    containerHeight = containerHeight + $(this).outerHeight();
-    x++;
-  }
-});
-
-container.css({ height: containerHeight, overflow: "hidden" });
-  
-function vertCycle() {
-  var firstItem = container.find('li.first').html();
-    
-  container.append('<li>'+firstItem+'</li>');
-  firstItem = '';
-  container.find('li.first').animate({ marginTop: "-90px" }, 1200, function(){  $(this).remove(); container.find('li:first').addClass("first"); });
-}
-
-if(intervalSec < 1000){
-  intervalSec = 1000;
-}
-
-var init = setInterval("vertCycle()",intervalSec);
-
-container.hover(function(){
-  clearInterval(init);
-}, function(){
-  init = setInterval("vertCycle()",intervalSec);
-});
-</script>
 <script>
     function makevisible() {
       var tidy = document.getElementById("contactwrap");

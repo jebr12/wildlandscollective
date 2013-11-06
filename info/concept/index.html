@@ -10,14 +10,14 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- Favicons -->
-<link rel="shortcut icon" href="images/favicon.ico" />
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,700,400italic,500,500italic|Roboto+Condensed:400,700">
+<link rel="shortcut icon" href="../../assets/home/images/favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300' rel='stylesheet' type='text/css'>
 <!-- prettyPhoto -->
 <link rel="stylesheet" href="lib/js/prettyphoto/css/prettyPhoto.css" />
 <!-- Custom Stylesheets -->
 <link rel="stylesheet" href="lib/css/demo.css" />
 <link rel="stylesheet" href="lib/css/animate.css" />
-<link rel="stylesheet" href="../../css/style.css" />
+<link rel="stylesheet" href="../../assets/home/css/style.css" />
 <link rel="stylesheet" id="prod-css" href="lib/css/style.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body data-spy="scroll" data-target="#navbar-spy" data-offset="160">
@@ -38,38 +38,102 @@
 
 
 
+<style>
+h1{font-weight: bold !important;
+font-size: 26px !important;
+color: #333 !important;
+padding: none !important;
+font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif;
+}
+.light{
+color:#FFF !important;
+}
+#headerwrap{
+  width: 100%;
+  height: 50px;
+  background: red;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999999 !important;
+  background: rgba(0,0,0,.85) !important;
+}
+.fixedheadertop{width: 980px !important;position: fixed;left: 50%;margin-left: -490px;z-index: 9999 !important;padding-top: 10px;}
+.fixedheadertop nav img{
+  float: left;
+  position: relative;
+  top: -6px;
+  left: -6px;
+}
+.fixedheadertop nav ul{
+  float: right;
+}
+.nav--primary{
+  position: relative;
+  right: -7px !important;
+  top: 4px !important;
+}
+#contactable-inner {
+  left:0;
+  margin-left:-5px; 
+  *margin-left:-5px; 
+  top:50%;
+  margin-top:-51px;
+  *margin-top:-51px;
+
+}
+#contactable-contactForm {
+  height:490px !important;
+  margin-top:-245px;
+  width:394px !important;
+}
+</style>
+
+<!--start contactable -->
+<div id="my-contact-div"><!-- contactable html placeholder --></div>
+
+<link rel="stylesheet" href="../../assets/contactable/contactable.css" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="../../assets/contactable/jquery.contactable.js"></script>
+
+<script>
+  jQuery(function(){
+    jQuery('#my-contact-div').contactable(
+        {
+            subject: 'Wildlands New Message',
+            url: 'assets/contactable/mail.php',
+            name: 'Name',
+            email: 'Email',
+            dropdownTitle: 'Subject',
+            dropdownOptions: ['General', 'Feedback', 'Inquiry'],
+            message : 'Message',
+            submit : 'SEND',
+            recievedMsg : 'Thank you for your message',
+            notRecievedMsg : 'Sorry but your message could not be sent, try again later',
+            disclaimer: 'Please feel free to get in touch, we value your feedback',
+            hideOnSubmit: false
+        });
+  });
+</script>
+<!--end contactable -->
 
 <div id="wrapper">
   <!-- Begin #header-section -->
-  <header class="headertop black">
+  <div id="headerwrap">
+  <header class="fixedheadertop black">
+ 
 
-        <!-- Logo -->
-        <h1>
-            <a href="index.html">
-                <!-- Use transparent image with the height of 70px -->
-                <span style="position:fixed;top:-2px !important;left:5px;"><img src="../../img/logo.png" style="height:50px;" alt="Showlight"></span>
-            </a>
-        </h1>
 
         <!-- Navigation -->
         <nav>
+           <img src="../../assets/images/logo.png" alt="Showlight">
             <ul class="nav nav--primary">
-                <li>
-                    <a href="../../index.html">Home</a>
-                </li>
-                <li class="selected">
-                    <a href="../../info/concept/index.html">Concept</a>
-                </li>
-                <li>
-                    <a href="../../info/philosophy/index.html">Philosophy</a>
-                </li>
-                <li>
-                    <a href="../../thoughts.html">Thoughts</a>
-                </li>
-                <li >
-                    <a href="../../destinations.html">Destinations</a>
-                </li>
-               <li><a href="#">Contact</a></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li class="selected"><a href="../../info/concept/index.html">Concept</a></li>
+                <li><a href="../../info/philosophy/index.html">Philosophy</a></li>
+                <li><a href="../../thoughts.html">Thoughts</a></li>
+                <li> <a href="../../destinations.html">Destinations</a></li>
+                <li><a href="#" id="contact-top">Contact</a></li>
             </ul>
         </nav>
 
@@ -79,6 +143,7 @@
         <div  style="display:block;position:absolute;bottom:7px;right:-47px;width:100px;height:17px;background:url('../../img/fbtw.png') top left no-repeat;z-index:9999;cursor:pointer;"></div>-->
 
     </header>
+  </div>
   <!-- End #header-section -->
 
 <!-- Begin intro -->
@@ -89,7 +154,7 @@
         <div class="section-header">
 
           <div class="intro-title">
-            <img src="http://blog.theclymb.com/wp-content/uploads/2013/08/walkingofftheedgeoftheworld_logotype.png"/>
+            <img src="images/intro.png"/>
           </div>
 
         </div>
@@ -100,8 +165,7 @@
 
   <!-- Begin .parallax-section -->
   <div class="parallax-section parallax-section-1" data-stellar-vertical-offset="-300" data-stellar-background-ratio="0.5">
-    <h2 class="parallax-title"><strong>“</strong>The <strong>greatest</strong> and most <strong>rewarding</strong> moments in life have 
-been found in the wild while playing in the <strong>outdoors”</strong></h2>
+    <img src="images/circles.png"/>
   </div>
   <!-- End #parallax-section -->
 
@@ -112,10 +176,20 @@ been found in the wild while playing in the <strong>outdoors”</strong></h2>
       <div class="row">
         <div class="section-header">
           
-          <div class="page-body background-white width-small">
-            My year had been great on paper: I’d created enough income to make a full-time living as a writer—a difficult thing to do when your medium is rock climbing and sleeping outside. But I knew I wasn’t healthy. I could climb 5.9/5.10 routes and keep up with more athletic friends when mountain biking, but my active moments were punctuated by too-long periods of stagnation. Long days and nights in front of a computer, chugging coffee 10 hours a day to pay Wi-Fi rent in coffee shops around the West, unable to escape the gravity of glowing screens on my laptop or phone, and not making enough time to get outside were combining to make me a ragged mess.<br/><br/>
+          <div class="page-body background-white width-small centered">
+            <h1> PAGE TITLE </h1>
+            <span style="color: #727272;font-size: 16px;">Have you ever dreamed about owning your own remote mountain ranch or your own desolately-empty coastal retreat and filling it with the most special people in your life? Have you ever felt the bonhomie and camaraderie of a mountain base camp, a remote surf break, or a jungle outpost – as if everybody present has stumbled upon a magical moment at the same time -- and only wished that fleeting moment lasted longer? Have you yearned for those moments of feeling alive, of being awake and fully present, ever since, and been searching to find it?
+            <br/><br/>
+            The thrill of the wilderness and the necessity of the cubicle and our busy urban lifestyles no longer have to be mutually exclusive.
+            <br/><br/>
+            This is Wildlands. We believe the greatest moments in life involve three simple things:
+            <br/><br/>
+            1) Wilderness: The mystery and magic of unadulterated, wild nature<br/>
+            2) Adventure: Being active, curious, and exploring one’s surroundings<br/>
+            3) Community: Connecting in a deeply authentic way with likeminded individuals -- those individuals who may not look or act alike, but who share the same values, passions, and interests.  
 
-            All June and July, I stressed about getting work done ahead of my trip to Europe. The day before my flight to Zurich, I noticed some fluttering in my chest, the kind I’d had once or twice before after drinking too much caffeine. I googled “heart palpitations.” Causes: stress, a few other things. I self-diagnosed it as a stress problem.
+
+          </span>
           </div>
 
 
@@ -138,10 +212,16 @@ are in fact plans to <strong>protect mankind”</strong></h2>
       <div class="row">
         <div class="section-header">
           
-          <div class="page-body float-right background-black color-white width-small">
-           We hiked up the trail to the Refuge du Soreiller, a climber’s hut perched a painful 1,140-meter climb from the road into Les Etages. I started counting switchbacks in the trail, but eventually lost count at 100. The front of my t-shirt was soaked through all the way to the hem by the 40th switchback. I battled, slowly falling a couple hundred feet behind Simon, Dan, and Janine.<br/><br/>
+          <div class="page-body centered background-white width-small ">
+            <span style="color: #727272;font-size: 16px;">
+              <h1> PAGE TITLE </h1>
+           Wildlands has scoured the farthest reaches of the world to find that rare breed of off-the-beaten-path lodge that maintains authenticity, end-of-the-world remoteness, light touch, and common meeting spaces to nurture these three simple things -- all while not forgoing authenticity and the spirit of conservation. The Wildlands network of properties reflect the ideals of a base camp—a place where people can come together to share stories and exchange tips before heading out on their life-affirming adventure—all while getting a comfortable night’s rest and not keeping retirement accounts intact.
+           <br/><br/>
+           Wildlands has compiled a world-class collection of remote lodges in iconic wilderness destinations. Think of these lodges as the world's greatest network of wilderness base camps, all with the basic comforts of your favorite hotel. Meant to get you into the heart of the wilderness, to share your adventures around a roaring fire, and to do it all over again. Our experiences seek to be heart-stirring and life-affirming.
+           <br/><br/>
+           While Wildlands calls itself a ‘destination club’, it is far from the pretentious, overglossed time shares of old. It is a movement and a lifestyle. Wilderness and community are its bedrock. We recognize that our busy lives dictate convenience, yet we deeply believe that a wilderness lodging experience need not cost an arm and a leg nor represent a “once in a lifetime” opportunity. For the adventurous lover of the outdoors, for whom “going on vacation” means getting out there, being active, and being inspired, Wildlands seeks to offer a breath and richness of wilderness destinations and experiences that such a traveler need not look anywhere else.
 
-           During the approach to the Refuge du Soreiller I remember thinking that an average person could probably throw a baseball off the summit of Aiguille Dibona and hit the hut’s roof 400 meters below. In reality, the hut sits several hundred feet back from the mountain, whose south face slopes gently back all the way to the summit. When you arrive at the hut your eyes are drawn up up up to the top of the Eiffel Tower-size granite spire that’s right there.
+         </span>
           </div>
 
          
@@ -159,15 +239,20 @@ group of kindred spirits to <strong>inspire</strong> and <strong>change the worl
   <!-- End #parallax-section -->
 
   <!-- Begin page3 -->
-  <div id="page3" class="about-section global-section container-section">
+  <div id="page3" class="about-section global-section container-section" >
     
-    <div class="container">
-      <div class="row">
+    <div class="container" >
+      <div class="row" >
         <div class="section-header-text">
          
 
-          <div class="page-body color-white">
-            It took several days for the extent of our isolation to become apparent. In that time we’d trekked inland from the coast, following the shores of a turquoise lake beneath gypsum cliffs that soared up for thousands of feet. Then came a labyrinth of braided rivers and narrow canyons leading ever upwards. At last we reached the interior plateau, endless plains of ochre rock and mocha earth. In four days we hadn’t seen a single human footprint, nor passed a sprig of vegetation taller than my ankle. A few wildflowers were sprinkled about, but the mood remained one of utter desolation.
+          <div class="page-body color-white centered" >
+            <h1 class="light"> PAGE TITLE </h1>
+            But why are we a lodging company? Isn’t there a paradox between hotels and wilderness? Usually, yes! While a number of well-recognized adventure and nature-based tour operators exist, the nature of “tour-based” travel removes much of the ‘magic’ that comes from travel and exploring the outdoors – spontaneity, the freedom of do-it-yourself, autonomy, flexibility, etc.
+            <br/><br/>
+            Wildlands believes that the small-scale, remote lodge -- when done well – represents a valiant art. That a minimalist lodge with all the basic comforts that modernity has bestowed upon us in the heart of the world’s wildest landscapes, offers the best of both civilization and the wilderness. There’s nothing like a roaring fire to bring people together – Wildlands’ lodges serve as catalysts to bring the tribe of adventurers, explorers, soul-searchers, and romantics together into a profound community.
+            <br/><br/>
+            Our lodges serve not only as incredible base camps from which to launch life-affirming adventures, but also a mechanism to connect a community of likeminded individuals in uniquely intimate way. The properties and lodges form the heart of Wildlands, but the experience and the people that are part of it are its soul.
           </div>
 
 
@@ -188,9 +273,18 @@ group of kindred spirits to <strong>inspire</strong> and <strong>change the worl
     
     <div class="container">
       <div class="row">
-        <div class="section-header-text">
-          <h3 class="section-header-title"></h3>
-          <p class="section-header-body-lead">...</p>
+        <div class="section-header-text ">
+            <div class="page-body float-left background-white width-small" style="width:400px !important;">
+               <span style="color: #727272;font-size: 16px;">
+                <h1> PAGE TITLE </h1>
+            While Wildlands’ adventures might appear to be 100% self-indulgent fun to the outsider, for many of us we do indeed have something else going on. It’s about feeling more alive and more aware to be able to tap into our human potential. It’s not what it seems.
+            <br/><br/>
+            A lot more goes on here than just making powder turns.Wildlands believes that when we lose ourselves in the rugged, wild landscapes that stir our hearts, we allow ourselves to be most alive, most full of potential, and most fully connected -- connected with ourselves, with those around us, and with the environment on which we depend.
+            <br/><br/>
+            Wildlands  seeks to be a metaphor for the greatest things in life. Be a part of the Wildlands movement.
+          </span>
+
+          </div>
         </div>
       </div>
     </div>
@@ -203,7 +297,7 @@ group of kindred spirits to <strong>inspire</strong> and <strong>change the worl
 
 </div>
 
-<script src="lib/js/jquery.min.js"></script>
+<!--<script src="lib/js/jquery.min.js"></script>-->
 <script src="lib/js/bootstrap.js"></script>
 <script src="lib/js/prettyphoto/js/jquery.prettyPhoto.js"></script>
 <script src="lib/js/plugins.js"></script>

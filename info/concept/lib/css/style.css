@@ -296,6 +296,7 @@ fieldset[disabled] .btn-brand.active {
   line-height: 38px;
   margin-bottom: 0px;
   font-style: italic;
+  font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif !important;
   
 
 
@@ -308,26 +309,26 @@ fieldset[disabled] .btn-brand.active {
 
 .parallax-section-1 {
   text-align: center;
-  padding: 70px 130px;
+  padding: 90px 130px;
   background: url("../../images/parallax1.jpg") ;
   box-shadow:0 -10px 10px -10px #000000;
 
 }
 .parallax-section-2 {
   text-align: center;
-  padding: 70px 130px;
+  padding: 90px 130px;
   background: url("../../images/parallax2.jpg");
   box-shadow:0 -10px 10px -10px #000000;
 }
 .parallax-section-3 {
   text-align: center;
-  padding: 70px 130px;
+  padding: 90px 130px;
   background: url("../../images/parallax3.jpg");
   box-shadow:0 -10px 10px -10px #000000;
 }
 .parallax-section-4 {
   text-align: center;
-  padding: 70px 130px;
+  padding: 90px 130px;
   background: url("../../images/parallax4.jpg");
   box-shadow:0 -10px 10px -10px #000000;
 }
@@ -348,10 +349,14 @@ fieldset[disabled] .btn-brand.active {
 .intro-title{
   display: block;
   float: left;
-  width: 65%;
+  width: 693px;
   height: 489px;
   margin-left: 35px;
   text-align: left;
+  position: absolute;
+  left: 50%;
+  margin-left: -346px;
+  margin-top: 50px;
 }
 .float-right{
   margin-right: 35px !important;
@@ -359,10 +364,17 @@ fieldset[disabled] .btn-brand.active {
   float: right !important;
   text-align: right !important;
 }
+.centered{
+  float: none !important;
+  position: absolute;
+  left: 50%;
+  margin-left: -375px !important;
+  text-align: center !important; 
+}
 .page-body{
   display: block;
   float: left;
-  width: 68%;
+  width: 780px;
   height: auto;
   background: rgba(0,0,0,0);
   color:#111 !important;
@@ -371,11 +383,11 @@ fieldset[disabled] .btn-brand.active {
   top:-20px;
   text-align: left;
   font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif;
-font-size: 16px;
-padding: 39px;
+  font-size: 16px;
+  padding: 39px;
 }
 .width-small{
-    width: 42% !important;
+    width: 780px !important;
 }
 .color-white{
   color: #ccc !important;
@@ -384,5 +396,5 @@ padding: 39px;
   background: rgba(0,0,0,.85);
 }
 .background-white{
-  background: rgba(255,255,255,.75);
+  background: rgba(255,255,255,.90);
 }
