@@ -1,0 +1,53 @@
+
+/* background images on concept & philosophy */
+
+.intro-section,
+.portfolio-section,
+.services-section {
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;	
+	background-size: cover;
+}
+
+
+/* fixed position nav bar on thoughts & destinations */
+
+.header-outer-wrapper {
+	position: fixed;
+}
+
+.titlebar-title {
+	margin-top: 50px;
+}
+
+
+/* thumbnail grids on thoughts & destinations */
+
+.cpt-detail-thoughts {
+	bottom: -46px;
+}
+
+.cpt-item-blog:hover .cpt-detail-thoughts,
+.cpt-item:hover .cpt-detail {
+	bottom: 0px !important;
+}
+
+
+/* 1 pixel gap on the right edge of thumbnail grids on thoughts & destinations */
+
+.cpt-detail-thoughts,
+.cpt-detail {
+	width: 306px;
+}
+
+/* centering filters on destinations */
+
+.builder-title-wrapper.has_filter .cpt-filters {
+	width: 100%;
+	text-align: center;
+}
+
+.cpt-filters li {
+	float: none;
+}
