@@ -35,11 +35,20 @@
 
 
 /* 1 pixel gap on the right edge of thumbnail grids on thoughts & destinations */
+/* fixing responsive width on thumbnail list on thoughts & destinations */
 
 .cpt-detail-thoughts,
 .cpt-detail {
 	width: 306px;
 	max-width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+	.row .cpt-item-blog.columns,
+	.row .cpt-item.columns {
+		margin: 0 auto;
+		max-width: 336px;
+	}
 }
 
 /* centering filters on destinations */
