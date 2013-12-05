@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="../assets/css/woocommerce-modify.css">
     <link rel="stylesheet" href="../assets/css/skins/brown.css">
 
-    <link rel="stylesheet" href="../addendum.css">
+    <link rel="stylesheet" href="addendum.css">
 
     <!-- Browser Specical File-->
     <!--[if IE 8]><link href="assets/css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
@@ -44,12 +44,18 @@
     <script src="../assets/js/jquery.modernizr.js"></script>
 
 </head>
-<body class="list-grid book-now">
-
+<body>
+     <style>
+    .main-outer-wrapper{background:none !important;}
+    .main-outer-wrapper.has-titlebar{margin-top:-68px !important;}
+    #contactable-inner {
+    background-image:url(../assets/contactable/images/book.png) !important;
+}
+    </style>
 
 
 <!--start contactable -->
-<div id="my-contact-div" class="contact-closed"><!-- contactable html placeholder --></div>
+<div id="my-contact-div"><!-- contactable html placeholder --></div>
 
 <link rel="stylesheet" href="../assets/contactable/contactable.css" type="text/css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -84,7 +90,7 @@
 <div class="body-outer-wrapper">
     <div id="body-wrapper" class="body-wrapper full-width-mode">
         
-        <header id="header" class="header-container-wrapper contact-closed">
+        <header id="header" class="header-container-wrapper">
 
             <div class="top-bar-outer-wrapper">
                 <div class="top-bar-wrapper container"></div>
@@ -113,7 +119,7 @@
                                         <li><a href="../info/philosophy/index.html">Philosophy</a></li>
                                         <li><a href="../thoughts.html">Thoughts</a></li>
                                         <li class="current-menu-item"><a href="../destinations.html">Destinations</a></li>
-                                        <li><a href="#" id="contact-top">Contact</a></li>
+                                        <li><a href="#">Contact</a></li>
                                     </ul>
                                 </nav>
                                 <div class="clear"></div>
@@ -127,7 +133,7 @@
         </header> <!-- END .header-container-wrapper -->
 <!-- header image -->
 
-        <div class="titlebar-outer-wrapper" style="background:#000 url('http://www.estanciacristina.com/swf/img/galerias/ellodge/1.jpg') no-repeat center -120px fixed;background-size: 100% 100%;">
+        <div class="titlebar-outer-wrapper" style="background:#000 img src="destinations/images/aurora.jpg" no-repeat center -120px fixed;background-size: 100% 100%;">
 
 
             <div class="container">
@@ -154,7 +160,7 @@
                                 <div class="twelve columns b0">
                                     <div class="page-title-wrapper">
                                         <!--HEADLINE-->
-                                        <h1 class="page-title left" style="color:#FFF !important;">Backcountry Sailing and Skiing in Comfort on the Aurora Arktika</h1>
+                                        <h1 class="page-title left" style="color:#FFF !important;">Backcountry Sailing and Skiing in Comfort on the Aurora Arktika Expedition Yacht</h1>
                                         <div class="page-title-alt right">
                                         </div>
                                         <div class="clear"></div>
@@ -167,7 +173,7 @@
                                 <div class="content-wrapper eight columns">
                                     <div class="post-1279 product type-product status-publish hentry instock" >
                                         
-                                        <div class="blog-thumb-wrapper twelve">
+                                        <div class="blog-thumb-wrapper twelve columns">
 
 
 
