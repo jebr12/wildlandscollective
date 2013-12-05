@@ -60,12 +60,10 @@ color:#FFF !important;
   z-index: 999999 !important;
   background: rgba(0,0,0,.85) !important;
 }
-.fixedheadertop{width: 980px !important;position: fixed;left: 50%;margin-left: -490px;z-index: 9999 !important;padding-top: 10px;}
+.fixedheadertop{ position: fixed;left: 50%;margin-left: -490px;z-index: 9999 !important;}
 .fixedheadertop nav img{
   float: left;
   position: relative;
-  top: -6px;
-  left: -6px;
 }
 .fixedheadertop nav ul{
   float: right;
@@ -73,7 +71,6 @@ color:#FFF !important;
 .nav--primary{
   position: relative;
   right: -7px !important;
-  top: 4px !important;
 }
 #contactable-inner {
   left:0;
@@ -92,7 +89,7 @@ color:#FFF !important;
 </style>
 
 <!--start contactable -->
-<div id="my-contact-div"><!-- contactable html placeholder --></div>
+<div id="my-contact-div" class="contact-closed"><!-- contactable html placeholder --></div>
 
 <link rel="stylesheet" href="../../assets/contactable/contactable.css" type="text/css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -122,7 +119,7 @@ color:#FFF !important;
 <div id="wrapper">
   <!-- Begin #header-section -->
   <div id="headerwrap">
-  <header class="fixedheadertop black">
+  <header class="fixedheadertop black contact-closed">
  
 
 

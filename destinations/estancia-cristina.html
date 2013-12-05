@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="../assets/css/woocommerce-modify.css">
     <link rel="stylesheet" href="../assets/css/skins/brown.css">
 
-    <link rel="stylesheet" href="addendum.css">
+    <link rel="stylesheet" href="../addendum.css">
 
     <!-- Browser Specical File-->
     <!--[if IE 8]><link href="assets/css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
@@ -44,18 +44,12 @@
     <script src="../assets/js/jquery.modernizr.js"></script>
 
 </head>
-<body>
-     <style>
-    .main-outer-wrapper{background:none !important;}
-    .main-outer-wrapper.has-titlebar{margin-top:-68px !important;}
-    #contactable-inner {
-    background-image:url(../assets/contactable/images/book.png) !important;
-}
-    </style>
+<body class="list-grid book-now">
+
 
 
 <!--start contactable -->
-<div id="my-contact-div"><!-- contactable html placeholder --></div>
+<div id="my-contact-div" class="contact-closed"><!-- contactable html placeholder --></div>
 
 <link rel="stylesheet" href="../assets/contactable/contactable.css" type="text/css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -90,7 +84,7 @@
 <div class="body-outer-wrapper">
     <div id="body-wrapper" class="body-wrapper full-width-mode">
         
-        <header id="header" class="header-container-wrapper">
+        <header id="header" class="header-container-wrapper contact-closed">
 
             <div class="top-bar-outer-wrapper">
                 <div class="top-bar-wrapper container"></div>
@@ -119,7 +113,7 @@
                                         <li><a href="../info/philosophy/index.html">Philosophy</a></li>
                                         <li><a href="../thoughts.html">Thoughts</a></li>
                                         <li class="current-menu-item"><a href="../destinations.html">Destinations</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="#" id="contact-top">Contact</a></li>
                                     </ul>
                                 </nav>
                                 <div class="clear"></div>

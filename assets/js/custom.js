@@ -2,10 +2,11 @@ var ST = {"disable_header_floating":"y"};
 
 
 // Call isotope when all images are loaded
-function run_isotope(){
-    "use strict";
-    jQuery(".cpt-items").isotope();
-}
+    function run_isotope(){
+        "use strict";
+        jQuery(".cpt-items").isotope();
+    }    
+
 
 
 // Reservation Form
@@ -380,13 +381,20 @@ jQuery(document).ready(function(){
                 jQuery(".cpt-filters li:first a").addClass("selected");
             }
 
-            jQuery(".cpt-items").isotope({filter: hashOptions});
+            var screenWidth = $("document").width();
+
+            if (screenWidth > 767) {
+                jQuery(".cpt-items").isotope({filter: hashOptions});
+            }
         }
 
     }).trigger("hashchange");
 
     //isotope
-    jQuery(".cpt-items").imagesLoaded(run_isotope);
+    var screenWidth = $("document").width();
+    if (screenWidth > 767) {
+        jQuery(".cpt-items").imagesLoaded(run_isotope);
+    }
 
     // Flexslider
     FS.pauseOnHover = (FS.pauseOnHover === 'true')? true: false;
@@ -416,6 +424,11 @@ jQuery(document).ready(function(){
              
              jQuery(el).css({'width':new_overlay_w,'height':new_overlay_h});
          });
+
+        var screenWidth = $("document").width();
+        if (screenWidth > 767) {
+            jQuery(".cpt-items").imagesLoaded(run_isotope);
+        }
         
         //isotope
         //jQuery(".cpt-items").imagesLoaded(run_isotope); /// don't need 

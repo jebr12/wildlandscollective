@@ -79,31 +79,30 @@
 			jQuery(this).html('<div id="contactable-inner"></div><form id="contactable-contactForm" method="" action=""><div id="contactable-loading"></div><div id="contactable-callback"></div><div class="contactable-holder"><p><label for="contactable-name">'+options.name+'<span class="contactable-green"> * </span></label><br /><input id="contactable-name" class="contactable-contact contactable-validate" name="name" /></p><p><label for="contactable-email">'+options.email+' <span class="contactable-green"> * </span></label><br /><input id="contactable-email" class="contactable-contact contactable-validate" name="email" /></p>'+dropdown+'<p><label for="contactable-message">'+options.message+' <span class="contactable-green"> * </span></label><br /><textarea id="contactable-message" name="message" class="contactable-message contactable-validate" rows="4" cols="30" ></textarea></p><p><input class="contactable-submit" type="submit" value="'+options.submit+'"/></p><p class="contactable-disclaimer">'+options.disclaimer+'</p></div></form>');
 			
 			// Toggle the form visibility
-			jQuery('#contactable-inner').toggle(function() {
+			jQuery('body').on('click', '#my-contact-div.contact-closed #contactable-inner, header.contact-closed #contact-top', function() {
 				jQuery('#contactable-overlay').css({display: 'block'});
-				jQuery(this).animate({"marginLeft": "-=5px"}, "2000"); 
+				jQuery("#contactable-inner").animate({"marginLeft": "-=5px"}, "2000"); 
 				jQuery('#contactable-contactForm').animate({"marginLeft": "-=0px"}, "2000");
-				jQuery(this).animate({"marginLeft": "+=387px"}, "4000"); 
+				jQuery("#contactable-inner").animate({"marginLeft": "+=387px"}, "4000"); 
 				jQuery('#contactable-contactForm').animate({"marginLeft": "+=390px"}, "4000"); 
-			}, 
-			function() {
-				jQuery('#contactable-contactForm').animate({"marginLeft": "-=390px"}, "4000");
-				jQuery(this).animate({"marginLeft": "-=387px"}, "4000").animate({"marginLeft": "+=5px"}, "2000"); 
-				jQuery('#contactable-overlay').css({display: 'none'});
+				jQuery('#my-contact-div, header').addClass('contact-open').removeClass('contact-closed');
 			});
 
-			jQuery('#contact-top').toggle(function() {
-				jQuery('#contactable-overlay').css({display: 'block'});
-				jQuery('#contactable-inner').animate({"marginLeft": "-=5px"}, "2000"); 
-				jQuery('#contactable-contactForm').animate({"marginLeft": "-=0px"}, "2000");
-				jQuery('#contactable-inner').animate({"marginLeft": "+=387px"}, "4000"); 
-				jQuery('#contactable-contactForm').animate({"marginLeft": "+=390px"}, "4000"); 
-			}, 
-			function() {
+			jQuery('body').on('click', '#my-contact-div.contact-open #contactable-inner, header.contact-open #contact-top', function() {
 				jQuery('#contactable-contactForm').animate({"marginLeft": "-=390px"}, "4000");
-				jQuery('#contactable-inner').animate({"marginLeft": "-=387px"}, "4000").animate({"marginLeft": "+=5px"}, "2000"); 
+				jQuery("#contactable-inner").animate({"marginLeft": "-=387px"}, "4000").animate({"marginLeft": "+=5px"}, "2000"); 
 				jQuery('#contactable-overlay').css({display: 'none'});
+				jQuery('#my-contact-div, header').removeClass('contact-open').addClass('contact-closed');
 			});
+
+				$('header, .global-section, .parallax-section, .cover-screen, .body-outer-wrapper div').click(function() {
+					if ($('#my-contact-div').hasClass("contact-open")) {
+						jQuery('#contactable-contactForm').animate({"marginLeft": "-=390px"}, "4000");
+						jQuery("#contactable-inner").animate({"marginLeft": "-=387px"}, "4000").animate({"marginLeft": "+=5px"}, "2000"); 
+						jQuery('#contactable-overlay').css({display: 'none'});
+						jQuery('#my-contact-div, header').removeClass('contact-open').addClass('contact-closed');
+					}
+				});
 
 			
 			// Submit the form
