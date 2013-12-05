@@ -10,6 +10,32 @@
 	background-size: cover;
 }
 
+/* widths on text sections on parallax pages */
+
+.page-body {
+	max-width: 100%;
+}
+
+.width-extra-small {
+	width: 600px;	
+}
+
+.width-small {
+	width: 780px;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.page-body,
+	.page-body.float-right,
+	.page-body.float-left {
+		margin-left: 0;
+		margin-right: 0;
+		left: 0;
+	}
+
+}
+
 
 /* fixed position nav bar on thoughts & destinations */
 

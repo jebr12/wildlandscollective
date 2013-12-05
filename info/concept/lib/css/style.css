@@ -359,7 +359,7 @@ fieldset[disabled] .btn-brand.active {
   margin-top: 50px;
 }
 .float-right{
-  margin-right: 35px !important;
+  margin-right: 35px;
   margin-left: none !important;
   float: right !important;
   text-align: right !important;
@@ -368,7 +368,7 @@ fieldset[disabled] .btn-brand.active {
   float: none !important;
   position: absolute;
   left: 50%;
-  margin-left: -375px !important;
+  margin-left: -375px;
   text-align: center !important; 
 }
 .page-body{
@@ -387,7 +387,7 @@ fieldset[disabled] .btn-brand.active {
   padding: 39px;
 }
 .width-small{
-    width: 780px !important;
+    /*width: 780px !important;*/
 }
 .color-white{
   color: #ccc !important;
