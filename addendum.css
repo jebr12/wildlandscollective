@@ -10,6 +10,32 @@
 	background-size: cover;
 }
 
+/* widths on text sections on parallax pages */
+
+.page-body {
+	max-width: 100%;
+}
+
+.width-extra-small {
+	width: 600px;	
+}
+
+.width-small {
+	width: 780px;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.page-body,
+	.page-body.float-right,
+	.page-body.float-left {
+		margin-left: 0;
+		margin-right: 0;
+		left: 0;
+	}
+
+}
+
 
 /* fixed position nav bar on thoughts & destinations */
 
@@ -44,12 +70,98 @@
 }
 
 @media only screen and (max-width: 767px) {
+
 	.row .cpt-item-blog.columns,
 	.row .cpt-item.columns {
-		margin: 0 auto;
+		display: block;
+		float: none;
+		margin: 0 auto 10px auto;
 		max-width: 336px;
 	}
+
+	.main-wrapper .page-title-wrapper {
+		height: 60px;
+		margin-top: -34px;
+	}
+
+	.builder-title-wrapper.has_filter .cpt-filters {
+		right: 0px;
+		top: -94px;
+	}
+
 }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	.header-right #primary-nav-id,
+	#primary-nav-id ul {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+
+	#primary-nav-id ul li {
+		display: inline-block;
+		float: none;
+		width: auto;
+		clear: none;
+	}
+
+	.titlebar-title.top-titlebar {
+		margin-top: 147px;
+	}
+
+}
+
+.row .cpt-item-blog.columns,
+.row .cpt-item.columns {
+	padding: 0 5px;
+	height: auto !important;
+	margin-bottom: 10px;
+}
+
+.cpt-detail,
+.cpt-detail-thoughts {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: transparent;
+	left: 0;
+	width: 100%;
+}
+
+.container {
+	padding: 0;
+}
+
+.row .row {
+	margin: 0 -5px;
+}
+
+.column, 
+.columns,
+.cpt-detail,
+.cpt-detail-thoughts {
+	padding: 0 5px;	
+}
+
+.cpt-desc-wrapper {
+	background: rgba(0,0,0,0.75);
+}
+
+.cpt-desc-wrapper:before, 
+.cpt-desc-wrapper:after { 
+	content: ""; 
+	display: table; 
+}
+
+.cpt-desc {
+	position: relative;
+	left: 0px;
+	width: 100% !important;
+	text-transform: none;
+}
+
 
 /* centering filters on destinations */
 
@@ -62,6 +174,83 @@
 	float: none;
 }
 
+/* lining up edges of blog post and blog title bar */
+
+.main-outer-wrapper {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-left: 5px solid #eee;
+	border-right: 5px solid #eee;
+}
+
+/* relocating trouble css from markup */
+
+.list-grid .main-outer-wrapper {
+	background: none !important;
+	border: 0;
+}
+
+.list-grid .main-outer-wrapper.has-titlebar {
+	margin-top:-68px !important;
+}
+
+.list-grid .thumb-control-wrapper {
+	height: 245px !important;
+}
+
+#thoughts .page-title-wrapper {
+	background: none !important;
+}
+
+.book-now #contactable-inner {
+    background-image:url(./assets/contactable/images/book.png) !important;
+}
+
+/* index bottom nav tweak */
+.header .nav.nav--primary li:last-child a {
+ 	padding-right: 15px; 
+}
+
+
+/* fixing discrepancy between parallax and non-parallax nav */
+
+.fixedheadertop nav img {
+	left: -9px;
+	top: 4px;
+}
+
+.nav--primary {
+	line-height: 22px;
+	top: 0;
+}
+
+.fixedheadertop{
+	width: 982px !important;
+	padding-top: 0;
+}
+
+.black .nav--primary > li.selected > a {
+	font-weight: bold !important;
+}
+
+.nav li {
+	display: block;
+	float: left;
+}
+
+.nav li a {
+	display: block;
+	padding: 14px 15px;
+}
+
+.nav--primary > li > a:after  {
+	margin: 0;
+}
+
+.nav li:last-child a {
+	padding-right: 0px;
+}
 
 /* header images */
 
@@ -69,16 +258,36 @@
 	/* original: 
 	background:#000 url('thoughts/images/banner.jpg') no-repeat center -145px fixed;
 	background-size: 100% 100%; */
-	background:#000 url('thoughts/images/banner.jpg') no-repeat center -145px fixed;
-	background-size: cover;
+	background: #000 url('thoughts/images/banner.jpg') no-repeat fixed center bottom;
+	background-size: 100% auto;
 }
 
 #destinations-header-image {
 	/* original: 
 	background:#000 url('destinations/images/banner.jpg') no-repeat center -70px fixed;
 	background-size: 100% 100%; */
-	background:#000 url('destinations/images/banner.jpg') no-repeat center -70px fixed;
-	background-size: cover;
+	background: #000 url('destinations/images/banner.jpg') no-repeat fixed center bottom;
+	background-size: 100% auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	#thoughts-header-image,
+	#destinations-header-image {
+		background-position: center -147px;
+		background-size: cover;
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+
+	#thoughts-header-image,
+	#destinations-header-image {
+		background-position: center -147px;
+		background-size: auto;
+	}
+
+
 }
 
 

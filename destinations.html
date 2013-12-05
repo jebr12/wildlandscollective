@@ -44,16 +44,12 @@
     <script src="assets/js/jquery.modernizr.js"></script>
 
 </head>
-<body>
+<body id="destinations" class="list-grid">
 
-    <style>
-    .main-outer-wrapper{background:none !important;}
-    .main-outer-wrapper.has-titlebar{margin-top:-68px !important;}
-    .thumb-control-wrapper{height: 245px !important;}
-    </style>
+
 
     <!--start contactable -->
-<div id="my-contact-div"><!-- contactable html placeholder --></div>
+<div id="my-contact-div" class="contact-closed"><!-- contactable html placeholder --></div>
 
 <link rel="stylesheet" href="assets/contactable/contactable.css" type="text/css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -83,7 +79,7 @@
 <div class="body-outer-wrapper">
     <div id="body-wrapper" class="body-wrapper full-width-mode">
         
-        <header id="header" class="header-container-wrapper">
+        <header id="header" class="header-container-wrapper contact-closed">
 
             <div class="top-bar-outer-wrapper">
                 <div class="top-bar-wrapper container"></div>
@@ -129,7 +125,7 @@
             <div class="container">
                 <div class="row">
                     <div class="twelve columns b0">
-                        <div class="titlebar-title">
+                        <div class="titlebar-title top-titlebar">
                             <h1>Destinations</h1>
                             <div class="titlebar-decs">A world-class portfolio of remote lodges</div>
                         </div>
@@ -186,9 +182,13 @@
                                                             <img src="assets/placeholders/destinations/01.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail">
-                                                            <h2 class="cpt-title"><a href="single-portfolio.html">Iceland</a></h2>
-                                                            <div class="cpt-desc">Backcountry Sailing and Skiing in the Pristine Horstrandir Reserve </div>
-                                                            <a href="destinations/estancia-cristina.html"><button class="button readmore">Explore</button></a>
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="single-portfolio.html">Iceland</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>Backcountry Sailing and Skiing in the Pristine Horstrandir Reserve</p>
+                                                                    <a href="destinations/estancia-cristina.html"><button class="button readmore">Explore</button></a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
 
@@ -197,9 +197,13 @@
                                                             <img src="assets/placeholders/destinations/02.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail">
-                                                            <h2 class="cpt-title"><a href="single-portfolio.html">Argentine Patagonia</a></h2>
-                                                            <div class="cpt-desc">The Rugged Beauty of Estancia Menelik</div>
-                                                            <a href="destinations/estancia-cristina.html"><button class="button readmore">Explore</button></a>
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="single-portfolio.html">Argentine Patagonia</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>The Rugged Beauty of Estancia Menelik</p>
+                                                                    <a href="destinations/estancia-cristina.html"><button class="button readmore">Explore</button></a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
 
@@ -208,9 +212,13 @@
                                                             <img src="assets/placeholders/destinations/03.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail">
-                                                            <h2 class="cpt-title"><a href="single-portfolio.html">Chilean Patagonia</a></h2>
-                                                            <div class="cpt-desc">Elegance in the Heart of the Future Patagonia National Park</div>
-                                                            <a href="destinations/estancia-cristina.html"><button class="button readmore">Explore</button></a>
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="single-portfolio.html">Chilean Patagonia</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>Elegance in the Heart of the Future Patagonia National Park</p>
+                                                                    <a href="destinations/estancia-cristina.html"><button class="button readmore">Explore</button></a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
 
@@ -219,9 +227,19 @@
                                                             <img src="assets/placeholders/destinations/04.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail">
+<<<<<<< HEAD
                                                             <h2 class="cpt-title"><a href="single-portfolio.html">Alaska</a></h2>
                                                             <div class="cpt-desc">As Wild as it Gets at the Ultima Thule Lodge — Gateway to the Wrangells </div>
                                                             <a href="destinations/estancia-cristina.html"><button class="button readmore">Explore</button></a>
+=======
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="single-portfolio.html">Vietnam</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>Wilderness backpacking</p>
+                                                                    <a href="destinations/estancia-cristina.html"><button class="button readmore">Explore</button></a>
+                                                                </div>
+                                                            </div>
+>>>>>>> 017b431b770b7f0a0a6ad9ae802b2748ff6d19af
                                                         </div>
                                                     </div>
 
@@ -230,9 +248,19 @@
                                                             <img src="assets/placeholders/destinations/05.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail">
+<<<<<<< HEAD
                                                             <h2 class="cpt-title"><a href="single-portfolio.html">East Greenland</a></h2>
                                                             <div class="cpt-desc">A Legendary Adventure Along Greenland's Forbidden Coast </div>
                                                             <a href="destinations/estancia-cristina.html"><button class="button readmore">Explore</button></a>
+=======
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="single-portfolio.html">Peru</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>The classic haute route</p>
+                                                                    <a href="destinations/estancia-cristina.html"><button class="button readmore">Explore</button></a>
+                                                                </div>
+                                                            </div>
+>>>>>>> 017b431b770b7f0a0a6ad9ae802b2748ff6d19af
                                                         </div>
                                                     </div>
 
@@ -241,9 +269,19 @@
                                                             <img src="assets/placeholders/destinations/06.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail">
+<<<<<<< HEAD
                                                             <h2 class="cpt-title"><a href="single-portfolio.html">Northern Kenya</a></h2>
                                                             <div class="cpt-desc">Experience the mystique of Africa in the fabled Matthews Mountains</div>
                                                             <a href="destinations/estancia-cristina.html"><button class="button readmore">Explore</button></a>
+=======
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="single-portfolio.html">Croatia</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>Bare on night mountain</p>
+                                                                    <a href="destinations/estancia-cristina.html"><button class="button readmore">Explore</button></a>
+                                                                </div>
+                                                            </div>
+>>>>>>> 017b431b770b7f0a0a6ad9ae802b2748ff6d19af
                                                         </div>
                                                     </div>
 

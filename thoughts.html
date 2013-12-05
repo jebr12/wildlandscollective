@@ -44,18 +44,10 @@
     <script src="assets/js/jquery.modernizr.js"></script>
 
 </head>
-<body>
-    <style>
-    .main-outer-wrapper{background:none !important;}
-    .main-outer-wrapper.has-titlebar{margin-top:-68px !important;}
-    .thumb-control-wrapper{height: 245px !important;}
-    .page-title-wrapper{background: none !important}
-    </style>
-
-
+<body id="thoughts" class="list-grid">
 
 <!--start contactable -->
-<div id="my-contact-div"><!-- contactable html placeholder --></div>
+<div id="my-contact-div" class="contact-closed"><!-- contactable html placeholder --></div>
 
 <link rel="stylesheet" href="assets/contactable/contactable.css" type="text/css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -86,7 +78,7 @@
 <div class="body-outer-wrapper">
     <div id="body-wrapper" class="body-wrapper full-width-mode">
         
-        <header id="header" class="header-container-wrapper">
+        <header id="header" class="header-container-wrapper contact-closed">
 
             <div class="top-bar-outer-wrapper">
                 <div class="top-bar-wrapper container"></div>
@@ -132,7 +124,7 @@
             <div class="container">
                 <div class="row">
                     <div class="twelve columns b0">
-                        <div class="titlebar-title">
+                        <div class="titlebar-title top-titlebar">
                             <h1>Thoughts</h1>
                             <div class="titlebar-decs">Stories of exploration in the wild</div>
                         </div>
@@ -194,8 +186,13 @@
                                                             <img src="assets/placeholders/thoughts/01.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail-thoughts">
-                                                            <h2 class="cpt-title"><a href="single-portfolio.html">John Muir Trail<br><br></a></h2>
-                                                            <div class="cpt-desc">A thought-provoking 223 mile run. <br/><a href="thoughts/example-blog.html"><button class="button readmore">Read More</button></a></div>
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="single-portfolio.html">John Muir Trail</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>A thought-provoking 223 mile run.</p>
+                                                                    <a href="thoughts/example-blog.html"><button class="button readmore">Read More</button></a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- New page ends here -->
@@ -211,8 +208,13 @@
                                                             <img src="assets/placeholders/thoughts/02.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail-thoughts">
-                                                            <h2 class="cpt-title"><a href="single-portfolio.html">Post #2</a></h2>
-                                                            <div class="cpt-desc">Rovaniemi, Finland. <br><br><br/><a href="thoughts/example-blog.html"><button class="button readmore">Read More</button></a></div>
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="single-portfolio.html">Post #2</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>Rovaniemi, Finland.</p>
+                                                                    <a href="thoughts/example-blog.html"><button class="button readmore">Read More</button></a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
 
@@ -225,8 +227,13 @@
                                                             <img src="assets/placeholders/thoughts/03.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail-thoughts">
-                                                            <h2 class="cpt-title"><a href="single-portfolio.html">Road Warrior</a></h2>
-                                                            <div class="cpt-desc">Spend a month cycling in New Zealand.<br><br><br/><a href="thoughts/example-blog.html"><button class="button readmore">Read More</button></a></div>
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="single-portfolio.html">Road Warrior</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>Spend a month cycling in New Zealand.</p>
+                                                                    <a href="thoughts/example-blog.html"><button class="button readmore">Read More</button></a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
 
@@ -239,8 +246,13 @@
                                                             <img src="assets/placeholders/thoughts/04.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail-thoughts">
-                                                            <h2 class="cpt-title"><a href="single-portfolio.html">Canvas Hotel</a></h2>
-                                                            <div class="cpt-desc">Telemark, Norway.<br><br><br/><a href="thoughts/example-blog.html"><button class="button readmore">Read More</button></a></div>
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="single-portfolio.html">Canvas Hotel</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>Telemark, Norway.</p>
+                                                                    <a href="thoughts/example-blog.html"><button class="button readmore">Read More</button></a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
 
@@ -253,8 +265,13 @@
                                                             <img src="assets/placeholders/thoughts/05.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail-thoughts">
-                                                            <h2 class="cpt-title"><a href="single-portfolio.html">Featured Property</a></h2>
-                                                            <div class="cpt-desc">Relax and get to know your inner mountain lion.<br><br><br/><a href="thoughts/example-blog.html"><button class="button readmore">Read More</button></a></div>
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="single-portfolio.html">Featured Property</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>Relax and get to know your inner mountain lion.</p>
+                                                                    <a href="thoughts/example-blog.html"><button class="button readmore">Read More</button></a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 <!--Wild Furnishings -->
@@ -267,8 +284,13 @@
                                                             <img src="assets/placeholders/thoughts/06.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail-thoughts">
-                                                            <h2 class="cpt-title"><a href="single-portfolio.html">Wild furnishings</a></h2>
-                                                            <div class="cpt-desc">The affordable, portable house<br><br><br/><a href="thoughts/wild-furnishings.html"><button class="button readmore">Read More</button></a></div>
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="single-portfolio.html">Wild furnishings</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>The affordable, portable house.</p>
+                                                                    <a href="thoughts/wild-furnishings.html"><button class="button readmore">Read More</button></a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <!-- end of wild furnishing -->
@@ -284,8 +306,13 @@
                                                             <img src="assets/placeholders/thoughts/01.jpg" alt="">
                                                         </div>
                                                         <div class="cpt-detail-thoughts">
-                                                            <h2 class="cpt-title"><a href="thoughts/post-07.html">Post #7<br><br></a></h2>
-                                                            <div class="cpt-desc">A Test of How to Post to Thoughts. <br/><a href="thoughts/post-07.html"><button class="button readmore">Read More</button></a></div>
+                                                            <div class="cpt-desc-wrapper">
+                                                                <h2 class="cpt-title"><a href="thoughts/post-07.html">Post #7</a></h2>
+                                                                <div class="cpt-desc">
+                                                                    <p>A Test of How to Post to Thoughts.</p>
+                                                                    <a href="thoughts/post-07.html"><button class="button readmore">Read More</button></a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div> 
 
@@ -320,6 +347,8 @@
     <script src="assets/js/jquery.prettyPhoto.js"></script>
     <script src="assets/js/jquery.fitvids.js"></script>
     <script src="assets/js/jquery.imagesloaded.min.js"></script>
+    <script>
+    </script>
     <script src="assets/js/jquery.isotope.min.js"></script>
 
     <!-- Included LayerSlider -->
