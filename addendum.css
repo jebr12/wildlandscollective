@@ -43,12 +43,16 @@
 	position: fixed;
 }
 
-.titlebar-title {
+.titlebar-title.top-titlebar {
 	margin-top: 50px;
 }
 
 
 /* thumbnail grids on thoughts & destinations */
+/* adding responsivity */
+/* fixing 1 pixel gap on the right edge of thumbnail grids on thoughts & destinations */
+/* fixing responsive width on thumbnail list on thoughts & destinations */
+
 
 .cpt-detail-thoughts {
 	bottom: -38px;
@@ -58,10 +62,6 @@
 .cpt-item:hover .cpt-detail {
 	bottom: 0px !important;
 }
-
-
-/* 1 pixel gap on the right edge of thumbnail grids on thoughts & destinations */
-/* fixing responsive width on thumbnail list on thoughts & destinations */
 
 .cpt-detail-thoughts,
 .cpt-detail {
@@ -203,11 +203,139 @@
 	background: none !important;
 }
 
-.book-now #contactable-inner {
-    background-image:url(./assets/contactable/images/book.png) !important;
+/* relocating concept css from markup */
+
+#concept h1{font-weight: bold !important;
+	font-size: 26px !important;
+	color: #333 !important;
+	padding: none !important;
+	font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif;
 }
 
+#concept .light{
+	color:#FFF !important;
+}
+
+#headerwrap{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 999999 !important;
+	background: rgba(0,0,0,.85) !important;
+}
+
+.fixedheadertop{position: fixed;left: 50%;margin-left: -490px;z-index: 9999 !important;}
+.fixedheadertop nav img{
+	float: left;
+	position: relative;
+}
+
+.fixedheadertop nav ul{
+	float: right;
+}
+
+.nav--primary{
+	position: relative;
+	right: -7px !important;
+}
+
+#contactable-inner {
+	*margin-right:-5px; 
+	top:50%;
+	margin-top:-51px;
+	*margin-top:-51px;
+	cursor: pointer;
+}
+
+#contactable-contactForm {
+	margin-top:-245px;
+}
+
+
+/* making contactable forms the same on both parallax and non-parallax pages */
+
+#my-contact-div,
+#my-contact-div form,
+#my-contact-div div,
+#my-contact-div label,
+#my-contact-div input,
+#my-contact-div textarea {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+#my-contact-div label,
+#my-contact-div input,
+#my-contact-div textarea {
+	display: block;
+	font-family: 'Roboto',Arial,sans-serif;
+	font-weight: 400;
+}
+
+#my-contact-div form input {
+	height: 14px;
+}
+
+#my-contact-div form p {
+	margin-bottom: 18px;
+}
+
+#my-contact-div form label {
+	padding-left: 0;
+	height: 18px;
+	line-height: 18px;
+	margin-bottom: 6px;
+}
+
+#my-contact-div form select {
+	vertical-align: baseline;
+	margin-top: 2px;
+}
+
+#my-contact-div .contactable-submit {
+	vertical-align: baseline;
+}
+
+#my-contact-div form textarea {
+	overflow: auto;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	color: #a9a9a9;
+	margin-top: 3px;
+	line-height: 24px;
+	min-height: 100px;
+}
+
+
+/* switch contactable form to right side */
+
+.book-now #contactable-inner {
+    background-image: url(./assets/contactable/images/book-now-right.png);
+}
+
+#my-contact-div #contactable-inner {
+	background-image: url(./assets/contactable/images/contact-right.png);
+	right: 0;
+	left: auto;
+	margin-right: -5px;
+	margin-left: 0;
+}
+
+#my-contact-div #contactable-contactForm {
+	margin-left: auto;
+	margin-right: -400px;
+	left: auto;
+	right: 0;
+}
+
+
+
 /* index bottom nav tweak */
+
 .header .nav.nav--primary li:last-child a {
  	padding-right: 15px; 
 }
@@ -252,6 +380,7 @@
 	padding-right: 0px;
 }
 
+
 /* header images */
 
 #thoughts-header-image {
@@ -290,4 +419,9 @@
 
 }
 
+/* changing background color on book now sidebars */
+
+.right-sidebar-wrapper .widget-container {
+	background: #444;
+}
 

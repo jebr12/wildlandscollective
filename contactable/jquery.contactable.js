@@ -49,60 +49,34 @@
 				
 				dropdown += '</select></p>';
 			}
-			// Form layout
-			/*	
-			*	<div id="contactable-inner"></div>
-			*	<form id="contactable-contactForm" method="" action="">
-			*  		<div id="contactable-loading"></div>
-			*		<div id="contactable-callback"></div>
-			* 		<div class="contactable-holder">
-							
-			* 			<p>
-			*				<label for="contactable-name">Name<span class="contactable-green"> * </span></label><br />
-			*				<input id="contactable-name" class="contactable-contact contactable-validate" name="name" />
-			*			</p>
-			*			<p>
-			*				<label for="contactable-email"> Email address <span class="contactable-green"> * </span></label><br />
-			* 				<input id="contactable-email" class="contactable-contact contactable-validate" name="email" />
-			*			</p>
-			* 			<p>
-			*				<label for="contactable-message"> Message <span class="contactable-green"> * </span></label><br />
-			* 				<textarea id="contactable-message" name="message" class="contactable-message contactable-validate" rows="4" cols="30" ></textarea>
-			*			</p>
-			*			<p>
-			*				<input class="contactable-submit" type="submit" value="Submit"/>
-			*			</p>
-			*			<p class="contactable-disclaimer">Disclaimer</p>
-			*		</div>
-			*	</form>
-			*/
+
 
 			jQuery(this).html('<div id="contactable-inner"></div><form id="contactable-contactForm" method="" action=""><div id="contactable-loading"></div><div id="contactable-callback"></div><div class="contactable-holder"><p><label for="contactable-name">'+options.name+'<span class="contactable-green"> * </span></label><br /><input id="contactable-name" class="contactable-contact contactable-validate" name="name" /></p><p><label for="contactable-email">'+options.email+' <span class="contactable-green"> * </span></label><br /><input id="contactable-email" class="contactable-contact contactable-validate" name="email" /></p>'+dropdown+'<p><label for="contactable-message">'+options.message+' <span class="contactable-green"> * </span></label><br /><textarea id="contactable-message" name="message" class="contactable-message contactable-validate" rows="4" cols="30" ></textarea></p><p><input class="contactable-submit" type="submit" value="'+options.submit+'"/></p><p class="contactable-disclaimer">'+options.disclaimer+'</p></div></form>');
 			
 			// Toggle the form visibility
 			jQuery('#contactable-inner').toggle(function() {
 				jQuery('#contactable-overlay').css({display: 'block'});
-				jQuery(this).animate({"marginLeft": "-=5px"}, "2000"); 
-				jQuery('#contactable-contactForm').animate({"marginLeft": "-=0px"}, "2000");
-				jQuery(this).animate({"marginLeft": "+=387px"}, "4000"); 
-				jQuery('#contactable-contactForm').animate({"marginLeft": "+=390px"}, "4000"); 
+				jQuery(this).animate({"marginRight": "-=5px"}, "2000"); 
+				jQuery('#contactable-contactForm').animate({"marginRight": "-=0px"}, "2000");
+				jQuery(this).animate({"marginRight": "+=387px"}, "4000"); 
+				jQuery('#contactable-contactForm').animate({"marginRight": "+=390px"}, "4000"); 
 			}, 
 			function() {
-				jQuery('#contactable-contactForm').animate({"marginLeft": "-=390px"}, "4000");
-				jQuery(this).animate({"marginLeft": "-=387px"}, "4000").animate({"marginLeft": "+=5px"}, "2000"); 
+				jQuery('#contactable-contactForm').animate({"marginRight": "-=390px"}, "4000");
+				jQuery(this).animate({"marginRight": "-=387px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
 				jQuery('#contactable-overlay').css({display: 'none'});
 			});
 
 			jQuery('#contact-top').toggle(function() {
 				jQuery('#contactable-overlay').css({display: 'block'});
-				jQuery('#contactable-inner').animate({"marginLeft": "-=5px"}, "2000"); 
-				jQuery('#contactable-contactForm').animate({"marginLeft": "-=0px"}, "2000");
-				jQuery('#contactable-inner').animate({"marginLeft": "+=387px"}, "4000"); 
-				jQuery('#contactable-contactForm').animate({"marginLeft": "+=390px"}, "4000"); 
+				jQuery('#contactable-inner').animate({"marginRight": "-=5px"}, "2000"); 
+				jQuery('#contactable-contactForm').animate({"marginRight": "-=0px"}, "2000");
+				jQuery('#contactable-inner').animate({"marginRight": "+=387px"}, "4000"); 
+				jQuery('#contactable-contactForm').animate({"marginRight": "+=390px"}, "4000"); 
 			}, 
 			function() {
-				jQuery('#contactable-contactForm').animate({"marginLeft": "-=390px"}, "4000");
-				jQuery('#contactable-inner').animate({"marginLeft": "-=387px"}, "4000").animate({"marginLeft": "+=5px"}, "2000"); 
+				jQuery('#contactable-contactForm').animate({"marginRight": "-=390px"}, "4000");
+				jQuery('#contactable-inner').animate({"marginRight": "-=387px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
 				jQuery('#contactable-overlay').css({display: 'none'});
 			});
 
@@ -166,8 +140,8 @@
 							jQuery('#contactable-callback').show().append(options.recievedMsg);
 							if(options.hideOnSubmit === true) {
 								//hide the tab after successful submition if requested
-								jQuery('#contactable-contactForm').animate({dummy:1}, 2000).animate({"marginLeft": "-=450px"}, "slow");
-								jQuery('#contactable-inner').animate({dummy:1}, 2000).animate({"marginLeft": "-=447px"}, "slow").animate({"marginLeft": "+=5px"}, "fast"); 
+								jQuery('#contactable-contactForm').animate({dummy:1}, 2000).animate({"marginRight": "-=450px"}, "slow");
+								jQuery('#contactable-inner').animate({dummy:1}, 2000).animate({"marginRight": "-=447px"}, "slow").animate({"marginRight": "+=5px"}, "fast"); 
 								jQuery('#contactable-overlay').css({display: 'none'});	
 							}
 						} else {

@@ -11,7 +11,9 @@ a,.primary-nav ul li.current-menu-item a,.top-bar-right a:hover,.primary-nav ul 
 		-webkit-transition:.5s;
 	}
 
-input[type="reset"], input[type="submit"], input[type="button"], button,.footer-social li a:hover,.btn_default,.acc-title-active,.toggle_current,
+/*input[type="reset"], input[type="submit"], */
+
+input[type="button"], button,.footer-social li a:hover,.btn_default,.acc-title-active,.toggle_current,
 .st-pagination li a:hover,.ui-datepicker-calendar .ui-state-hover,.ui-datepicker-calendar .ui-state-active,.go-detail,.go-gallery,
 .color,.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button
 	{
