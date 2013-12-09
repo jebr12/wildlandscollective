@@ -281,6 +281,11 @@ fieldset[disabled] .btn-brand.active {
   background: url('../../images/big-intro.jpg')center center;
   background-size:  100% auto;
 }
+#page3 {
+  background-color: #111;
+  background: url('../../images/big-page3.jpg')center center;
+  background-size:  100% auto;
+}
 .outro-section {
   background-color: #111;
   background: url('../../images/big-outro.jpg')center center;

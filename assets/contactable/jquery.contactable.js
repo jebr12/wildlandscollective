@@ -95,7 +95,7 @@
 				jQuery('#contactable-overlay').css({display: 'none'});
 			});
 
-			$('.global-section, .parallax-section, .cover-screen")').click(function() {
+			$('.global-section, .parallax-section, .cover-screen').click(function() {
 				if ($('#my-contact-div').hasClass("contact-open")) {
 					jQuery('#my-contact-div, header, .widget-container').removeClass('contact-open').addClass('contact-closed');
 					jQuery('#contactable-contactForm').animate({"marginRight": "-=390px"}, "4000");
