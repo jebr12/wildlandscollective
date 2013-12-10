@@ -1,32 +1,320 @@
+/* relocated parallax page CSS */
+
+/** 
+-------------------------
+* Grid system
+------------------------- */
+.container-section {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-section:before,
+.container-section:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.container-section:after {
+  clear: both;
+}
+
+/** 
+-------------------------
+* Skeleton
+------------------------- */
+/** Global Section
+------------------------- */
+.global-section {
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  min-height: 705px;
+}
+.global-section .section-header {
+  margin-bottom: 50px;
+}
+.global-section .section-header .section-header-title,
+.global-section .section-header-text .section-header-title {
+  margin-bottom: 15px;
+}
+.global-section .section-header .section-header-body-lead,
+.global-section .section-header-text .section-header-body-lead {
+  font-size: 16.099999999999998px;
+  line-height: 1.6428571433499999;
+  padding: 55px;
+  font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif !important;
+  letter-spacing: 0;
+}
+.global-section .section-header .nav-pills-centered,
+.global-section .section-header-text .nav-pills-centered {
+  margin-top: 30px;
+}
+@media screen and (max-width: 480px) {
+  .global-section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+#intro {
+  padding-top: 140px;
+}
+
+#concept #intro {
+  background: #111 url('./info/concept/images/big-intro.jpg')center center;
+}
+
+#concept #page1 {
+  background: #111 url('./info/concept/images/big-page1.jpg')center center;
+}
+
+#concept #page2 {
+  background: #111 url('./info/concept/images/big-page2.jpg')center center;
+}
+
+#concept #page3 {
+  background: #111 url('./info/concept/images/big-page3.jpg')center center;
+}
+
+#concept #page4 {
+  background: #111 url('./info/concept/images/big-outro.jpg')center center;
+}
+
+#philosophy #intro {
+  background: #111 url('./info/philosophy/images/big-intro.jpg')center center;
+}
+
+#philosophy #page1 {
+  background: #111 url('./info/philosophy/images/big-page1.jpg')center center;t
+}
+
+#philosophy #page2 {
+  background: #111 url('./info/philosophy/images/big-page2.jpg')center center;t
+}
+
+#philosophy #page3 {
+  background: #111 url('./info/philosophy/images/big-page3.jpg')center center;t
+}
+
+#philosophy #page4 {
+  background: #111 url('./info/philosophy/images/big-outro.jpg')center center;
+}
+
+#concept .global-section,
+#philosophy .global-section {
+  background-size:  100% auto;	
+}
+
+/** Parallax Section
+------------------------- */
+
+
+.parallax-section .parallax-title {
+	color: #fff !important;
+	font-size: 25px;
+	font-weight: 100;
+	line-height: 38px;
+	margin-bottom: 0px;
+	font-style: italic;
+	text-transform: uppercase;
+	font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif !important;
+  letter-spacing: 0;
+}
+.parallax-section .parallax-body {
+	color: #ffd500;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+#concept .parallax-section-1 {
+  background: #111 url("./info/concept/images/parallax1.jpg")  center center;
+}
+#concept .parallax-section-2 {
+  background: #111 url("./info/concept/images/parallax2.jpg") center center;
+
+}
+#concept .parallax-section-3 {
+  background: #111 url("./info/concept/images/parallax3.jpg") center center;
+}
+#concept .parallax-section-4 {
+  background: #111 url("./info/concept/images/parallax4.jpg") center center;
+}
+
+#philosophy .parallax-section-1 {
+  background: #111 url("./info/philosophy/images/parallax1.jpg")  center center;
+}
+#philosophy .parallax-section-2 {
+  background: #111 url("./info/philosophy/images/parallax2.jpg") center center;
+}
+#philosophy .parallax-section-3 {
+  background: #111 url("./info/philosophy/images/parallax3.jpg") center center;
+}
+#philosophy .parallax-section-4 {
+  background: #111 url("./info/philosophy/images/parallax4.jpg") center center;
+}
+
+#philosophy .parallax-section,
+#concept .parallax-section {
+	padding: 90px 130px;
+	text-align: center;
+	box-shadow:0 -10px 10px -10px #000000;
+	background-attachment: fixed;
+	background-size:  cover;
+}
+
+
+.intro-title{
+  display: block;
+  float: left;
+  width: 693px;
+  height: 489px;
+  margin-left: 35px;
+  text-align: left;
+  position: absolute;
+  left: 50%;
+  margin-left: -346px;
+  margin-top: 50px;
+}
+.page-body.float-right,
+.float-right{
+  margin-right: 35px;
+  margin-left: none;
+  float: right;
+}
+.page-body.centered,
+.centered{
+  float: none;
+  left: 50%;
+  margin-left: -375px;
+}
+.page-body{
+  display: block;
+  float: left;
+  width: 780px;
+  height: auto;
+  background: rgba(0,0,0,0);
+  color:#111 !important;
+  margin-left: 35px;
+  position: relative;
+  top:-20px;
+  text-align: left;
+  font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif;
+  font-size: 16px;
+  padding: 39px;
+}
+.width-small{
+    /*width: 780px !important;*/
+}
+.color-white{
+  color: #ccc !important;
+}
+.background-black{
+  background: rgba(0,0,0,.85);
+}
+.background-white{
+  background: rgba(255,255,255,.90);
+}
+
+/* widths on text sections on parallax pages */
+
+.global-section,
+.parallax-section,
+.about-section,
+.outro-section,
+.intro-section,
+.portfolio-section,
+.services-section,
+.page-body {
+	max-width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.page-body.width-extra-small {
+	width: 600px;	
+}
+
+.page-body.width-small {
+	width: 780px;
+}
+
 
 /* background images on concept & philosophy */
 
-.intro-section,
-.portfolio-section,
-.services-section {
+#concept #intro,
+#concept #page1,
+#concept #page2,
+#concept #page3,
+#concept #page4,
+#concept #outro,
+#philosophy #intro,
+#philosophy #page1,
+#philosophy #page2,
+#philosophy #page3,
+#philosophy #page4 {
 	-o-background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;	
 	background-size: cover;
 }
 
-/* widths on text sections on parallax pages */
 
-.page-body {
-	max-width: 100%;
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.outro-section,
+	#page3,
+	.intro-section,
+	.portfolio-section,
+	.services-section,
+	.about-section {
+		min-height: 1024px;
+	}
+	.intro-section {
+		padding-top: 240px;
+	}
+	.page-body,
+	.page-body.float-right,
+	.page-body.centered,
+	.page-body.width-small,
+	.page-body.width-extra-small {
+		width: 500px;
+		float: none;
+		margin: 0 auto;
+		left: auto;
+		right: auto;
+	}
 }
 
-.width-extra-small {
-	width: 600px;	
-}
+@media screen and (max-width: 767px) {
+	.parallax-section {
+		padding: 45px 65px;
+	}
 
-.width-small {
-	width: 780px;
-}
+	.intro-section {
+		padding-top: 120px;
+	}
 
-@media only screen and (max-width: 767px) {
+	#concept #intro,
+	#concept #page1,
+	#concept #page2,
+	#concept #page3,
+	#concept #page4,
+	#concept #outro,
+	#philosophy #intro,
+	#philosophy #page1,
+	#philosophy #page2,
+	#philosophy #page3,
+	#philosophy #page4,
+	#philosophy #outro {
+		background: #fff;
+	}
 
 	.page-body,
+	.page-body.centered,
 	.page-body.float-right,
 	.page-body.float-left {
 		margin-left: 0;
@@ -36,6 +324,9 @@
 
 }
 
+.page-body h1 {
+	text-align: center;
+}
 
 /* fixed position nav bar on thoughts & destinations */
 
@@ -204,17 +495,6 @@
 }
 
 /* relocating concept css from markup */
-
-#concept h1{font-weight: bold !important;
-	font-size: 26px !important;
-	color: #333 !important;
-	padding: none !important;
-	font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif;
-}
-
-#concept .light{
-	color:#FFF !important;
-}
 
 #headerwrap{
 	width: 100%;
@@ -424,4 +704,6 @@
 .right-sidebar-wrapper .widget-container {
 	background: #444;
 }
+
+
 
