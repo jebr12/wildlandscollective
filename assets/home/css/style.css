@@ -1088,7 +1088,7 @@ html .button {
    ========================================================================== */
 
 
-.header {
+/*.header {
   position: fixed;
   bottom: 0px;
   left: 0px;
@@ -1145,26 +1145,6 @@ html .button {
             .header nav li a:after {
               display: none; } 
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .headertop {
@@ -1235,7 +1215,7 @@ html .button {
 
 
 
-
+*/
 
 
 
@@ -1251,7 +1231,7 @@ html .button {
 
 
 /* Mobile navigation animation */
-@media screen and (max-width: 767px) {
+/*@media screen and (max-width: 767px) {
   .cssanimations .header nav.is-active {
     opacity: 0;
     -webkit-animation: mobile-nav 0.3s 0.1s forwards;
@@ -1543,6 +1523,7 @@ html .button {
   background-image: url(../img/arrow_down_black.png); }
 .white .mobile-nav a:hover, .white .mobile-nav a:hover:after {
   border-color: rgba(0, 0, 0, 0.2); }
+  */
 
 /* ==========================================================================
    Footer
