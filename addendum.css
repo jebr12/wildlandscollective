@@ -61,53 +61,10 @@
 }
 
 #intro {
-  padding-top: 140px;
+	padding-top: 140px;
 }
 
-#concept #intro {
-  background: #111 url('./info/concept/images/big-intro.jpg')center center;
-}
 
-#concept #page1 {
-  background: #111 url('./info/concept/images/big-page1.jpg')center center;
-}
-
-#concept #page2 {
-  background: #111 url('./info/concept/images/big-page2.jpg')center center;
-}
-
-#concept #page3 {
-  background: #111 url('./info/concept/images/big-page3.jpg')center center;
-}
-
-#concept #page4 {
-  background: #111 url('./info/concept/images/big-outro.jpg')center center;
-}
-
-#philosophy #intro {
-  background: #111 url('./info/philosophy/images/big-intro.jpg')center center;
-}
-
-#philosophy #page1 {
-  background: #111 url('./info/philosophy/images/big-page1.jpg')center center;t
-}
-
-#philosophy #page2 {
-  background: #111 url('./info/philosophy/images/big-page2.jpg')center center;t
-}
-
-#philosophy #page3 {
-  background: #111 url('./info/philosophy/images/big-page3.jpg')center center;t
-}
-
-#philosophy #page4 {
-  background: #111 url('./info/philosophy/images/big-outro.jpg')center center;
-}
-
-#concept .global-section,
-#philosophy .global-section {
-  background-size:  100% auto;	
-}
 
 /** Parallax Section
 ------------------------- */
@@ -124,37 +81,11 @@
 	font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif !important;
   letter-spacing: 0;
 }
+
 .parallax-section .parallax-body {
 	color: #ffd500;
 	font-size: 18px;
 	line-height: 18px;
-}
-
-#concept .parallax-section-1 {
-  background: #111 url("./info/concept/images/parallax1.jpg")  center center;
-}
-#concept .parallax-section-2 {
-  background: #111 url("./info/concept/images/parallax2.jpg") center center;
-
-}
-#concept .parallax-section-3 {
-  background: #111 url("./info/concept/images/parallax3.jpg") center center;
-}
-#concept .parallax-section-4 {
-  background: #111 url("./info/concept/images/parallax4.jpg") center center;
-}
-
-#philosophy .parallax-section-1 {
-  background: #111 url("./info/philosophy/images/parallax1.jpg")  center center;
-}
-#philosophy .parallax-section-2 {
-  background: #111 url("./info/philosophy/images/parallax2.jpg") center center;
-}
-#philosophy .parallax-section-3 {
-  background: #111 url("./info/philosophy/images/parallax3.jpg") center center;
-}
-#philosophy .parallax-section-4 {
-  background: #111 url("./info/philosophy/images/parallax4.jpg") center center;
 }
 
 #philosophy .parallax-section,
@@ -162,8 +93,6 @@
 	padding: 90px 130px;
 	text-align: center;
 	box-shadow:0 -10px 10px -10px #000000;
-	background-attachment: fixed;
-	background-size:  cover;
 }
 
 
@@ -246,23 +175,6 @@
 
 /* background images on concept & philosophy */
 
-#concept #intro,
-#concept #page1,
-#concept #page2,
-#concept #page3,
-#concept #page4,
-#concept #outro,
-#philosophy #intro,
-#philosophy #page1,
-#philosophy #page2,
-#philosophy #page3,
-#philosophy #page4 {
-	-o-background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;	
-	background-size: cover;
-}
-
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	.outro-section,
@@ -294,10 +206,6 @@
 		padding: 45px 65px;
 	}
 
-	.intro-section {
-		padding-top: 120px;
-	}
-
 	#concept #intro,
 	#concept #page1,
 	#concept #page2,
@@ -310,17 +218,33 @@
 	#philosophy #page3,
 	#philosophy #page4,
 	#philosophy #outro {
-		background: #fff;
+		padding: 0;
 	}
+
+	#concept #intro,
+	#philosophy #intro {
+		padding-top: 113px;
+	}
+
 
 	.page-body,
 	.page-body.centered,
 	.page-body.float-right,
 	.page-body.float-left {
-		margin-left: 0;
-		margin-right: 0;
+		margin: 225px 0 0 0;
 		left: 0;
+		background: #eee;
 	}
+
+	.global-section .section-header {
+		margin-bottom: 0;
+	}
+
+	#philosophy .parallax-section, 
+	#concept .parallax-section {
+		box-shadow: none;
+	}
+
 
 }
 
@@ -337,6 +261,45 @@
 .titlebar-title.top-titlebar {
 	margin-top: 50px;
 }
+
+/* destinations titlebar color */
+
+.page-title-wrapper .page-title {
+	color: #fff;
+}
+
+/* blog pages titlebar css from markup */
+
+.blog .titlebar-title {
+    float: none;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.75);
+    margin-top: 255px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgba(255,255,255,0.75);
+}
+
+.blog .titlebar-title h1 {
+	color: #ffd400;
+	font-size: 26px;
+	line-height: 30px;
+}
+
+.blog .titlebar-title .titlebar-desc {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: bold;
+}
+
+.blog .titlebar-title .titlebar-author {
+	font-size: 13px;
+	line-height: 15px;	
+}
+
+
 
 
 /* thumbnail grids on thoughts & destinations */
@@ -368,11 +331,6 @@
 		float: none;
 		margin: 0 auto 10px auto;
 		max-width: 336px;
-	}
-
-	.main-wrapper .page-title-wrapper {
-		height: 60px;
-		margin-top: -34px;
 	}
 
 	.builder-title-wrapper.has_filter .cpt-filters {
@@ -506,7 +464,12 @@
 	background: rgba(0,0,0,.85) !important;
 }
 
-.fixedheadertop{position: fixed;left: 50%;margin-left: -490px;z-index: 9999 !important;}
+.fixedheadertop{
+	position: fixed;
+	left: 50%;
+	margin-left: -490px;
+	z-index: 9999 !important;
+}
 .fixedheadertop nav img{
 	float: left;
 	position: relative;
@@ -591,6 +554,25 @@
 }
 
 
+/* narrowing contactable form to make it more mobile-friendly */
+
+#contactable-contactForm {
+	width: 260px !important;
+}
+
+
+form#contactable-contactForm input, 
+form#contactable-contactForm textarea, 
+form#contactable-contactForm select {
+	width: 225px !important;
+}
+
+form#contactable-contactForm .contactable-submit {
+	width: 238px;
+}
+
+
+
 /* switch contactable form to right side */
 
 .book-now #contactable-inner {
@@ -607,10 +589,12 @@
 
 #my-contact-div #contactable-contactForm {
 	margin-left: auto;
-	margin-right: -400px;
+	margin-right: -300px;
 	left: auto;
 	right: 0;
 }
+
+
 
 
 
@@ -621,88 +605,16 @@
 }
 
 
-/* fixing discrepancy between parallax and non-parallax nav */
-
-.fixedheadertop nav img {
-	left: -9px;
-	top: 4px;
-}
-
-.nav--primary {
-	line-height: 22px;
-	top: 0;
-}
-
-.fixedheadertop{
-	width: 982px !important;
-	padding-top: 0;
-}
-
-.black .nav--primary > li.selected > a {
-	font-weight: bold !important;
-}
-
-.nav li {
-	display: block;
-	float: left;
-}
-
-.nav li a {
-	display: block;
-	padding: 14px 15px;
-}
-
-.nav--primary > li > a:after  {
-	margin: 0;
-}
-
-.nav li:last-child a {
-	padding-right: 0px;
-}
-
-
-/* header images */
-
-#thoughts-header-image {
-	/* original: 
-	background:#000 url('thoughts/images/banner.jpg') no-repeat center -145px fixed;
-	background-size: 100% 100%; */
-	background: #000 url('thoughts/images/banner.jpg') no-repeat fixed center bottom;
-	background-size: 100% auto;
-}
-
-#destinations-header-image {
-	/* original: 
-	background:#000 url('destinations/images/banner.jpg') no-repeat center -70px fixed;
-	background-size: 100% 100%; */
-	background: #000 url('destinations/images/banner.jpg') no-repeat fixed center bottom;
-	background-size: 100% auto;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-	#thoughts-header-image,
-	#destinations-header-image {
-		background-position: center -147px;
-		background-size: cover;
-	}
-
-}
-
-@media only screen and (max-width: 767px) {
-
-	#thoughts-header-image,
-	#destinations-header-image {
-		background-position: center -147px;
-		background-size: auto;
-	}
-
-
-}
-
 /* changing background color on book now sidebars */
 
 .right-sidebar-wrapper .widget-container {
 	background: #444;
+}
+
+/* fixing padding on mobile nav */
+
+#primary-nav-mobile-id {
+	padding-bottom: 0;
 }
 
 
@@ -771,9 +683,17 @@ padding: 0;
 		top: -4px;
 		left: 8px;
 	}
+
+    .slides li a img {
+    	width:100% !important;
+    }
 }
 
 @media only screen and (max-width: 767px) {
+
+	.header-left.left {
+		margin-bottom: 10px;
+	}
 
 	#home-type,
 	#home-slide-wrap,
@@ -799,6 +719,8 @@ padding: 0;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		padding: 0 100px 0 20px;
+		font-size: 16px;
+		line-height: 20px;
 	}
 
 	#home-content {
@@ -813,8 +735,10 @@ padding: 0;
 		text-align: left;
 	}
 
+	.titlebar-title h1,
 	#home-content .home-content-title {
-		line-height: 40px;
+		line-height: 30px;
+		font-size: 24px;
 	}
 
 	.slideshow--bullets .slideshow__thumbs {
@@ -822,7 +746,82 @@ padding: 0;
 	}
 
 	#home-content .home-content-btn {
+		top: 82px;
 	}
+
+	.page-wrapper.columns.b0, 
+	#philosophy .parallax-section, 
+	#concept .parallax-section,
+	.page-body {
+		padding: 20px 60px 20px 20px;
+	}
+
+	.titlebar-outer-wrapper .row .columns {
+		padding: 0 60px 0 20px;
+	}
+
+	.page-body h1 {
+		text-align: left;
+	}
+
+	.parallax-section .parallax-title {
+		font-size: 20px;
+		line-height: 25px;
+		text-align: left;
+	}
+
+	.titlebar-outer-wrapper .container {
+		display: block;
+	}
+
+	.blog .titlebar-title,
+	.titlebar-title.top-titlebar {
+		margin-top: 93px;
+		text-align: left;
+	}
+
+	.titlebar-title .titlebar-decs {
+		line-height: 15px;
+	}
+
+	#thoughts .main-wrapper .page-title-wrapper {
+		margin-top: -60px;
+	}
+
+	.book-now .page-title-wrapper {
+		background: none;
+	}
+
+	.b40 {
+		margin-bottom: 0;
+	}
+
+	.book-now .page-title-wrapper .page-title {
+		color: #000;
+	}
+
+	.book-now .main-wrapper .page-title-wrapper,
+	#destinations .main-wrapper .page-title-wrapper {
+		height: 100px;
+		margin-top: 40px;
+	}
+
+	.builder-title-wrapper.has_filter .cpt-filters {
+		top: -130px;
+	}
+
+	.cpt-filters li a {
+		background: none;
+	}
+
+	.slides li a img {
+    	height: auto;
+    	width:100% !important;
+    }
+
+    .tab-title li {
+    	margin-bottom: 1px;
+    }
 
 }
 
@@ -833,6 +832,10 @@ padding: 0;
 	#home #primary-nav-id {
 		margin-left: auto;
 	}
+	.slides li a img {
+    	height: auto;
+    	width:100% !important;
+    }
 }
 
 

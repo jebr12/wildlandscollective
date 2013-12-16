@@ -84,22 +84,22 @@
 				jQuery('#contactable-overlay').css({display: 'block'});
 				jQuery("#contactable-inner").animate({"marginRight": "-=5px"}, "2000"); 
 				jQuery('#contactable-contactForm').animate({"marginRight": "-=0px"}, "2000");
-				jQuery("#contactable-inner").animate({"marginRight": "+=387px"}, "4000"); 
-				jQuery('#contactable-contactForm').animate({"marginRight": "+=390px"}, "4000"); 
+				jQuery("#contactable-inner").animate({"marginRight": "+=287px"}, "4000"); 
+				jQuery('#contactable-contactForm').animate({"marginRight": "+=290px"}, "4000"); 
 			});
 
 			jQuery('body').on('click', '#my-contact-div.contact-open #contactable-inner, header.contact-open #contact-top, .widget-container.contact-open #book-now', function() {
 				jQuery('#my-contact-div, .widget-container, header').removeClass('contact-open').addClass('contact-closed');
-				jQuery('#contactable-contactForm').animate({"marginRight": "-=390px"}, "4000");
-				jQuery("#contactable-inner").animate({"marginRight": "-=387px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
+				jQuery('#contactable-contactForm').animate({"marginRight": "-=290px"}, "4000");
+				jQuery("#contactable-inner").animate({"marginRight": "-=287px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
 				jQuery('#contactable-overlay').css({display: 'none'});
 			});
 
 			$('.global-section, .parallax-section, .cover-screen').click(function() {
 				if ($('#my-contact-div').hasClass("contact-open")) {
 					jQuery('#my-contact-div, header, .widget-container').removeClass('contact-open').addClass('contact-closed');
-					jQuery('#contactable-contactForm').animate({"marginRight": "-=390px"}, "4000");
-					jQuery("#contactable-inner").animate({"marginRight": "-=387px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
+					jQuery('#contactable-contactForm').animate({"marginRight": "-=290px"}, "4000");
+					jQuery("#contactable-inner").animate({"marginRight": "-=287px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
 					jQuery('#contactable-overlay').css({display: 'none'});
 				}
 			});
