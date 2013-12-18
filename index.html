@@ -33,6 +33,8 @@
     <!-- JavaScript -->
     <script src="assets/js/jquery.modernizr.js"></script>
 
+<link rel="stylesheet" href="assets/contactable/contactable.css" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
     
 </head>
@@ -42,57 +44,13 @@
   <!--start contactable -->
 <div id="my-contact-div" class="contact-closed"><!-- contactable html placeholder --></div>
 
-<link rel="stylesheet" href="assets/contactable/contactable.css" type="text/css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="assets/contactable/jquery.contactable.js"></script>
 
-<script>
-  jQuery(function(){
-    jQuery('#my-contact-div').contactable(
-        {
-            subject: 'Wildlands New Message ',
-            url: 'assets/contactable/mail.php',
-            name: 'Name',
-            email: 'Email',
-            dropdownTitle: 'Subject',
-            dropdownOptions: ['General', 'Feedback', 'Inquiry'],
-            message : 'Message',
-            submit : 'SEND',
-            recievedMsg : 'Thank you for your message',
-            notRecievedMsg : 'Sorry but your message could not be sent, try again later',
-            disclaimer: 'Please feel free to get in touch, we value your feedback',
-            hideOnSubmit: false
-        });
-  });
-</script>
+
 <!--end contactable -->
 
     <!-- START PAGE -->
     <!-- START HEADER -->
-    
-    <!--<header class="header black contact-closed">
-        <h1>
-            <a href="index.html">
-                <span class="logosite"><img src="assets/home/img/logo-home.png" alt="Showlight"></span>
 
-            </a>
-        </h1>
-
-        <nav>
-            <ul class="nav nav--primary">
-                <li class="selected"><a href="index.html">Home</a></li>
-                <li><a href="./concept.html">Concept</a></li>
-                <li><a href="./philosophy.html">Philosophy</a></li>
-                <li><a href="thoughts.html">Thoughts</a></li>
-                <li > <a href="destinations.html">Destinations</a></li>
-                <li><a href="#" id="contact-top">Contact</a></li>
-            </ul>
-        </nav>
-
-        <div id="global-footer">© 2013 Wildlands Collective</div>
-        <div id="global-social"></div>
-
-    </header>-->
 
     <header id="header" class="header header-container-wrapper contact-closed">
 
@@ -214,6 +172,7 @@
 <script src="assets/home/js/script.js"></script>
 <script src="assets/js/ddsmoothmenu.js"></script>
 <script>
+var ST = {"disable_header_floating":"y"};
 jQuery(document).ready(function(){
     "use strict";
     
@@ -327,6 +286,21 @@ jQuery(document).ready(function(){
     var primary_nav = jQuery('#primary-nav-id > ul');
 
     primary_nav.clone().attr('id','primary-nav-mobile-id').removeClass().appendTo( primary_nav_mobile_button );
+    jQuery('#primary-nav-mobile-id li:last-child a').attr('id', 'mobile-contact-top');
+
+    /*jQuery('#mobile-contact-top').toggle(function() {
+      jQuery('#contactable-overlay').css({display: 'block'});
+      jQuery('#contactable-inner').animate({"marginRight": "-=5px"}, "2000"); 
+      jQuery('#contactable-contactForm').animate({"marginRight": "-=0px"}, "2000");
+      jQuery('#contactable-inner').animate({"marginRight": "+=387px"}, "4000"); 
+      jQuery('#contactable-contactForm').animate({"marginRight": "+=390px"}, "4000"); 
+    }, 
+    function() {
+      jQuery('#contactable-contactForm').animate({"marginRight": "-=390px"}, "4000");
+      jQuery('#contactable-inner').animate({"marginRight": "-=387px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
+      jQuery('#contactable-overlay').css({display: 'none'});
+    });*/
+
     primary_nav_cloned = primary_nav_mobile_button.find('> ul');
         jQuery('#primary-nav-mobile-a').click(function(){
             if(jQuery(this).hasClass('primary-nav-close')){
@@ -345,7 +319,27 @@ jQuery(document).ready(function(){
   });
     
     </script>
+<script type="text/javascript" src="assets/contactable/jquery.contactable.js"></script>
 
+<script>
+  jQuery(function(){
+    jQuery('#my-contact-div').contactable(
+        {
+            subject: 'Wildlands New Message ',
+            url: 'assets/contactable/mail.php',
+            name: 'Name',
+            email: 'Email',
+            dropdownTitle: 'Subject',
+            dropdownOptions: ['General', 'Feedback', 'Inquiry'],
+            message : 'Message',
+            submit : 'SEND',
+            recievedMsg : 'Thank you for your message',
+            notRecievedMsg : 'Sorry but your message could not be sent, try again later',
+            disclaimer: 'Please feel free to get in touch, we value your feedback',
+            hideOnSubmit: false
+        });
+  });
+</script>
 
 
 <script>

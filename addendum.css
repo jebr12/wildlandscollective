@@ -299,7 +299,11 @@
 	line-height: 15px;	
 }
 
+/* fix google maps on mobile */
 
+.tab-content iframe {
+	max-width: 100% !important;
+}
 
 
 /* thumbnail grids on thoughts & destinations */
@@ -802,7 +806,7 @@ padding: 0;
 
 	.book-now .main-wrapper .page-title-wrapper,
 	#destinations .main-wrapper .page-title-wrapper {
-		height: 100px;
+		height: auto;
 		margin-top: 40px;
 	}
 
