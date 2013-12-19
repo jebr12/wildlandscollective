@@ -442,16 +442,51 @@
     <script src="../assets/js/layerslider.transitions.js"></script>
     <script src="../assets/js/layerslider.kreaturamedia.jquery.js"></script>
     
-    <script type='text/javascript'>
-    /* <![CDATA[ */
-    var FS = {"animation":"fade","pauseOnHover":"true","controlNav":"true","directionNav":"false","animationDuration":"500","slideshowSpeed":"5000","pauseOnAction":"false"};
-    /* ]]> */
-    </script>
+    <script src="../assets/js/nav.js"></script>
 
     <script src="../assets/js/jquery.flexslider.js"></script>
+    <script>
+    jQuery(document).ready(function(){
+
+        function multiScreenSlides() {
+            var screenWidth = jQuery(document).width();
+            console.log(screenWidth);
+            if (screenWidth > 767) {
+                console.log("lightbox");
+                jQuery("a[rel^='prettyPhoto']").prettyPhoto();                
+            }
+            else {
+                jQuery("a[rel^='prettyPhoto']").click(function(e) {
+                    e.preventDefault();
+                    var bigImage = jQuery(this).attr("href");
+                    window.open(bigImage, "_blank");
+                });
+            }
+        }
+
+        multiScreenSlides();
+
+        jQuery(window).resize(function() {
+            multiScreenSlides();
+        });
+
+        jQuery(".flexslider").each(function(){
+            jQuery(this).flexslider({
+                slideshow: true,
+                animation: "fade",
+                pauseOnHover: true,
+                controlNav: true,
+                directionNav: false,
+                animationDuration: 500,
+                slideshowSpeed: 5000,
+                pauseOnAction: false
+            });
+        });
+
+    });
+    </script>
     <script src="../assets/js/jquery-ui.datepicker.js"></script>
     <script src="../assets/js/shortcodes.js"></script>
-    <script src="../assets/js/custom.js"></script>
 
 </body>
 </html>
