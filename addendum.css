@@ -299,7 +299,7 @@
 	line-height: 15px;	
 }
 
-/* fix google maps on mobile */
+/* fix maps on mobile */
 
 .tab-content iframe {
 	max-width: 100% !important;
@@ -695,6 +695,10 @@ padding: 0;
 
 @media only screen and (max-width: 767px) {
 
+	.map iframe {
+		height: 200px !important;
+	}
+
 	.header-left.left {
 		margin-bottom: 10px;
 	}
@@ -840,6 +844,30 @@ padding: 0;
     	height: auto;
     	width:100% !important;
     }
+    .page-wrapper.columns.b0, 
+	#philosophy .parallax-section, 
+	#concept .parallax-section,
+	.page-body {
+		padding: 20px 60px 20px 60px;
+	}
+	.titlebar-title.top-titlebar {
+	margin-left: 55px;
+	}
+
+	.list-grid .main-outer-wrapper.has-titlebar {
+		margin-top: 0 !important;
+	}
+
+	.page-title-wrapper {
+		padding: 0;
+		margin-top: 0;
+		margin-bottom: 30px;
+		background: none;
+		height: auto;
+	}
+
+	.page-title-wrapper .page-title {
+		color: #000;
+	}
+
 }
-
-

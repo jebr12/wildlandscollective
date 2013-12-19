@@ -391,7 +391,7 @@ jQuery(document).ready(function(){
     }).trigger("hashchange");
 
     //isotope
-    var screenWidth = $("document").width();
+    var screenWidth = jQuery("document").width();
     if (screenWidth > 767) {
         jQuery(".cpt-items").imagesLoaded(run_isotope);
     }

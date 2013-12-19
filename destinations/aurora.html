@@ -41,7 +41,7 @@
     <!--[if IE 8]><link href="assets/css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
     
     <!-- JavaScript -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="../assets/js/jquery.modernizr.js"></script>
 
 </head>
@@ -53,11 +53,10 @@
 <div id="my-contact-div" class="contact-closed"><!-- contactable html placeholder --></div>
 
 <link rel="stylesheet" href="../assets/contactable/contactable.css" type="text/css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="../assets/contactable/jquery.contactable.js"></script>
+<!--<script type="text/javascript" src="../assets/contactable/jquery.contactable.js"></script>-->
 
 <script>
-  jQuery(function(){
+  /*jQuery(function(){
     jQuery('#my-contact-div').contactable(
         {
             subject: 'Wildlands Booking '+location.href,
@@ -73,7 +72,7 @@
             disclaimer: 'Please feel free to get in touch, we value your feedback',
             hideOnSubmit: false
         });
-  });
+  });*/
 </script>
 <!--end contactable -->
 
@@ -274,7 +273,7 @@
                                                 <!--Map -->
 
                                                 <div class="tab-content" tab-id="tab5">
-                                                    <p><div><iframe width="640" height="480" frameborder="0" src="http://www.bing.com/maps/embed/viewer.aspx?v=3&cp=66.265989~-22.686793&lvl=9&w=640&h=480&sty=h&typ=d&pp=&ps=&dir=0&mkt=en-au&src=SHELL&form=BMEMJS"></iframe><div style="margin: 12px 0 0 0;"><a target="_blank" href="http://www.bing.com/maps/?cp=66.265989~-22.686793&sty=h&lvl=9&sp=&mm_embed=map">View Larger Map</a></div></div></p>
+                                                    <p><div class="map"><iframe width="640" height="480" frameborder="0" src="http://www.bing.com/maps/embed/viewer.aspx?v=3&cp=66.265989~-22.686793&lvl=9&w=640&h=480&sty=h&typ=d&pp=&ps=&dir=0&mkt=en-au&src=SHELL&form=BMEMJS"></iframe><div style="margin: 12px 0 0 0;"><a target="_blank" href="http://www.bing.com/maps/?cp=66.265989~-22.686793&sty=h&lvl=9&sp=&mm_embed=map">View Larger Map</a></div></div></p>
                                                 </div>
 
                                                 <!--Reviews -->
@@ -295,7 +294,7 @@
 
                                                 <!--Other -->
 
-                                                <div class="tab-content active" tab-id="tab7">
+                                                <div class="tab-content" tab-id="tab7">
                                                     <p><strong>WEATHER</strong><br>Iceland is a land of very mixed weather. As they say, if you don´t like the weather, wait for ten minutes! Usually the spring brings higher pressure and settled weather, but be prepared for everything from dead calm and sunny days to blowing blizzards.
                                                     <br/>
 
@@ -430,7 +429,7 @@
     
     <script src="../assets/js/ddsmoothmenu.js"></script>
     <script src="../assets/js/purl.js"></script>
-    <script src="../assets/js/jquery.prettyPhoto.js"></script>
+    <script src="../assets/js/jquery.prettyPhoto.min.js"></script>
     <script src="../assets/js/jquery.fitvids.js"></script>
     <script src="../assets/js/jquery.imagesloaded.min.js"></script>
     <script src="../assets/js/jquery.isotope.min.js"></script>
@@ -443,14 +442,55 @@
     
     <script type='text/javascript'>
     /* <![CDATA[ */
-    var FS = {"animation":"fade","pauseOnHover":"true","controlNav":"true","directionNav":"false","animationDuration":"500","slideshowSpeed":"5000","pauseOnAction":"false"};
+    //var FS = {"animation":"fade","pauseOnHover":"true","controlNav":"true","directionNav":"false","animationDuration":"500","slideshowSpeed":"5000","pauseOnAction":"false"};
     /* ]]> */
     </script>
+    <script src="../assets/js/nav.js"></script>
 
     <script src="../assets/js/jquery.flexslider.js"></script>
+    <script>
+    jQuery(document).ready(function(){
+
+        function multiScreenSlides() {
+            var screenWidth = jQuery(document).width();
+            console.log(screenWidth);
+            if (screenWidth > 767) {
+                console.log("lightbox");
+                jQuery("a[rel^='prettyPhoto']").prettyPhoto();                
+            }
+            else {
+                jQuery("a[rel^='prettyPhoto']").click(function(e) {
+                    e.preventDefault();
+                    var bigImage = jQuery(this).attr("href");
+                    window.open(bigImage, "_blank");
+                });
+            }
+        }
+
+        multiScreenSlides();
+
+        jQuery(window).resize(function() {
+            multiScreenSlides();
+        });
+
+        jQuery(".flexslider").each(function(){
+            jQuery(this).flexslider({
+                slideshow: true,
+                animation: "fade",
+                pauseOnHover: true,
+                controlNav: true,
+                directionNav: false,
+                animationDuration: 500,
+                slideshowSpeed: 5000,
+                pauseOnAction: false
+            });
+        });
+
+    });
+    </script>
     <script src="../assets/js/jquery-ui.datepicker.js"></script>
     <script src="../assets/js/shortcodes.js"></script>
-    <script src="../assets/js/custom.js"></script>
+    <!--<script src="../assets/js/custom.js"></script>-->
 
 </body>
 </html>

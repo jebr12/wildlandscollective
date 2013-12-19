@@ -34,7 +34,7 @@ html[xmlns] .slides {display: block;}
 
 /* FlexSlider Default Theme
 *********************************/
-.flexslider {background: #fff; position: relative; zoom: 1;}
+.flexslider { position: relative; zoom: 1;}
 .flexslider .slides {zoom: 1;}
 .flexslider .slides > li {position: relative;}
 /* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
@@ -56,3 +56,16 @@ html[xmlns] .slides {display: block;}
 .flex-control-nav li a:hover {}
 .flex-control-nav li a.active {cursor: default;}
 
+
+@media only screen and (max-width: 767px) {
+
+	.flex-control-nav {
+		margin-top: 0;
+		position: relative;
+		left: 0;
+		bottom: auto;
+		background: rgba(0,0,0,0.5);
+		padding: 10px 0;		
+	}
+
+}
