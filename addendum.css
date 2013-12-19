@@ -854,7 +854,6 @@ padding: 0;
 	.book-now .main-wrapper .page-title-wrapper,
 	#destinations .main-wrapper .page-title-wrapper {
 		height: auto;
-		margin-top: 40px;
 	}
 
 	.builder-title-wrapper.has_filter .cpt-filters {
@@ -904,7 +903,7 @@ padding: 0;
 		display: none;
 	}
 
-	#destinations .page-wrapper.columns.b0 {
+	.book-now .page-wrapper.columns.b0 {
 		padding-top: 0;
 	}
 }
