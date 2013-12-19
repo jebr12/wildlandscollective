@@ -252,6 +252,26 @@
 	text-align: center;
 }
 
+
+/* footer */
+
+#footer {
+	background: #000;
+	color: #d2d2d2;
+	width: 100%;
+	clear: both;
+	margin-top: 40px;
+	padding: 20px 0;
+}
+
+
+#concept #footer,
+#philosophy #footer {
+	margin-top: 0;
+}
+
+
+
 /* fixed position nav bar on thoughts & destinations */
 
 .header-outer-wrapper {
@@ -319,6 +339,15 @@
     height: 100%;
 }
 
+/* link color on tab content */
+
+.tab-content a {
+	color: #000;
+}
+
+.tab-content a:hover {
+	color: #555;
+}
 
 /* thumbnail grids on thoughts & destinations */
 /* adding responsivity */
