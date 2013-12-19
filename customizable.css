@@ -91,7 +91,7 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 /* thoughts */
 
 #thoughts-header-image {
-	background: #000 url('thoughts/images/banner.jpg') no-repeat center bottom;
+	background: #000 url('thoughts/images/banner.jpg') no-repeat center center;
 }
 
 
@@ -180,8 +180,6 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 	background-size: 100% auto !important;
 }
 
-#thoughts-header-image,
-#destinations-header-image,
 #philosophy .parallax-section,
 #concept .parallax-section {
 	background-attachment: fixed !important;
