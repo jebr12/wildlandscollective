@@ -217,7 +217,7 @@ Author : http://www.smooththemes.com
 	/*Top level list items*/
 	.slideMenu ul li{position: relative;display: inline;float: left;}
 	/*Top level menu link items style*/
-	.slideMenu ul li a{display: block;padding: 8px 10px;text-decoration: none;z-index: 0;position: relative;}
+	.slideMenu ul li a, .slideMenu ul li span {display: block;padding: 8px 10px;text-decoration: none;z-index: 0;position: relative;}
 	* html .slideMenu ul li a{ display: inline-block;}
 	.slideMenu ul li a:link, .slideMenu ul li a:visited{}
 	.slideMenu ul li a.selected{ background: black; }
@@ -279,8 +279,10 @@ Author : http://www.smooththemes.com
 	.header-right #primary-nav-id{float:right;}
 
 		/* Primary Navigation */
-		.primary-nav.slideMenu ul li a{padding:14px 15px;font-size: 13px;}
-		.primary-nav ul li a{color:#fff;z-index: 0;}
+		.primary-nav.slideMenu ul li span,
+		#primary-nav-mobile ul li span { cursor: pointer; }
+		.primary-nav.slideMenu ul li a, .primary-nav.slideMenu ul li span {padding:14px 15px;font-size: 13px;}
+		.primary-nav ul li a, .primary-nav ul li span {color:#fff;z-index: 0;}
 		.primary-nav ul li a:hover{color: #f0d40f !important;}
 		.primary-nav ul li:last-child a{padding-right:0px;}
 		.primary-nav ul li.current-menu-item a{color: #f0d40f !important;font-weight: bold;}
@@ -298,7 +300,7 @@ Author : http://www.smooththemes.com
 			#primary-nav-mobile-a span{width:9px;height: 5px;display: block;background: url('assets/images/primary-mobilemenu-arrowdown.png') no-repeat;position: absolute;top:18px;left:16px;}
 			#primary-nav-mobile-id{margin:0px;background: #333333;padding-bottom:8px;display: none;}
 			#primary-nav-mobile-id li{margin-bottom:0px;border-top:1px solid #222222;}
-			#primary-nav-mobile-id li a{border-top:1px solid #444444;color:#cccccc;padding:6px 19px 6px;font-size: 14px;text-shadow: none !important; display: block;}
+			#primary-nav-mobile-id li a, #primary-nav-mobile-id li span {border-top:1px solid #444444;color:#cccccc;padding:6px 19px 6px;font-size: 14px;text-shadow: none !important; display: block;}
 			#primary-nav-mobile-id li ul li a{padding-left:40px;color:#999999 !important;}
 			#primary-nav-mobile-id li a:hover,#primary-nav-mobile-id li a:active{color:#fff !important;background: #444444;}
 			.primary-nav-mobile-id li a:hover,.primary-nav-mobile-id li.current-menu-item a{background: #16a1e7;}

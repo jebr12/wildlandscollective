@@ -106,7 +106,7 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 }
 
 #single-destination .titlebar-outer-wrapper {
-	background: #000 url('http://concordia-expeditions.com/wp-content/uploads/2013/03/IMG_1083.jpg') no-repeat center bottm;
+	background: #000 url('http://concordia-expeditions.com/wp-content/uploads/2013/03/IMG_1083.jpg') no-repeat center bottom;
 }
 
 
@@ -190,7 +190,7 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 
 	#thoughts-header-image,
 	#destinations-header-image {
-		background-position: center -147px;
+		background-position: center center;
 	}
 
 	.blog .titlebar-outer-wrapper,

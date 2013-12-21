@@ -71,7 +71,7 @@ object, embed { max-width: 100%; }
 		.primary-nav.slideMenu ul li a{padding:40px 12px;}
 		.top-nav.slideMenu ul li a {padding: 4px 8px;}
 		#top-nav-id{margin-left:7px;}
-		#primary-nav-id{margin-left:-12px;}
+		/*#primary-nav-id{margin-left:-12px;}*/
 		.header-right .btn{margin-left:12px;}
 		.services-included ul li{width:33.3333333333%;}
 

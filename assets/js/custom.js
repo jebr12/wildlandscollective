@@ -381,7 +381,7 @@ jQuery(document).ready(function(){
                 jQuery(".cpt-filters li:first a").addClass("selected");
             }
 
-            var screenWidth = $("document").width();
+            var screenWidth = jQuery("document").width();
 
             if (screenWidth > 767) {
                 jQuery(".cpt-items").isotope({filter: hashOptions});
@@ -425,7 +425,7 @@ jQuery(document).ready(function(){
              jQuery(el).css({'width':new_overlay_w,'height':new_overlay_h});
          });
 
-        var screenWidth = $("document").width();
+        var screenWidth = jQuery("document").width();
         if (screenWidth > 767) {
             jQuery(".cpt-items").imagesLoaded(run_isotope);
         }

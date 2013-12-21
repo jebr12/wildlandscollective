@@ -22,7 +22,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/home/css/style.css">
-    <link rel="stylesheet" href="assets/css/layerslider.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="addendum.css">
@@ -31,10 +30,10 @@
 
     <link rel="shortcut icon" href="assets/home/favicon.png">
     <!-- JavaScript -->
-    <script src="assets/js/jquery.modernizr.js"></script>
+    <script src="assets/home/js/vendor/modernizr-latest.js"></script>
 
-<link rel="stylesheet" href="assets/contactable/contactable.css" type="text/css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="assets/contactable/contactable.css" type="text/css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
     
 </head>
@@ -43,9 +42,6 @@
 
   <!--start contactable -->
 <div id="my-contact-div" class="contact-closed"><!-- contactable html placeholder --></div>
-
-
-
 <!--end contactable -->
 
     <!-- START PAGE -->
@@ -81,7 +77,16 @@
                                   <li><a href="philosophy.html">Philosophy</a></li>
                                   <li><a href="thoughts.html">Thoughts</a></li>
                                   <li><a href="destinations.html">Destinations</a></li>
-                                  <li><a href="#" id="contact-top">Contact</a></li>
+                                  <li>
+                                    <span>Info</span>
+                                    <ul>
+                                      <li><a href="team.html">Team</a></li>
+                                      <li><a href="jobs.html">Jobs</a></li>
+                                      <li><a href="partners.html">Partners</a></li>
+                                      <li><a href="news.html">News</a></li>
+                                      <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                  </li>
                               </ul>
                           </nav>
                           <div class="clear"></div>
@@ -101,20 +106,20 @@
     	<div class="slideshow slideshow--bullets slideshow--animation" data-interval="7000">
 
 
-    <!-- START HOMEPAGE -->
-    <div id="home-content">
-        <p>
-            <span class="home-content-title">GO WHERE IT'S STILL WILD</span><br/>
-            <span class="home-content-subtitle"><strong style="color:#fed42d;">WILD NATURE</strong> · <strong style="color:#fed42d;">ADVENTURES</strong> · <strong style="color:#fed42d;">COMMUNITY</strong></span><br/>
-              <span class="home-content-btn">
-                <a href="destinations.html">
-                  <img src="assets/home/img/explorebtn.jpg"/>
+        <!-- START HOMEPAGE -->
+        <div id="home-content">
+            <p>
+                <span class="home-content-title">GO WHERE IT'S STILL WILD</span><br/>
+                <span class="home-content-subtitle"><strong style="color:#fed42d;">WILD NATURE</strong> · <strong style="color:#fed42d;">ADVENTURES</strong> · <strong style="color:#fed42d;">COMMUNITY</strong></span><br/>
+                  <span class="home-content-btn">
+                    <a href="destinations.html">
+                      <img src="assets/home/img/explorebtn.jpg"/>
 
-                  </span></a>
-        </p>
-    </div>
+                      </span></a>
+            </p>
+        </div>
 
-    <!-- START BACKGROUND IMAGES -->
+        <!-- START BACKGROUND IMAGES -->
     		<ul class="slideshow__data">
 
           <!-- START IMAGE -->
@@ -194,7 +199,6 @@
         });
   });
 </script>
-
 
 <script>
     function makevisible() {

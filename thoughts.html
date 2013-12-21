@@ -25,7 +25,6 @@
     <!-- WP HEAD
     ========================================================================= -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300' rel='stylesheet' type='text/css'>    
-    <link rel="stylesheet" href="../assets/css/layerslider.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/css/flexslider.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -44,35 +43,15 @@
     <script src="assets/js/jquery-1.9.1.min.js"></script>
     <script src="assets/js/jquery.modernizr.js"></script>
 
+    <link rel="stylesheet" href="assets/contactable/contactable.css" type="text/css" />
+    <script type="text/javascript" src="assets/contactable/jquery.contactable.js"></script>
+
 </head>
 <body id="thoughts" class="list-grid">
 
 <!--start contactable -->
 <div id="my-contact-div" class="contact-closed"><!-- contactable html placeholder --></div>
 
-<link rel="stylesheet" href="assets/contactable/contactable.css" type="text/css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="assets/contactable/jquery.contactable.js"></script>
-
-<script>
-  jQuery(function(){
-    jQuery('#my-contact-div').contactable(
-        {
-            subject: 'Wildlands New Message',
-            url: 'assets/contactable/mail.php',
-            name: 'Name',
-            email: 'Email',
-            dropdownTitle: 'Subject',
-            dropdownOptions: ['General', 'Feedback', 'Inquiry'],
-            message : 'Message',
-            submit : 'SEND',
-            recievedMsg : 'Thank you for your message',
-            notRecievedMsg : 'Sorry but your message could not be sent, try again later',
-            disclaimer: 'Please feel free to get in touch, we value your feedback',
-            hideOnSubmit: false
-        });
-  });
-</script>
 <!--end contactable -->
 
 
@@ -108,7 +87,16 @@
                                         <li><a href="philosophy.html">Philosophy</a></li>
                                         <li class="current-menu-item"><a href="thoughts.html">Thoughts</a></li>
                                         <li><a href="destinations.html">Destinations</a></li>
-                                        <li><a href="#" id="contact-top">Contact</a></li>
+                                        <li>
+                                            <span>Info</span>
+                                            <ul>
+                                              <li><a href="team.html">Team</a></li>
+                                              <li><a href="jobs.html">Jobs</a></li>
+                                              <li><a href="partners.html">Partners</a></li>
+                                              <li><a href="news.html">News</a></li>
+                                              <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </li> 
                                     </ul>
                                 </nav>
                                 <div class="clear"></div>
@@ -355,6 +343,27 @@
 	
 
     <!-- Javascript -->
+
+    
+    <script>
+      jQuery(function(){
+        jQuery('#my-contact-div').contactable(
+            {
+                subject: 'Wildlands New Message',
+                url: 'assets/contactable/mail.php',
+                name: 'Name',
+                email: 'Email',
+                dropdownTitle: 'Subject',
+                dropdownOptions: ['General', 'Feedback', 'Inquiry'],
+                message : 'Message',
+                submit : 'SEND',
+                recievedMsg : 'Thank you for your message',
+                notRecievedMsg : 'Sorry but your message could not be sent, try again later',
+                disclaimer: 'Please feel free to get in touch, we value your feedback',
+                hideOnSubmit: false
+            });
+      });
+    </script>
     
     <script src="assets/js/ddsmoothmenu.js"></script>
     <script src="assets/js/purl.js"></script>

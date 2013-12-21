@@ -95,8 +95,8 @@
 				jQuery('#contactable-overlay').css({display: 'none'});
 			});
 
-			$('.global-section, .parallax-section, .cover-screen').click(function() {
-				if ($('#my-contact-div').hasClass("contact-open")) {
+			jQuery('.global-section, .parallax-section, .cover-screen, .body-outer-wrapper').click(function() {
+				if (jQuery('#my-contact-div').hasClass("contact-open")) {
 					jQuery('#my-contact-div, header, .widget-container').removeClass('contact-open').addClass('contact-closed');
 					jQuery('#contactable-contactForm').animate({"marginRight": "-=290px"}, "4000");
 					jQuery("#contactable-inner").animate({"marginRight": "-=287px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 

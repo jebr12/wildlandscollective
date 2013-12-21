@@ -44,6 +44,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="../assets/js/jquery.modernizr.js"></script>
 
+    <link rel="stylesheet" href="../assets/contactable/contactable.css" type="text/css" />
+    <script type="text/javascript" src="../assets/contactable/jquery.contactable.js"></script>
+
 </head>
 <body id="aurora" class="list-grid book-now">
 
@@ -51,29 +54,6 @@
 
 <!--start contactable -->
 <div id="my-contact-div" class="contact-closed"><!-- contactable html placeholder --></div>
-
-<link rel="stylesheet" href="../assets/contactable/contactable.css" type="text/css" />
-<!--<script type="text/javascript" src="../assets/contactable/jquery.contactable.js"></script>-->
-
-<script>
-  /*jQuery(function(){
-    jQuery('#my-contact-div').contactable(
-        {
-            subject: 'Wildlands Booking '+location.href,
-            url: '../assets/contactable/mail.php',
-            name: 'Name',
-            email: 'Email',
-            dropdownTitle: 'Subject',
-            dropdownOptions: ['General', 'Feedback', 'Inquiry'],
-            message : 'Message',
-            submit : 'BOOK NOW',
-            recievedMsg : 'Thanks! We have received your booking!',
-            notRecievedMsg : 'Sorry but your booking could not be processed, try again later',
-            disclaimer: 'Please feel free to get in touch, we value your feedback',
-            hideOnSubmit: false
-        });
-  });*/
-</script>
 <!--end contactable -->
 
 
@@ -113,7 +93,16 @@
                                         <li><a href="../philosophy.html">Philosophy</a></li>
                                         <li><a href="../thoughts.html">Thoughts</a></li>
                                         <li class="current-menu-item"><a href="../destinations.html">Destinations</a></li>
-                                        <li><a href="#" id="contact-top">Contact</a></li>
+                                        <li>
+                                            <span>Info</span>
+                                            <ul>
+                                              <li><a href="team.html">Team</a></li>
+                                              <li><a href="jobs.html">Jobs</a></li>
+                                              <li><a href="partners.html">Partners</a></li>
+                                              <li><a href="news.html">News</a></li>
+                                              <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </nav>
                                 <div class="clear"></div>
@@ -274,9 +263,13 @@
 
                                                 <div class="tab-content" tab-id="tab5">
                                                     <div class="flex-container">
-                                                        <iframe width="640" height="480" frameborder="0" src="http://www.bing.com/maps/embed/viewer.aspx?v=3&cp=66.265989~-22.686793&lvl=9&w=640&h=480&sty=h&typ=d&pp=&ps=&dir=0&mkt=en-au&src=SHELL&form=BMEMJS"></iframe>
+                                                        <!-- Old Bing Map -->
+                                                        <!--<iframe width="640" height="480" frameborder="0" src="http://www.bing.com/maps/embed/viewer.aspx?v=3&cp=66.265989~-22.686793&lvl=9&w=640&h=480&sty=h&typ=d&pp=&ps=&dir=0&mkt=en-au&src=SHELL&form=BMEMJS"></iframe>-->
+
+                                                        <!-- New Mapbox Map -->
+                                                        <iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v3/jebr12.gj83cfgc/mm/zoompan,zoomwheel.html?secure=1#9/66.1472/-22.8227'></iframe>
                                                     </div>
-                                                    <p><a target="_blank" href="http://www.bing.com/maps/?cp=66.265989~-22.686793&sty=h&lvl=9&sp=&mm_embed=map">View Larger Map</a></p>
+                                                    <!--<p><a target="_blank" href="http://www.bing.com/maps/?cp=66.265989~-22.686793&sty=h&lvl=9&sp=&mm_embed=map">View Larger Map</a></p>-->
                                                 </div>
 
                                                 <!--Reviews -->
@@ -440,6 +433,26 @@
 	
 
     <!-- Javascript -->
+
+    <script>
+      jQuery(function(){
+        jQuery('#my-contact-div').contactable(
+            {
+                subject: 'Wildlands Booking '+location.href,
+                url: '../assets/contactable/mail.php',
+                name: 'Name',
+                email: 'Email',
+                dropdownTitle: 'Subject',
+                dropdownOptions: ['General', 'Feedback', 'Inquiry'],
+                message : 'Message',
+                submit : 'BOOK NOW',
+                recievedMsg : 'Thanks! We have received your booking!',
+                notRecievedMsg : 'Sorry but your booking could not be processed, try again later',
+                disclaimer: 'Please feel free to get in touch, we value your feedback',
+                hideOnSubmit: false
+            });
+      });
+    </script>
     
     <script src="../assets/js/ddsmoothmenu.js"></script>
     <script src="../assets/js/purl.js"></script>

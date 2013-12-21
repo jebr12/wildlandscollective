@@ -69,48 +69,7 @@
 				jQuery('#contactable-overlay').css({display: 'none'});
 			});	
 
-			jQuery('#contact-top').toggle(function() {
-				jQuery('#contactable-overlay').css({display: 'block'});
-				jQuery('#contactable-inner').animate({"marginRight": "-=5px"}, "2000"); 
-				jQuery('#contactable-contactForm').animate({"marginRight": "-=0px"}, "2000");
-				jQuery('#contactable-inner').animate({"marginRight": "+=387px"}, "4000"); 
-				jQuery('#contactable-contactForm').animate({"marginRight": "+=390px"}, "4000"); 
-			}, 
-			function() {
-				jQuery('#contactable-contactForm').animate({"marginRight": "-=390px"}, "4000");
-				jQuery('#contactable-inner').animate({"marginRight": "-=387px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
-				jQuery('#contactable-overlay').css({display: 'none'});
-			});
 
-			/*jQuery('#mobile-contact-top').toggle(function() {
-				jQuery('#contactable-overlay').css({display: 'block'});
-				jQuery('#contactable-inner').animate({"marginRight": "-=5px"}, "2000"); 
-				jQuery('#contactable-contactForm').animate({"marginRight": "-=0px"}, "2000");
-				jQuery('#contactable-inner').animate({"marginRight": "+=387px"}, "4000"); 
-				jQuery('#contactable-contactForm').animate({"marginRight": "+=390px"}, "4000"); 
-			}, 
-			function() {
-				jQuery('#contactable-contactForm').animate({"marginRight": "-=390px"}, "4000");
-				jQuery('#contactable-inner').animate({"marginRight": "-=387px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
-				jQuery('#contactable-overlay').css({display: 'none'});
-			});*/
-
-			$('#primary-nav-mobile').on('click', 'ul li #mobile-contact-top', function(){
-			    if (!$(this).attr('data-toggled') || $(this).attr('data-toggled') == 'off'){
-			    	jQuery('#contactable-overlay').css({display: 'block'});
-					jQuery('#contactable-inner').animate({"marginRight": "-=5px"}, "2000"); 
-					jQuery('#contactable-contactForm').animate({"marginRight": "-=0px"}, "2000");
-					jQuery('#contactable-inner').animate({"marginRight": "+=387px"}, "4000"); 
-					jQuery('#contactable-contactForm').animate({"marginRight": "+=390px"}, "4000");
-			        $(this).attr('data-toggled','on');
-			    }
-			    else if ($(this).attr('data-toggled') == 'on'){
-			        jQuery('#contactable-contactForm').animate({"marginRight": "-=390px"}, "4000");
-					jQuery('#contactable-inner').animate({"marginRight": "-=387px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
-					jQuery('#contactable-overlay').css({display: 'none'});
-			        $(this).attr('data-toggled','off');
-			    }
-			});
 
 			
 			// Submit the form

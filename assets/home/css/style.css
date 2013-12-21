@@ -2796,7 +2796,7 @@ background:rgba(0,0,0,0) url("../img/blog-arrows.png") 0px -28px no-repeat;
     opacity: 1; } }
 
 .slideshow__controls {
-  display: none;
+  display: block;
   position: absolute;
   width: 100%;
   top: 50%;

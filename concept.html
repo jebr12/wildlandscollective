@@ -44,6 +44,9 @@
     <script src="assets/js/jquery-1.9.1.min.js"></script>
     <script src="assets/js/jquery.modernizr.js"></script>
 
+    <link rel="stylesheet" href="assets/contactable/contactable.css" type="text/css" />
+    <script type="text/javascript" src="assets/contactable/jquery.contactable.js"></script>
+
 </head>
 <body id="concept">
 
@@ -52,30 +55,7 @@
 <!--start contactable -->
 <div id="my-contact-div" class="contact-closed"><!-- contactable html placeholder --></div>
 
-<link rel="stylesheet" href="assets/contactable/contactable.css" type="text/css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="assets/contactable/jquery.contactable.js"></script>
 
-<script>
-  jQuery(function(){
-    jQuery('#my-contact-div').contactable(
-        {
-            subject: 'Wildlands Booking '+location.href,
-            url: '../assets/contactable/mail.php',
-            name: 'Name',
-            email: 'Email',
-            dropdownTitle: 'Subject',
-            dropdownOptions: ['General', 'Feedback', 'Inquiry'],
-            message : 'Message',
-            submit : 'BOOK NOW',
-            recievedMsg : 'Thanks! We have received your booking!',
-            notRecievedMsg : 'Sorry but your booking could not be processed, try again later',
-            disclaimer: 'Please feel free to get in touch, we value your feedback',
-            hideOnSubmit: false
-        });
-  });
-</script>
-<!--end contactable -->
 
 <div class="body-outer-wrapper">
     <div id="body-wrapper" class="body-wrapper full-width-mode">
@@ -109,7 +89,16 @@
                                         <li><a href="philosophy.html">Philosophy</a></li>
                                         <li><a href="thoughts.html">Thoughts</a></li>
                                         <li><a href="destinations.html">Destinations</a></li>
-                                        <li><a href="#" id="contact-top">Contact</a></li>
+                                        <li>
+                                            <span>Info</span>
+                                            <ul>
+                                              <li><a href="team.html">Team</a></li>
+                                              <li><a href="jobs.html">Jobs</a></li>
+                                              <li><a href="partners.html">Partners</a></li>
+                                              <li><a href="news.html">News</a></li>
+                                              <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </nav>
                                 <div class="clear"></div>
@@ -121,6 +110,41 @@
                 </div><!-- END .header-wrapper -->
             </div><!-- END .header-outer-wrapper -->
         </header> <!-- END .header-container-wrapper -->
+
+        <nav id="subnav">
+            <ol>
+                <li class="intro selected-subnav">
+                    <a href="#intro">
+                        <span class="dot"></span>
+                        <span class="desc">Overview</span>
+                    </a>
+                </li>
+                <li class="page1">
+                    <a href="#page1">
+                        <span class="dot"></span>
+                        <span class="desc">Why Wildlands</span>
+                    </a>
+                </li>
+                <li class="page2">
+                    <a href="#page2">
+                        <span class="dot"></span>
+                        <span class="desc">Why Community</span>
+                    </a>
+                </li>
+                <li class="page3">
+                    <a href="#page3">
+                        <span class="dot"></span>
+                        <span class="desc">Why Lodging</span>
+                    </a>
+                </li>
+                <li class="page4">
+                    <a href="#page4">
+                        <span class="dot"></span>
+                        <span class="desc">FAQ</span>
+                    </a>
+                </li>
+            </ol>
+        </nav>
 
 
 
@@ -304,7 +328,64 @@
 	
 
     <!-- Javascript -->
+
+    <script>
+      jQuery(function(){
+        jQuery('#my-contact-div').contactable(
+            {
+                subject: 'Wildlands Booking '+location.href,
+                url: '../assets/contactable/mail.php',
+                name: 'Name',
+                email: 'Email',
+                dropdownTitle: 'Subject',
+                dropdownOptions: ['General', 'Feedback', 'Inquiry'],
+                message : 'Message',
+                submit : 'BOOK NOW',
+                recievedMsg : 'Thanks! We have received your booking!',
+                notRecievedMsg : 'Sorry but your booking could not be processed, try again later',
+                disclaimer: 'Please feel free to get in touch, we value your feedback',
+                hideOnSubmit: false
+            });
+      });
+    </script>
+    <!--end contactable -->
+
+    <script>
+        /*jQuery(function() {
+          jQuery('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = jQuery(this.hash);
+              target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
+              var header = jQuery('.header-outer-wrapper').height();
+              if (target.length) {
+                pos = target.offset().top - header;
+                jQuery('html,body').animate({
+                  scrollTop: pos
+                }, 1000);
+                return false;
+              }
+            }
+          });
+        });*/
+    </script>
+    <script src="assets/js/jquery.scrollTo.js"></script>
+    <script src="assets/js/jquery.nav.js"></script>
+    <script>
+        jQuery(function(){
+            var header = jQuery('.header-outer-wrapper').height();
+            if (jQuery(window).width() > 768) {
+                jQuery('#subnav ol').onePageNav({
+                    currentClass: 'selected-subnav',
+                    scrollSpeed: 1000,
+                    scrollOffset: header,
+                    scrollThreshold: 0.5
+                });
+            }            
+        });
+
+    </script>
     
+
     <script src="assets/js/ddsmoothmenu.js"></script>
     <script src="assets/js/purl.js"></script>
     <script src="assets/js/jquery.prettyPhoto.js"></script>
