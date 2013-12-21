@@ -113,7 +113,7 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 /* destinations */
 
 #destinations-header-image {
-	background: #000 url('./destinations/images/banner.jpg') no-repeat center bottom;
+	background: #000 url('./destinations/images/banner.jpg') no-repeat center center;
 }
 
 
