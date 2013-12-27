@@ -219,12 +219,22 @@
 
     jQuery('.slideshow__controls a').css('display', 'none');
 
-    jQuery('.cover-screen').hover(function() {
-      $('.slideshow__controls a').fadeIn('slow');
-    },
-    function() {
-      $('.slideshow__controls a').fadeOut('slow');
-    });
+    var lastTimeMouseMoved = "";
+
+    $('.cover-screen').mousemove(function(e){
+
+       $('.slideshow__controls a').fadeIn('slow');
+       
+       lastTimeMouseMoved = new Date().getTime();
+       var t=setTimeout(function(){
+           var currentTime = new Date().getTime();
+           if(currentTime - lastTimeMouseMoved > 1000){
+              $('.slideshow__controls a').fadeOut('slow');
+           }
+       },1000);
+       
+    }); 
+
 
   });
 </script>
