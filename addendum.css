@@ -279,32 +279,13 @@
 	width: 100%;
 	clear: both;
 	margin-top: 40px;
-	padding: 20px 0;
+	padding: 0;
 	font-family: 'Roboto',Arial,sans-serif;
 }
 
-#footer ul, #footer p { 
-	clear: both; 
-	float: none; 
-}
-
-#footer ul li a { 
-	margin-right: 5px; 
-}
-
-#footer ul li { 
-	display: block; 
-	float: left; 
-	text-transform: uppercase; 
-	margin-right: 5px; 
-}
-
-#footer ul li:after { 
-	content: '\2022'; 
-}
-
-#footer ul li:last-child:after { 
-	content: ''; 
+#footer p { 
+	clear: both;
+	font-size: 11px; 
 }
 
 #footer a { 
@@ -315,24 +296,20 @@
 	color: #f0d40f; 
 }
 
-#footer ul li.current-menu-item a {
-    color: #f0d40f !important;
-    font-weight: bold;
-}
-
 #footer p { 
 	margin: 0; 
-	padding-top: 18px; 
 }
 
 #footer .share-buttons,
-#footer #mc_embed_signup {
+#footer p {
 	float: right;
+	text-align: right;
 }
 
 #mc_embed_signup {
 	background: #000; 
 	clear: both;
+	float: left;
 }
 
 #mc_embed_signup input.email { 
@@ -355,7 +332,7 @@
 }
 
 #footer .share-buttons {
-	margin-bottom: 26px;}
+	margin-bottom: 9px;}
 
 .share-buttons img {
 	width: 25px;
