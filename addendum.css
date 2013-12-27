@@ -283,6 +283,15 @@
 	font-family: 'Roboto',Arial,sans-serif;
 }
 
+#footer .page-wrapper.twelve.columns {
+	padding: 0;
+}
+
+#footer .main-outer-wrapper {
+	background: transparent;
+	border-color: transparent;
+}
+
 #footer p { 
 	clear: both;
 	font-size: 11px; 
