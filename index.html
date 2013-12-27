@@ -73,8 +73,26 @@
                           <nav id="primary-nav-id" class="primary-nav slideMenu">
                               <ul>
                                   <li class="current-menu-item"><a href="index.html">Home</a></li>
-                                  <li><a href="concept.html">Concept</a></li>
-                                  <li><a href="philosophy.html">Philosophy</a></li>
+                                  <li>
+                                    <span class="concept">Concept</span>
+                                    <ul class="concept">
+                                      <li><a href="concept.html#overview">Overview</a></li>
+                                      <li><a href="concept.html#why-wildlands">Why Wildlands</a></li>
+                                      <li><a href="concept.html#why-community">Why Community</a></li>
+                                      <li><a href="concept.html#why-lodging">Why Lodging</a></li>
+                                      <li><a href="concept.html#faq">FAQ</a></li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    <span class="philosophy">Philosophy</span>
+                                    <ul class="philosophy">
+                                      <li><a href="philosophy.html#overview">Mission Statement</a></li>
+                                      <li><a href="philosophy.html#manifesto">Manifesto</a></li>
+                                      <li><a href="philosophy.html#who-you-are">Who You Are</a></li>
+                                      <li><a href="philosophy.html#why-wild">Why Wild</a></li>
+                                      <li><a href="philosophy.html#sustainability">Sustainability</a></li>
+                                    </ul>
+                                  </li>
                                   <li><a href="thoughts.html">Thoughts</a></li>
                                   <li><a href="destinations.html">Destinations</a></li>
                                   <li>
@@ -197,6 +215,17 @@
             disclaimer: 'Please feel free to get in touch, we value your feedback',
             hideOnSubmit: false
         });
+
+
+    jQuery('.slideshow__controls a').css('display', 'none');
+
+    jQuery('.cover-screen').hover(function() {
+      $('.slideshow__controls a').fadeIn('slow');
+    },
+    function() {
+      $('.slideshow__controls a').fadeOut('slow');
+    });
+
   });
 </script>
 

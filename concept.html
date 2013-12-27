@@ -85,8 +85,26 @@
                                 <nav id="primary-nav-id" class="primary-nav slideMenu">
                                     <ul>
                                         <li><a href="index.html">Home</a></li>
-                                        <li class="current-menu-item"><a href="concept.html">Concept</a></li>
-                                        <li><a href="philosophy.html">Philosophy</a></li>
+                                        <li class="current-menu-item">
+                                            <span class="concept">Concept</span>
+                                            <ul class="concept">
+                                              <li><a href="concept.html#overview">Overview</a></li>
+                                              <li><a href="concept.html#why-wildlands">Why Wildlands</a></li>
+                                              <li><a href="concept.html#why-community">Why Community</a></li>
+                                              <li><a href="concept.html#why-lodging">Why Lodging</a></li>
+                                              <li><a href="concept.html#faq">FAQ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="philosophy">Philosophy</span>
+                                            <ul class="philosophy">
+                                              <li><a href="philosophy.html#overview">Mission Statement</a></li>
+                                              <li><a href="philosophy.html#manifesto">Manifesto</a></li>
+                                              <li><a href="philosophy.html#who-you-are">Who You Are</a></li>
+                                              <li><a href="philosophy.html#why-wild">Why Wild</a></li>
+                                              <li><a href="philosophy.html#sustainability">Sustainability</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a href="thoughts.html">Thoughts</a></li>
                                         <li><a href="destinations.html">Destinations</a></li>
                                         <li>
@@ -113,32 +131,32 @@
 
         <nav id="subnav">
             <ol>
-                <li class="intro selected-subnav">
-                    <a href="#intro">
+                <li class="overview selected-subnav">
+                    <a href="#overview">
                         <span class="dot"></span>
                         <span class="desc">Overview</span>
                     </a>
                 </li>
-                <li class="page1">
-                    <a href="#page1">
+                <li class="why-wildlands">
+                    <a href="#why-wildlands">
                         <span class="dot"></span>
                         <span class="desc">Why Wildlands</span>
                     </a>
                 </li>
-                <li class="page2">
-                    <a href="#page2">
+                <li class="why-community">
+                    <a href="#why-community">
                         <span class="dot"></span>
                         <span class="desc">Why Community</span>
                     </a>
                 </li>
-                <li class="page3">
-                    <a href="#page3">
+                <li class="why-lodging">
+                    <a href="#why-lodging">
                         <span class="dot"></span>
                         <span class="desc">Why Lodging</span>
                     </a>
                 </li>
-                <li class="page4">
-                    <a href="#page4">
+                <li class="faq">
+                    <a href="#faq">
                         <span class="dot"></span>
                         <span class="desc">FAQ</span>
                     </a>
@@ -149,7 +167,7 @@
 
 
         <!-- Begin intro -->
-        <div id="intro" class="intro-section global-section container-section">    
+        <div id="overview" class="intro-section global-section container-section">    
 
             <div class="section-header">
 
@@ -188,7 +206,7 @@
 
 
         <!-- Begin page1 -->
-        <div id="page1" class="services-section global-section container-section">    
+        <div id="why-wildlands" class="services-section global-section container-section">    
 
             <div class="section-header">
           
@@ -223,7 +241,7 @@
         <!-- End #parallax-section -->
 
         <!-- Begin page2 -->  
-        <div id="page2" class="portfolio-section global-section container-section">
+        <div id="why-community" class="portfolio-section global-section container-section">
   
             <div class="section-header">
               
@@ -254,7 +272,7 @@
         <!-- End #parallax-section -->
 
         <!-- Begin page3 -->
-        <div id="page3" class="about-section global-section container-section">
+        <div id="why-lodging" class="about-section global-section container-section">
     
 
             <div class="section-header-text">
@@ -286,7 +304,7 @@
         <!-- End #parallax-section -->
 
         <!-- Begin page4 -->
-        <div id="page4" class="outro-section global-section container-section">
+        <div id="faq" class="outro-section global-section container-section">
     
             <div class="section-header-text">
 
@@ -350,24 +368,7 @@
     </script>
     <!--end contactable -->
 
-    <script>
-        /*jQuery(function() {
-          jQuery('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = jQuery(this.hash);
-              target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
-              var header = jQuery('.header-outer-wrapper').height();
-              if (target.length) {
-                pos = target.offset().top - header;
-                jQuery('html,body').animate({
-                  scrollTop: pos
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });*/
-    </script>
+
     <script src="assets/js/jquery.scrollTo.js"></script>
     <script src="assets/js/jquery.nav.js"></script>
     <script>

@@ -47,6 +47,14 @@
     <link rel="stylesheet" href="../assets/contactable/contactable.css" type="text/css" />
     <script type="text/javascript" src="../assets/contactable/jquery.contactable.js"></script>
 
+
+    <!-- Mapbox -->
+    <script src='http://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" href="../assets/css/leaflet.fullscreen.css" />
+    <script src="../assets/js/Leaflet.fullscreen.js"></script>
+    <script src="../assets/js/leaflet-hash.js"></script>
+
 </head>
 <body id="aurora" class="list-grid book-now">
 
@@ -89,18 +97,36 @@
                                 <nav id="primary-nav-id" class="primary-nav slideMenu">
                                     <ul>
                                         <li><a href="../index.html">Home</a></li>
-                                        <li><a href="../concept.html">Concept</a></li>
-                                        <li><a href="../philosophy.html">Philosophy</a></li>
+                                        <li>
+                                            <span class="concept">Concept</span>
+                                            <ul class="concept">
+                                              <li><a href="../concept.html#overview">Overview</a></li>
+                                              <li><a href="../concept.html#why-wildlands">Why Wildlands</a></li>
+                                              <li><a href="../concept.html#why-community">Why Community</a></li>
+                                              <li><a href="../concept.html#why-lodging">Why Lodging</a></li>
+                                              <li><a href="../concept.html#faq">FAQ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="philosophy">Philosophy</span>
+                                            <ul class="philosophy">
+                                              <li><a href="../philosophy.html#overview">Mission Statement</a></li>
+                                              <li><a href="../philosophy.html#manifesto">Manifesto</a></li>
+                                              <li><a href="../philosophy.html#who-you-are">Who You Are</a></li>
+                                              <li><a href="../philosophy.html#why-wild">Why Wild</a></li>
+                                              <li><a href="../philosophy.html#sustainability">Sustainability</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a href="../thoughts.html">Thoughts</a></li>
                                         <li class="current-menu-item"><a href="../destinations.html">Destinations</a></li>
                                         <li>
                                             <span>Info</span>
                                             <ul>
-                                              <li><a href="team.html">Team</a></li>
-                                              <li><a href="jobs.html">Jobs</a></li>
-                                              <li><a href="partners.html">Partners</a></li>
-                                              <li><a href="news.html">News</a></li>
-                                              <li><a href="contact.html">Contact</a></li>
+                                              <li><a href="../team.html">Team</a></li>
+                                              <li><a href="../jobs.html">Jobs</a></li>
+                                              <li><a href="../partners.html">Partners</a></li>
+                                              <li><a href="../news.html">News</a></li>
+                                              <li><a href="../contact.html">Contact</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -225,13 +251,21 @@
 
                                                 </div>
                                                 <div class="tab-content" tab-id="tab3">
-                                                    <p><iframe src="http://player.vimeo.com/video/54756268?byline=0&amp;portrait=0&amp;color=999999" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></br>
+                                                    <div class="flex-container">
+                                                        <iframe src="http://player.vimeo.com/video/54756268?byline=0&amp;portrait=0&amp;color=999999" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></br>
+                                                    </div>
 
-                                                    <iframe src="http://player.vimeo.com/video/52360909?byline=0&amp;portrait=0" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><br>
+                                                    <div class="flex-container">
+                                                        <iframe src="http://player.vimeo.com/video/52360909?byline=0&amp;portrait=0" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><br>
+                                                    </div>
 
-                                                    <iframe width="624" height="351" src="https://www.facebook.com/video/embed?video_id=482837315468" frameborder="0" style="max-width: 100%;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><br>
+                                                    <div class="flex-container">
+                                                        <iframe width="624" height="351" src="https://www.facebook.com/video/embed?video_id=482837315468" frameborder="0" style="max-width: 100%;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><br>
+                                                    </div>
 
-                                                    <iframe width="560" height="315" src="http://www.youtube.com/embed/_sDvsQAT5x8" frameborder="0" allowfullscreen></iframe></p>
+                                                    <div class="flex-container">
+                                                        <iframe width="560" height="315" src="http://www.youtube.com/embed/_sDvsQAT5x8" frameborder="0" allowfullscreen></iframe>
+                                                    </div>
                                                 </div>
 
                                                 <!--Activities -->
@@ -262,14 +296,14 @@
                                                 <!--Map -->
 
                                                 <div class="tab-content" tab-id="tab5">
-                                                    <div class="flex-container">
-                                                        <!-- Old Bing Map -->
-                                                        <!--<iframe width="640" height="480" frameborder="0" src="http://www.bing.com/maps/embed/viewer.aspx?v=3&cp=66.265989~-22.686793&lvl=9&w=640&h=480&sty=h&typ=d&pp=&ps=&dir=0&mkt=en-au&src=SHELL&form=BMEMJS"></iframe>-->
+                                                    
 
                                                         <!-- New Mapbox Map -->
-                                                        <iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v3/jebr12.gj83cfgc/mm/zoompan,zoomwheel.html?secure=1#9/66.1472/-22.8227'></iframe>
-                                                    </div>
-                                                    <!--<p><a target="_blank" href="http://www.bing.com/maps/?cp=66.265989~-22.686793&sty=h&lvl=9&sp=&mm_embed=map">View Larger Map</a></p>-->
+                                                        <!--<iframe id="map" width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v3/jebr12.gj83cfgc/mm/zoompan,zoomwheel.html?secure=1#9/66.1472/-22.8227' fullscreen='true'></iframe>-->
+                                                        <div class="flex-container">
+                                                            <div id="map">
+                                                            </div>
+                                                        </div>
                                                 </div>
 
                                                 <!--Reviews -->
@@ -474,15 +508,20 @@
     </script>
     <script src="../assets/js/nav.js"></script>
 
+    <script>
+    var map = L.mapbox.map('map', 'jebr12.gj83cfgc', {
+        fullscreenControl: true
+    })
+    .setView([66.1472, -22.8227], 9);
+    </script>
+
     <script src="../assets/js/jquery.flexslider.js"></script>
     <script>
     jQuery(document).ready(function(){
 
         function multiScreenSlides() {
             var screenWidth = jQuery(document).width();
-            console.log(screenWidth);
             if (screenWidth > 767) {
-                console.log("lightbox");
                 jQuery("a[rel^='prettyPhoto']").prettyPhoto();                
             }
             else {

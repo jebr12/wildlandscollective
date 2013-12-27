@@ -85,8 +85,26 @@
                                 <nav id="primary-nav-id" class="primary-nav slideMenu">
                                     <ul>
                                         <li><a href="index.html">Home</a></li>
-                                        <li><a href="concept.html">Concept</a></li>
-                                        <li class="current-menu-item"><a href="philosophy.html">Philosophy</a></li>
+                                        <li>
+                                            <span class="concept">Concept</span>
+                                            <ul class="concept">
+                                              <li><a href="concept.html#overview">Overview</a></li>
+                                              <li><a href="concept.html#why-wildlands">Why Wildlands</a></li>
+                                              <li><a href="concept.html#why-community">Why Community</a></li>
+                                              <li><a href="concept.html#why-lodging">Why Lodging</a></li>
+                                              <li><a href="concept.html#faq">FAQ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="current-menu-item">
+                                            <span class="philosophy">Philosophy</span>
+                                            <ul class="philosophy">
+                                              <li><a href="philosophy.html#mission-statement">Mission Statement</a></li>
+                                              <li><a href="philosophy.html#manifesto">Manifesto</a></li>
+                                              <li><a href="philosophy.html#who-you-are">Who You Are</a></li>
+                                              <li><a href="philosophy.html#why-wild">Why Wild</a></li>
+                                              <li><a href="philosophy.html#sustainability">Sustainability</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a href="thoughts.html">Thoughts</a></li>
                                         <li><a href="destinations.html">Destinations</a></li>
                                         <li>
@@ -112,9 +130,45 @@
         </header> <!-- END .header-container-wrapper -->
 
 
+        <nav id="subnav">
+            <ol>
+                <li class="mission-statement selected-subnav">
+                    <a href="#mission-statement">
+                        <span class="dot"></span>
+                        <span class="desc">Mission Statement</span>
+                    </a>
+                </li>
+                <li class="manifesto">
+                    <a href="#manifesto">
+                        <span class="dot"></span>
+                        <span class="desc">Manifesto</span>
+                    </a>
+                </li>
+                <li class="who-you-are">
+                    <a href="#who-you-are">
+                        <span class="dot"></span>
+                        <span class="desc">Who You Are</span>
+                    </a>
+                </li>
+                <li class="why-wild">
+                    <a href="#why-wild">
+                        <span class="dot"></span>
+                        <span class="desc">Why Wild</span>
+                    </a>
+                </li>
+                <li class="sustainability">
+                    <a href="#sustainability">
+                        <span class="dot"></span>
+                        <span class="desc">Sustainability</span>
+                    </a>
+                </li>
+            </ol>
+        </nav>
+
+
 
         <!-- Begin intro -->
-        <div id="intro" class="intro-section global-section container-section">    
+        <div id="mission-statement" class="intro-section global-section container-section">    
 
             <div class="section-header">
 
@@ -122,7 +176,7 @@
 
                     <h1> PHILOSOPHY </h1>
 
-                    <span style="color: #727272;font-size: 16px;">
+                    <p>
 
                         Wild nature is under increasing pressure from all directions and is rapidly disappearing. Wildlands  seeks to protect these wild places through the creation of a sustainable travel venture and the formation of a community of likeminded individuals. We strive to conserve these places by offering authentic, adventurous, inspiring and life-affirming experiences, along with a promise of light footprints. We aim to create a powerful community of like-minded adventurers and stewards of nature who will demand preservation and ensure access to these lands for future generations to come.
                         <br/><br/>
@@ -130,7 +184,7 @@
                         <br/><br/>
                         People matter. Locals of wildlands must not be antagonized. At Wildlands, we prioritize and encourage human  development along with environmental conservation. 
            
-                    </span>
+                    </p>
 
                 </div><!-- page-body -->
 
@@ -146,7 +200,7 @@
         <!-- End #parallax-section -->
 
         <!-- Begin page1 -->
-        <div id="page1" class="services-section global-section container-section">    
+        <div id="manifesto" class="services-section global-section container-section">    
 
             <div class="section-header">
           
@@ -180,7 +234,7 @@
 
 
         <!-- Begin page2 -->  
-        <div id="page2" class="portfolio-section global-section container-section">
+        <div id="who-you-are" class="portfolio-section global-section container-section">
     
             <div class="section-header">
           
@@ -209,7 +263,7 @@
         <!-- End #parallax-section -->
 
         <!-- Begin page3 -->
-        <div id="page3" class="about-section global-section container-section" >
+        <div id="why-wild" class="about-section global-section container-section" >
     
             <div class="section-header-text">
          
@@ -240,7 +294,7 @@
         <!-- End #parallax-section -->
   
         <!-- Begin page4 -->
-        <div id="page4" class="outro-section global-section container-section">
+        <div id="sustainability" class="outro-section global-section container-section">
     
             <div class="section-header-text ">
 
@@ -296,6 +350,22 @@
 
     <!-- Javascript -->
 
+    <script src="assets/js/jquery.scrollTo.js"></script>
+    <script src="assets/js/jquery.nav.js"></script>
+    <script>
+        jQuery(function(){
+            var header = jQuery('.header-outer-wrapper').height();
+            if (jQuery(window).width() > 768) {
+                jQuery('#subnav ol').onePageNav({
+                    currentClass: 'selected-subnav',
+                    scrollSpeed: 1000,
+                    scrollOffset: header,
+                    scrollThreshold: 0.5
+                });
+            }            
+        });
+
+    </script>
     
     <script>
       jQuery(function(){

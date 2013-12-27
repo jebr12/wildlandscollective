@@ -61,7 +61,8 @@
 }
 
 @media screen and (min-width: 959px) {
-	#intro {
+	#overview,
+	#mission-statement {
 		top: 54px;
 		position: relative;
 	}
@@ -188,7 +189,8 @@
 	.about-section {
 		min-height: 1024px;
 	}
-	#intro {
+	#overview,
+	#mission-statement {
 		padding-top: 240px;
 	}
 	.page-body,
@@ -209,23 +211,21 @@
 		padding: 45px 65px;
 	}
 
-	#concept #intro,
-	#concept #page1,
-	#concept #page2,
-	#concept #page3,
-	#concept #page4,
-	#concept #outro,
-	#philosophy #intro,
-	#philosophy #page1,
-	#philosophy #page2,
-	#philosophy #page3,
-	#philosophy #page4,
-	#philosophy #outro {
+	#concept #overview,
+	#concept #why-wildlands,
+	#concept #why-community,
+	#concept #why-lodging,
+	#concept #faq,
+	#philosophy #mission-statement,
+	#philosophy #manifesto,
+	#philosophy #who-you-are,
+	#philosophy #why-wild,
+	#philosophy #sustainability {
 		padding: 0;
 	}
 
-	#concept #intro,
-	#philosophy #intro {
+	#concept #overview,
+	#philosophy #mission-statement {
 		padding-top: 113px;
 	}
 
@@ -371,6 +371,37 @@
 	margin-top: 0;
 }
 
+/* drop down nav arrows & colors */
+
+.primary-nav.slideMenu ul li span, 
+#primary-nav-mobile ul li span {
+	background: transparent url(./assets/images/dropdown.png) right center no-repeat;
+	background-size: 16px 5px;
+}
+
+#home .primary-nav.slideMenu ul li span {
+	background: transparent url(./assets/images/dropup.png) right center no-repeat;
+	background-size: 16px 5px;
+}
+
+.primary-nav.slideMenu ul li span {
+	padding-right: 22px;
+}
+
+.primary-nav ul li.current-menu-item ul.concept li a,
+.primary-nav ul li.current-menu-item ul.philosophy li a {
+	color: #fff !important;
+	font-weight: normal !important;
+}
+
+.primary-nav ul li.current-menu-item span.concept,
+.primary-nav ul li.current-menu-item span.philosophy {
+	color: #f0d40f !important;
+	font-weight: bold !important;
+}
+
+
+
 
 
 /* concept and philosophy subnav */
@@ -418,7 +449,7 @@
 	display: none;
 	z-index: 99;
 	padding: 0 10px 0 30px;
-	width: 120px;
+	width: 150px;
 	position: absolute;
 	background: rgba(0,0,0,0.8);
 	text-transform: uppercase;
@@ -498,6 +529,7 @@
     margin-bottom: 20px;
 }
 
+.flex-container #map,
 .flex-container iframe,   
 .flex-container object,  
 .flex-container embed {
@@ -506,6 +538,14 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#map {
+	position:absolute; 
+	top:0; 
+	bottom:0; 
+	width:100%;
+	height: 500px;
 }
 
 /* link color on tab content */
@@ -798,13 +838,6 @@ form#contactable-contactForm .contactable-submit {
 
 
 
-/* index bottom nav tweak */
-
-.header .nav.nav--primary li:last-child span {
- 	padding-right: 15px; 
-}
-
-
 /* changing background color on book now sidebars */
 
 .right-sidebar-wrapper .widget-container {
@@ -837,12 +870,21 @@ padding: 0;
 	max-width: none;
 }
 
+/* home slideshow button tweak */
+
+.slideshow__controls a {
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;	
+}
+
+
 @media only screen and (min-width: 959px) {
-	#home #header .row,
+	/*#home #header .row,
 	#home #header .container {
 		width: 100%;
 		max-width: 100%;
-	}	
+	}*/	
 
 	#home-slide-wrap {
 		left: 9%;
@@ -854,10 +896,6 @@ padding: 0;
 
 }
 
-
-#home .primary-nav ul li:last-child span {
-	padding-right: 15px;
-}
 
 
 @media only screen and (min-width: 767px) {
@@ -892,7 +930,17 @@ padding: 0;
 
 @media only screen and (max-width: 1024px) {
 	.tab-title li {
-    	margin-bottom: 1px;
+		margin: 0 0 1px 0 !important;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+    	width: 50%;
+    }
+    .tab-title li:nth-child(even) {
+    	border-left: 1px solid #eee;
+    }
+    .tab-title li:last-child {
+    	width: 100%;
     }
 }
 
