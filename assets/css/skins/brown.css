@@ -17,7 +17,6 @@ input[type="button"], button,.footer-social li a:hover,.btn_default,.acc-title-a
 .st-pagination li a:hover,.ui-datepicker-calendar .ui-state-hover,.ui-datepicker-calendar .ui-state-active,.go-detail,.go-gallery,
 .color,.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button
 	{
-		background-color: #bca474;
 		-o-transition:.5s;
 		-ms-transition:.5s;
 		-moz-transition:.5s;

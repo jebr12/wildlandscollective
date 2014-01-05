@@ -100,7 +100,7 @@ Author : http://www.smooththemes.com
 	----------------------------------------------------------------------------------------*/
 	fieldset{ padding:20px; border:1px solid #e0e0e0;}
 	input[type=text],input[type=password],textarea{ color:#a9a9a9; padding:0.7em 10px; border:1px solid #f0f0f0; background:#f4f4f4;font-size: 12px;}
-	textarea{ width:90%; font-size:13px; background:#f4f4f4; overflow:auto; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;color:#a9a9a9;margin-top:3px;line-height: 24px;min-height: 100px;}
+	textarea{ width:90%; font-size:13px; background:#f4f4f4; overflow:auto; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;color:#a9a9a9;margin-top:3px;line-height: 24px;}
 	input, textarea,input[type="submit"]:focus{outline:0 none;}
 	input[type="radio"],input[type="checkbox"]{margin-right:10px; margin-left:10px;}
 	button::-moz-focus-inner { border: 0; padding: 0;}
@@ -490,7 +490,7 @@ Author : http://www.smooththemes.com
 			.notice_bar{margin-top:15px;}
 
 			/* Date Picker */
-			.calendar{margin-top:5px;}
+			/*.calendar{margin-top:5px;}
 			.ui-datepicker { width: 100%; height: auto; margin: 0px auto 0; }
 			.ui-datepicker a { text-decoration: none; }
 			.ui-datepicker table { width: 100%; }
@@ -508,7 +508,7 @@ Author : http://www.smooththemes.com
 			.ui-datepicker-calendar .ui-state-default { background: #ffffff; }
 			.ui-datepicker-calendar .ui-state-hover { background: #BCA474; color:#fff; margin:-1px; }
 			.ui-datepicker-calendar .ui-state-active { background: #BCA474; color: #ffffff; position: relative; margin:-1px; }
-			.ui-datepicker-unselectable .ui-state-default { background: #ffffff; color: #cccccc; }
+			.ui-datepicker-unselectable .ui-state-default { background: #ffffff; color: #cccccc; }*/
 		
 		/* Divider */
 		.divider{height: 4px;background: url('assets/images/doted-divider.png') repeat-x top left;}
@@ -721,7 +721,6 @@ Author : http://www.smooththemes.com
 		.woocommerce .sidebar a.button,.woocommerce-page .sidebar a.button{font-size: 11px; padding: 3px 12px;}
 		.related.products h2{background: url("assets/images/doted-divider.png") repeat-x scroll left bottom transparent;padding-bottom:6px;font-weight: 500;font-size: 15px;}
 
-		.button{background: #f0d40f !important;}
 
 	/* Footer.
 	----------------------------------------------------------------------------------------*/

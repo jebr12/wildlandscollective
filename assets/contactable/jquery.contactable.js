@@ -76,7 +76,10 @@
 			*	</form>
 			*/
 
-			jQuery(this).html('<div id="contactable-inner"></div><form id="contactable-contactForm" method="" action=""><div id="contactable-loading"></div><div id="contactable-callback"></div><div class="contactable-holder"><p><label for="contactable-name">'+options.name+'<span class="contactable-green"> * </span></label><input id="contactable-name" class="contactable-contact contactable-validate" name="name" /></p><p><label for="contactable-email">'+options.email+' <span class="contactable-green"> * </span></label><input id="contactable-email" class="contactable-contact contactable-validate" name="email" /></p>'+dropdown+'<p><label for="contactable-message">'+options.message+' <span class="contactable-green"> * </span></label><textarea id="contactable-message" name="message" class="contactable-message contactable-validate" rows="4" cols="30" ></textarea></p><p><input class="contactable-submit" type="submit" value="'+options.submit+'"/></p></div></form>');
+			//jQuery(this).html('<div id="contactable-inner"></div><form id="contactable-contactForm" method="" action=""><div id="contactable-loading"></div><div id="contactable-callback"></div><div class="contactable-holder"><p><label for="contactable-name">'+options.name+'<span class="contactable-green"> * </span></label><input id="contactable-name" class="contactable-contact contactable-validate" name="name" /></p><p><label for="contactable-email">'+options.email+' <span class="contactable-green"> * </span></label><input id="contactable-email" class="contactable-contact contactable-validate" name="email" /></p>'+dropdown+'<p><label for="contactable-start-date">'+options.message+' <span class="contactable-green"> * </span></label><textarea id="contactable-message" name="message" class="contactable-message contactable-validate" rows="4" cols="30" ></textarea></p><p><label for="contactable-message">'+options.message+' <span class="contactable-green"> * </span></label><textarea id="contactable-message" name="message" class="contactable-message contactable-validate" rows="4" cols="30" ></textarea></p><p><input class="contactable-submit" type="submit" value="'+options.submit+'"/></p></div></form>');
+
+
+			jQuery(this).html('<div id="contactable-inner"></div><form id="contactable-contactForm" method="" action=""><div id="contactable-loading"></div><div id="contactable-callback"></div><div class="contactable-holder"><p><label for="contactable-name">'+options.name+'</label><input id="contactable-name" class="contactable-contact contactable-validate" name="name" /></p><p><label for="contactable-email">'+options.email+'</label><input id="contactable-email" class="contactable-contact contactable-validate" name="email" /></p><p><label for="contactable-startdate">Start Date</label><input id="contactable-startdate" name="startdate" class="contactable-validate dates" type="date" /></p><p><label for="enddate">End Date</label><input id="contactable-enddate" name="enddate" class="contactable-validate dates" type="date" /></p><p><label for="contactable-message">'+options.message+'</label><textarea id="contactable-message" name="message" class="contactable-message contactable-validate" rows="4" cols="30" ></textarea></p><p><input class="contactable-submit" type="submit" value="'+options.submit+'"/></p></div></form>');
 			
 			// Toggle the form visibility
 			jQuery('body').on('click', '#my-contact-div.contact-closed #contactable-inner, header.contact-closed #contact-top, .widget-container.contact-closed #book-now', function() {
@@ -95,14 +98,7 @@
 				jQuery('#contactable-overlay').css({display: 'none'});
 			});
 
-			jQuery('.global-section, .parallax-section, .cover-screen, .body-outer-wrapper').click(function() {
-				if (jQuery('#my-contact-div').hasClass("contact-open")) {
-					jQuery('#my-contact-div, header, .widget-container').removeClass('contact-open').addClass('contact-closed');
-					jQuery('#contactable-contactForm').animate({"marginRight": "-=290px"}, "4000");
-					jQuery("#contactable-inner").animate({"marginRight": "-=287px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
-					jQuery('#contactable-overlay').css({display: 'none'});
-				}
-			});
+			
 
 			
 			// Submit the form

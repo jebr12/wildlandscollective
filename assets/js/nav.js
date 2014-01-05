@@ -113,8 +113,10 @@ jQuery(document).ready(function(){
 
     primary_nav.clone().attr('id','primary-nav-mobile-id').removeClass().appendTo( primary_nav_mobile_button );
     jQuery('#primary-nav-mobile-id li:last-child a').attr('id', 'mobile-contact-top');
+    jQuery('#primary-nav-mobile-id li span').addClass('dropdown-close');
 
     primary_nav_cloned = primary_nav_mobile_button.find('> ul');
+
         jQuery('#primary-nav-mobile-a').click(function(){
             if(jQuery(this).hasClass('primary-nav-close')){
                 jQuery(this).removeClass('primary-nav-close').addClass('primary-nav-opened');
@@ -122,6 +124,18 @@ jQuery(document).ready(function(){
             } else {
                 jQuery(this).removeClass('primary-nav-opened').addClass('primary-nav-close');
                 primary_nav_cloned.slideUp( 400 );
+            }
+            return false;
+        });
+        jQuery('#primary-nav-mobile-id span').click(function(){
+            if(jQuery(this).hasClass('dropdown-close')){
+                jQuery('.dropdown-opened').next('ul').slideUp( 400 );
+                jQuery('.dropdown-opened').removeClass('dropdown-opened').addClass('dropdown-close');
+                jQuery(this).removeClass('dropdown-close').addClass('dropdown-opened');
+                jQuery(this).next('ul').slideDown( 400 );
+            } else {
+                jQuery(this).removeClass('dropdown-opened').addClass('dropdown-close');
+                jQuery(this).next('ul').slideUp( 400 );
             }
             return false;
         });

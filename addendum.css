@@ -271,6 +271,48 @@
 }
 
 
+/* activity icons */
+
+#book-now {
+	color: #111;
+	font-weight: bold;
+}
+
+.activity-icons {
+	width: 100%;
+	float: left;
+	clear: both;
+	padding: 10px 0 0 0;
+	background: #333;
+}
+
+.activity-icons li {
+	display: block;
+	float: left;
+	text-align: center;
+	width: 33%;
+}
+
+.activity-icons img {
+	display: block;
+	float: none;
+	margin: 0 auto 5px auto;
+	width: 22px;
+	height: 22px;
+	padding: 5px;
+	border-radius: 40px;
+	border: 2px solid #ccc;
+}
+
+.activity-icons p {
+	font-size: 9px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	line-height: 9px;
+	color: #ddd;
+}
+
+
 /* footer */
 
 #footer {
@@ -475,11 +517,12 @@
 
 /* blog pages titlebar css from markup */
 
+.text .titlebar-title,
 .blog .titlebar-title {
     float: none;
     padding: 30px;
     background: rgba(0, 0, 0, 0.75);
-    margin-top: 255px;
+    margin-top: 260px;
     position: relative;
     text-align: center;
     text-transform: uppercase;
@@ -487,18 +530,21 @@
     color: rgba(255,255,255,0.75);
 }
 
+.text .titlebar-title,
 .blog .titlebar-title h1 {
 	color: #ffd400;
 	font-size: 26px;
 	line-height: 30px;
 }
 
+.text .titlebar-title .titlebar-desc,
 .blog .titlebar-title .titlebar-desc {
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: bold;
 }
 
+.text .titlebar-title .titlebar-author,
 .blog .titlebar-title .titlebar-author {
 	font-size: 13px;
 	line-height: 15px;	
@@ -564,6 +610,46 @@
 	width: 306px;
 	max-width: 100%;
 }
+
+input[type="reset"], input[type="submit"], input[type="button"], button,
+.woocommerce a.button, 
+.woocommerce button.button,
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover,
+button.button,
+button.button:hover {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+}
+
+input[type="reset"], input[type="submit"], input[type="button"], button,
+.woocommerce a.button, 
+.woocommerce button.button,
+button.button{
+	background: #f0d40f;
+}
+
+
+input[type="reset"]:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover,
+#olark-box-wrapper #habla_window_div button:hover, #olark-box-wrapper #habla_window_div input[type=submit]:hover,
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover,
+button.button:hover {
+	background-color: #76b347;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #76b347), color-stop(100%, #5e9e2e));
+    background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: -o-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: linear-gradient(top, #76b347, #5e9e2e);
+    -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
+    -moz-box-shadow: inset 0 1px 0 0 #8dbf67;
+    box-shadow: inset 0 1px 0 0 #8dbf67;
+    cursor: pointer;
+}
+
 
 @media only screen and (max-width: 767px) {
 
@@ -637,6 +723,10 @@
 	padding: 0 10px;
 }
 
+
+.right-sidebar-wrapper.columns {
+	float: right;
+}
 
 /* centering filters on destinations */
 
@@ -794,14 +884,14 @@ form#contactable-contactForm select {
 }
 
 form#contactable-contactForm .contactable-submit {
-	width: 238px;
+	width: 238px !important;
 }
 
 
 
 /* switch contactable form to right side */
 
-.book-now #contactable-inner {
+.book-now #my-contact-div #contactable-inner {
     background-image: url(./assets/contactable/images/book-now-right.png);
 }
 
@@ -882,6 +972,19 @@ padding: 0;
 
 }
 
+	#home footer input[type="submit"] {
+		border: none;
+		margin: 0;
+		outline-width: 0;
+		padding: 8px 22px 10px;
+		height: 34px;
+		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+		text-align: center;
+		cursor: pointer;
+		line-height: normal;
+		-webkit-appearance: button;
+		vertical-align: baseline;
+	}
 
 
 @media only screen and (min-width: 767px) {
@@ -891,13 +994,21 @@ padding: 0;
 	}
 
 	#home .header {
-	  position: fixed;
-	  bottom: 0px;
-	  left: 0px;
-	  width: 100%;
-	  z-index: 200;
-	  *zoom: 1;
+		position: absolute;
+		top: 100%;
+		left: 0px;
+		width: 100%;
+		z-index: 200;
+		margin-top: -50px;
+		*zoom: 1;
 	}
+
+	#home footer {
+		position: absolute;
+		top: 100%;
+	}
+
+
 
 	#home .header-outer-wrapper {
 		position: relative;
@@ -928,19 +1039,25 @@ padding: 0;
     .tab-title li:last-child {
     	width: 100%;
     }
-}
 
-@media only screen and (max-width: 445px) {
-	#footer #mc_embed_signup,
-	#footer #mc_embed_signup input.email,
-	#footer #mc_embed_signup input.button {
-		width: 100%;
-		text-align: center;
+	.row .row {
+		margin: 0;
 	}
-
 }
+
+
 
 @media only screen and (max-width: 767px) {
+
+	#primary-nav-mobile ul li ul {
+		display: none;
+	}
+
+	#primary-nav-mobile ul li span.dropdown-close {
+		background: transparent url(./assets/images/dropright.png) right center no-repeat;
+		background-size: 16px 8px;
+	}
+
 
 	#footer .right,
 	#footer #mc_embed_signup,
@@ -997,9 +1114,7 @@ padding: 0;
 		top: 240px;
 	}
 
-	ul li:first-child #home-slide-wrap {
-		top: 400px;
-	}
+
 
 	#home-content p {
 		text-align: left;
@@ -1011,8 +1126,17 @@ padding: 0;
 		font-size: 24px;
 	}
 
+	#home-slide-wrap {
+		top: 350px;
+	}
+
+	#home-type {
+		top: 0;
+	}
+
+	.slideshow__controls,
 	.slideshow--bullets .slideshow__thumbs {
-		display: none;
+		display: none !important;
 	}
 
 	#home-content .home-content-btn {
@@ -1173,10 +1297,25 @@ padding: 0;
 	}
 }
 
+@media only screen and (max-width: 445px) {
+	#footer #mc_embed_signup,
+	#footer #mc_embed_signup input.email,
+	#footer #mc_embed_signup input.button {
+		width: 100%;
+		text-align: center;
+	}
+
+	#home-slide-wrap {
+		top: 400px;
+	}
+
+}
+
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
 	#home .primary-nav.slideMenu ul li a {
 		padding: 14px 15px;
 	}
+
 	#home #primary-nav-id {
 		margin-left: auto;
 	}
