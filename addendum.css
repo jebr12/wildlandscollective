@@ -986,6 +986,11 @@ padding: 0;
 		vertical-align: baseline;
 	}
 
+	#home footer {
+		position: absolute;
+		top: 100%;
+	}
+
 
 @media only screen and (min-width: 767px) {
 
@@ -1001,11 +1006,6 @@ padding: 0;
 		z-index: 200;
 		margin-top: -50px;
 		*zoom: 1;
-	}
-
-	#home footer {
-		position: absolute;
-		top: 100%;
 	}
 
 
