@@ -6,7 +6,7 @@
     line-height: 18px;
     background-color:#212121;
     cursor:pointer;
-    height:102px;
+    height:112px;
     margin-left: 0;
     *margin-left: 0;
     *margin-right:-8px; 
@@ -15,10 +15,10 @@
     *position:absolute;
     text-indent:-100000px;
     top:50%;
-    margin-top:-51px;
-    *margin-top:-51px;
+    margin-top:-56px;
+    *margin-top:-56px;
     width:44px;
-    background-image: url(./assets/contactable/images/contact-right.png);
+    background-image: url(./assets/contactable/images/feedback.png);
     right: 100%;
     left: auto;
     margin-right: -8px;
