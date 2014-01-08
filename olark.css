@@ -23,6 +23,14 @@
     left: auto;
     margin-right: -8px;
 }
+
+/* revised */
+
+#side-chat {
+    width: 39px;
+    margin-right: -3px;
+    *margin-right:-3px; 
+}
  
 #olark-box-wrapper {
     position: fixed;
@@ -61,23 +69,28 @@
     margin: 0 !important;
   }
 
-  .habla_panel_border.hbl_pal_main_bg {
+  /*.habla_panel_border.hbl_pal_main_bg {
     background: #212121 !important;
     color: #fff !important;
+  }
+
+  .olrk-available .habla_panel_border.hbl_pal_main_bg {
+    background: #fff !important;
+    color: #212121;
   }
 
   .habla_panel_border.hbl_pal_main_bg textarea {
     background: #fff !important;
     color: #000 !important;
-  }
+  }*/
 
     #habla_window_div.habla_window_div_position_inline .habla_panel_border {
-        border-top: 3px solid #fff !important;
-        border-bottom: 3px solid #fff !important;
+        border-top: 3px solid #999 !important;
+        border-bottom: 3px solid #999 !important;
     }
 
     #habla_window_div #habla_expanded_div {
-        border-left: 3px solid #fff !important;
+        border-left: 3px solid #999 !important;
         border-right: 0 !important;
     }
 
