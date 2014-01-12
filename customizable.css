@@ -36,16 +36,16 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 }
 
 #concept .parallax-section-1 {
-	background: #111 url("./info/concept/images/parallax1.jpg") no-repeat center center;
+	background: #111 url('./info/concept/images/parallax1.jpg') no-repeat center center;
 }
 #concept .parallax-section-2 {
-	background: #111 url("./info/concept/images/parallax2.jpg") no-repeat center center;
+	background: #111 url('./info/concept/images/parallax2.jpg') no-repeat center center;
 }
 #concept .parallax-section-3 {
-	background: #111 url("./info/concept/images/parallax3.jpg") no-repeat center center;
+	background: #111 url('./info/concept/images/parallax3.jpg') no-repeat center center;
 }
 #concept .parallax-section-4 {
-	background: #111 url("./info/concept/images/parallax4.jpg") no-repeat center center;
+	background: #111 url('./info/concept/images/parallax4.jpg') no-repeat center center;
 }
 
 
@@ -64,7 +64,7 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 }
 
 #philosophy #why-wild {
-	background: #111 url('./info/philosophy/images/big-page3.jpg') no-repeat center center;
+	background: #111 url('./info/philosophy/images/big-page2.jpg') no-repeat center center;
 }
 
 #philosophy #sustainability {
@@ -72,19 +72,19 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 }
 
 #philosophy .parallax-section-1 {
-	background: #111 url("./info/philosophy/images/parallax1.jpg") no-repeat center center;
+	background: #111 url('./info/philosophy/images/parallax1.jpg') no-repeat center center;
 }
 
 #philosophy .parallax-section-2 {
-	background: #111 url("./info/philosophy/images/parallax2.jpg") no-repeat center center;
+	background: #111 url('./info/philosophy/images/parallax2.jpg') no-repeat center center;
 }
 
 #philosophy .parallax-section-3 {
-	background: #111 url("./info/philosophy/images/parallax3.jpg") no-repeat center center;
+	background: #111 url('./info/philosophy/images/parallax3.jpg') no-repeat center center;
 }
 
 #philosophy .parallax-section-4 {
-	background: #111 url("./info/philosophy/images/parallax4.jpg") no-repeat center center;
+	background: #111 url('./info/philosophy/images/parallax4.jpg') no-repeat center center;
 }
 
 
@@ -143,8 +143,9 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 	background:#000 url('./thoughts/images/wild-furnishings-banner.jpg') no-repeat center bottom;	
 }
 
-
-/* END CUSTOMIZABLE CSS! begin pre-set background sizing css! */
+/*--------------------------------------------------------------
+END CUSTOMIZABLE CSS! begin pre-set background sizing css!
+---------------------------------------------------------------*/
 
 #thoughts-header-image,
 #destinations-header-image,
