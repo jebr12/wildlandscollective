@@ -27,15 +27,15 @@
 	color:#FFFFFF;
 	height:500px;
 	left:0;
-	margin-left:-400px;
-	*margin-left:-434px;
+	margin-left:-410px;
+	*margin-left:-444px;
 	margin-top:-225px;
 	overflow:hidden;
 	padding-left:30px;
 	position:fixed;
 	top:50%;
-	width:360px;
-	*width:394px;
+	width:370px;
+	*width:404px;
 	z-index:99999;
 }
 

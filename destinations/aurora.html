@@ -44,8 +44,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="../assets/js/jquery.modernizr.js"></script>
 
+    <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
     <link rel="stylesheet" href="../assets/contactable/contactable.css" type="text/css" />
-    <script type="text/javascript" src="../assets/contactable/jquery.contactable.js"></script>
 
 
     <!-- Mapbox -->
@@ -67,7 +68,35 @@
 
 
 <!--start contactable -->
-<div id="my-contact-div" class="contact-closed"><!-- contactable html placeholder --></div>
+<div id="my-contact-div" class="contact-closed">
+
+    <!-- contactable html placeholder -->
+    <div id="contactable-inner"></div>
+    <form id="contactable-contactForm">
+        <div id="contactable-loading"></div>
+        <div id="contactable-callback"></div>
+        <div class="contactable-holder">
+            <p>
+                <label for="contactable-name">Name</label>
+                <input id="contactable-name" class="contactable-contact contactable-validate" name="name" />
+            </p>
+            <p>
+                <label for="contactable-email">Email</label>
+                <input id="contactable-email" class="contactable-contact contactable-validate" name="email" /></p>
+            <p>
+                <label for="contactable-startdate">Start Date</label>
+                <input id="contactable-startdate" name="startdate" class="contactable-validate dates" type="text" /></p><p><label for="enddate">End Date</label>
+                <input id="contactable-enddate" name="enddate" class="contactable-validate dates" type="text" /></p>
+            <p>
+                <label for="contactable-message">Message</label>
+                <textarea id="contactable-message" name="message" class="contactable-message contactable-validate" rows="4" cols="30" ></textarea>
+            </p>
+
+            <p><input class="contactable-submit submit" type="submit" value="Submit"/></p>
+        </div>
+    </form>
+
+</div>
 <!--end contactable -->
 
 
@@ -569,24 +598,29 @@
 	
 
     <!-- Javascript -->
+    <script src="http://sfdevlabs.github.io/fireform/fireform.js"></script>
 
     <script>
       jQuery(function(){
-        jQuery('#my-contact-div').contactable(
-            {
-                subject: 'Wildlands Booking '+location.href,
-                url: '../assets/contactable/mail.php',
-                name: 'Name',
-                email: 'Email',
-                dropdownTitle: 'Subject',
-                dropdownOptions: ['General', 'Feedback', 'Inquiry'],
-                message : 'Message',
-                submit : 'BOOK NOW',
-                recievedMsg : 'Thanks! We have received your booking!',
-                notRecievedMsg : 'Sorry but your booking could not be processed, try again later',
-                disclaimer: 'Please feel free to get in touch, we value your feedback',
-                hideOnSubmit: false
-            });
+        jQuery("#contactable-contactForm").fireform('https://wildlandscollective.firebaseio.com');
+
+        // Toggle the form visibility
+        jQuery('body').on('click', '#my-contact-div.contact-closed #contactable-inner, header.contact-closed #contact-top, .widget-container.contact-closed #book-now', function() {
+            jQuery('#my-contact-div,  .widget-container, header').addClass('contact-open').removeClass('contact-closed');
+            jQuery('#contactable-overlay').css({display: 'block'});
+            jQuery("#contactable-inner").animate({"marginRight": "-=5px"}, "2000"); 
+            jQuery('#contactable-contactForm').animate({"marginRight": "-=0px"}, "2000");
+            jQuery("#contactable-inner").animate({"marginRight": "+=297px"}, "4000"); 
+            jQuery('#contactable-contactForm').animate({"marginRight": "+=300px"}, "4000"); 
+        });
+
+        jQuery('body').on('click', '#my-contact-div.contact-open #contactable-inner, header.contact-open #contact-top, .widget-container.contact-open #book-now', function() {
+            jQuery('#my-contact-div, .widget-container, header').removeClass('contact-open').addClass('contact-closed');
+            jQuery('#contactable-contactForm').animate({"marginRight": "-=300px"}, "4000");
+            jQuery("#contactable-inner").animate({"marginRight": "-=297px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
+            jQuery('#contactable-overlay').css({display: 'none'});
+        });;
+
       });
     </script>
     

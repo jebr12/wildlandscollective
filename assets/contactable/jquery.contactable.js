@@ -11,6 +11,59 @@
  
 (function(jQuery){
 
+	$.fireform = function(element, options) {
+
+        var fb = new Firebase(options),
+            target = jQuery(element);
+
+        target.children(':submit').on('click', function() {
+            event.preventDefault()
+            var obj = {};
+            target.find('input').each(function(key, input) {
+                var name = jQuery(input).attr('name'),
+                    val = jQuery(input).val();
+                if (name)
+                    obj[name] = val;
+                else if (jQuery(input).attr('type') !== 'submit')
+                    obj['unnamed' + key] = val;
+            });
+            var form = fb;
+            obj['_time'] = new Date().toString();
+            form.push(obj, function(err) {
+                if (!err)
+                    target.addClass("submited");
+                else
+                    target.addClass("error");
+            });
+        });
+    }
+
+    // add the plugin to the jQuery.fn object
+    jQuery.fn.fireform = function(options) {
+
+        // iterate through the DOM elements we are attaching the plugin to
+        return this.each(function() {
+
+            // if plugin has not already been attached to the element
+            if (undefined == jQuery(this).data('fireform')) {
+
+                // create a new instance of the plugin
+                // pass the DOM element and the user-provided options as arguments
+                var plugin = new jQuery.fireform(this, options);
+
+                // in the jQuery version of the element
+                // store a reference to the plugin object
+                // you can later access the plugin and its methods and properties like
+                // element.data('pluginName').publicMethod(arg1, arg2, ... argn) or
+                // element.data('pluginName').settings.propertyName
+                jQuery(this).data('fireform', plugin);
+
+            }
+
+        });
+
+    }
+
 	// Define the new for the plugin ans how to call it	
 	jQuery.fn.contactable = function(options) {
 		// Set default options  
@@ -81,27 +134,29 @@
 
 			jQuery(this).html('<div id="contactable-inner"></div><form id="contactable-contactForm" method="" action=""><div id="contactable-loading"></div><div id="contactable-callback"></div><div class="contactable-holder"><p><label for="contactable-name">'+options.name+'</label><input id="contactable-name" class="contactable-contact contactable-validate" name="name" /></p><p><label for="contactable-email">'+options.email+'</label><input id="contactable-email" class="contactable-contact contactable-validate" name="email" /></p><p><label for="contactable-startdate">Start Date</label><input id="contactable-startdate" name="startdate" class="contactable-validate dates" type="text" /></p><p><label for="enddate">End Date</label><input id="contactable-enddate" name="enddate" class="contactable-validate dates" type="text" /></p><p><label for="contactable-message">'+options.message+'</label><textarea id="contactable-message" name="message" class="contactable-message contactable-validate" rows="4" cols="30" ></textarea></p><p><input class="contactable-submit" type="submit" value="'+options.submit+'"/></p></div></form>');
 			
+			jQuery("#contactable-contactForm").fireform('https://wildlandscollective.firebaseio.com');
+
 			// Toggle the form visibility
 			jQuery('body').on('click', '#my-contact-div.contact-closed #contactable-inner, header.contact-closed #contact-top, .widget-container.contact-closed #book-now', function() {
 				jQuery('#my-contact-div,  .widget-container, header').addClass('contact-open').removeClass('contact-closed');
 				jQuery('#contactable-overlay').css({display: 'block'});
 				jQuery("#contactable-inner").animate({"marginRight": "-=5px"}, "2000"); 
 				jQuery('#contactable-contactForm').animate({"marginRight": "-=0px"}, "2000");
-				jQuery("#contactable-inner").animate({"marginRight": "+=287px"}, "4000"); 
-				jQuery('#contactable-contactForm').animate({"marginRight": "+=290px"}, "4000"); 
+				jQuery("#contactable-inner").animate({"marginRight": "+=297px"}, "4000"); 
+				jQuery('#contactable-contactForm').animate({"marginRight": "+=300px"}, "4000"); 
 			});
 
 			jQuery('body').on('click', '#my-contact-div.contact-open #contactable-inner, header.contact-open #contact-top, .widget-container.contact-open #book-now', function() {
 				jQuery('#my-contact-div, .widget-container, header').removeClass('contact-open').addClass('contact-closed');
-				jQuery('#contactable-contactForm').animate({"marginRight": "-=290px"}, "4000");
-				jQuery("#contactable-inner").animate({"marginRight": "-=287px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
+				jQuery('#contactable-contactForm').animate({"marginRight": "-=300px"}, "4000");
+				jQuery("#contactable-inner").animate({"marginRight": "-=297px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
 				jQuery('#contactable-overlay').css({display: 'none'});
 			});
 
 			
 
 			
-			// Submit the form
+			/*// Submit the form
 			jQuery("#contactable-contactForm").submit(function() {
 				
 				// Validate the entries
@@ -178,7 +233,7 @@
 						jQuery('#contactable-callback').show().append(options.notRecievedMsg);
 					}
 				});		
-			}
+			}*/
 		});
 	};
  

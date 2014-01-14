@@ -988,7 +988,6 @@ button.button:hover {
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
-	color: #a9a9a9;
 	margin-top: 3px;
 	line-height: 24px;
 	min-height: 100px;
@@ -998,7 +997,7 @@ button.button:hover {
 /* narrowing contactable form to make it more mobile-friendly */
 
 #contactable-contactForm {
-	width: 260px !important;
+	width: 270px !important;
 }
 
 
@@ -1030,12 +1029,15 @@ form#contactable-contactForm .contactable-submit {
 
 #my-contact-div #contactable-contactForm {
 	margin-left: auto;
-	margin-right: -300px;
+	margin-right: -310px;
 	left: auto;
 	right: 0;
 }
 
-
+form#contactable-contactForm input, 
+form#contactable-contactForm textarea {
+	color: #333;
+}
 
 
 
