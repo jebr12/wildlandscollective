@@ -5,52 +5,55 @@
 (function($) {
     $.fireform = function(element, options) {
 
-        var fb = new Firebase(options),
-            target = $(element);
+        var fb = new Firebase(options.fb),
+            target = jQuery(element),
+            self = this;
 
-        target.addClass('initialized');
-
-        target.children('.submit').on('click', function(event) {
+        target.find(':submit').on('click', function() {
             event.preventDefault()
             var obj = {};
-            target.find('input').each(function(key, input) {
-                var name = $(input).attr('name'),
-                    val = $(input).val();
+            target.find('input, textarea').each(function(key, input) {
+                var name = jQuery(input).attr('name'),
+                    val = jQuery(input).val();
                 if (name)
                     obj[name] = val;
-                else if ($(input).attr('type') !== 'submit')
+                else if (jQuery(input).attr('type') !== 'submit')
                     obj['unnamed' + key] = val;
             });
             var form = fb;
             obj['_time'] = new Date().toString();
             form.push(obj, function(err) {
                 if (!err)
-                    target.addClass("submitted");
+                    target.addClass("submited");
                 else
                     target.addClass("error");
+
+                if (options.callback) {
+                    options.callback(err);
+                }
             });
         });
-    }
+    };
 
     // add the plugin to the jQuery.fn object
-    $.fn.fireform = function(options) {
+    jQuery.fn.fireform = function(options) {
 
         // iterate through the DOM elements we are attaching the plugin to
         return this.each(function() {
 
             // if plugin has not already been attached to the element
-            if (undefined == $(this).data('fireform')) {
+            if (undefined == jQuery(this).data('fireform')) {
 
                 // create a new instance of the plugin
                 // pass the DOM element and the user-provided options as arguments
-                var plugin = new $.fireform(this, options);
+                var plugin = new jQuery.fireform(this, options);
 
                 // in the jQuery version of the element
                 // store a reference to the plugin object
                 // you can later access the plugin and its methods and properties like
                 // element.data('pluginName').publicMethod(arg1, arg2, ... argn) or
                 // element.data('pluginName').settings.propertyName
-                $(this).data('fireform', plugin);
+                jQuery(this).data('fireform', plugin);
 
             }
 

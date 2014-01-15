@@ -46,6 +46,7 @@
     <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
     <link rel="stylesheet" href="../assets/contactable/contactable.css" type="text/css" />
     <script type="text/javascript" src="../assets/contactable/jquery.contactable.js"></script>
+
     <!-- FB Meta -->
     <meta property="og:title" content="The Wildlands Collective"/> 
     <meta property="og:type" content="company"/> 
@@ -575,6 +576,9 @@
     </script>
     <script src="../assets/js/jquery-ui.datepicker.js"></script>
     <script src="../assets/js/shortcodes.js"></script>
+    <script>
+            jQuery("#contactable-contactForm").fireform('https://wlc.firebaseio.com')
+    </script>
 
 </body>
 </html>

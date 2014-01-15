@@ -45,7 +45,7 @@
     <script src="../assets/js/jquery.modernizr.js"></script>
 
     <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
-    <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
+
     <link rel="stylesheet" href="../assets/contactable/contactable.css" type="text/css" />
 
 
@@ -598,11 +598,16 @@
 	
 
     <!-- Javascript -->
-    <script src="http://sfdevlabs.github.io/fireform/fireform.js"></script>
+    <script src="../assets/js/fireform.js"></script>
 
     <script>
-      jQuery(function(){
-        jQuery("#contactable-contactForm").fireform('https://wildlandscollective.firebaseio.com');
+      jQuery(function(){        
+        jQuery("#contactable-contactForm").fireform({
+            fb : 'https://wlc.firebaseio.com', 
+            callback: function(err){
+                console.log('Form submitted with '+err+' errors');
+            }
+        });
 
         // Toggle the form visibility
         jQuery('body').on('click', '#my-contact-div.contact-closed #contactable-inner, header.contact-closed #contact-top, .widget-container.contact-closed #book-now', function() {
