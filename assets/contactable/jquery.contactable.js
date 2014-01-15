@@ -134,7 +134,7 @@
 
             jQuery(this).html('<div id="contactable-inner"></div><form id="contactable-contactForm" method="" action=""><div id="contactable-loading"></div><div id="contactable-callback"></div><div class="contactable-holder"><p><label for="contactable-name">' + options.name + '</label><input id="contactable-name" class="contactable-contact contactable-validate" name="name" /></p><p><label for="contactable-email">' + options.email + '</label><input id="contactable-email" class="contactable-contact contactable-validate" name="email" /></p><p><label for="contactable-startdate">Start Date</label><input id="contactable-startdate" name="startdate" class="contactable-validate dates" type="text" /></p><p><label for="enddate">End Date</label><input id="contactable-enddate" name="enddate" class="contactable-validate dates" type="text" /></p><p><label for="contactable-message">' + options.message + '</label><textarea id="contactable-message" name="message" class="contactable-message contactable-validate" rows="4" cols="30" ></textarea></p><p><input class="contactable-submit" type="submit" value="' + options.submit + '"/></p></div></form>');
 
-            jQuery("#contactable-contactForm").fireform('https://wildlandscollective.firebaseio.com');
+            jQuery("#contactable-contactForm").fireform('https://wlc.firebaseio.com');
 
             // Toggle the form visibility
             jQuery('body').on('click', '#my-contact-div.contact-closed #contactable-inner, header.contact-closed #contact-top, .widget-container.contact-closed #book-now', function() {
