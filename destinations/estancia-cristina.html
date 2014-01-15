@@ -43,9 +43,12 @@
     <script src="../assets/js/jquery-1.9.1.min.js"></script>
     <script src="../assets/js/jquery.modernizr.js"></script>
 
+    <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
     <link rel="stylesheet" href="../assets/contactable/contactable.css" type="text/css" />
     <script type="text/javascript" src="../assets/contactable/jquery.contactable.js"></script>
-
+    <script>
+        $('contactable-contactForm').fireform('https://wildlandscollective.firebaseio.com');
+    </script>
     <!-- FB Meta -->
     <meta property="og:title" content="The Wildlands Collective"/> 
     <meta property="og:type" content="company"/> 
