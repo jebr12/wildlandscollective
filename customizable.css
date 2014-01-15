@@ -143,10 +143,20 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 	background:#000 url('./thoughts/images/wild-furnishings-banner.jpg') no-repeat center bottom;	
 }
 
+
+/* bookings */
+
+#bookings .titlebar-outer-wrapper {
+	background: #000 url('assets/home/placeholders/backgrounds/home01.jpg') no-repeat center top;
+}
+
+
+
 /*--------------------------------------------------------------
 END CUSTOMIZABLE CSS! begin pre-set background sizing css!
 ---------------------------------------------------------------*/
 
+#bookings.logged-in .titlebar-outer-wrapper,
 #thoughts-header-image,
 #destinations-header-image,
 #concept .global-section,
@@ -157,6 +167,7 @@ END CUSTOMIZABLE CSS! begin pre-set background sizing css!
  	background-size:  100% auto;	
 }
 
+#bookings.login-screen .titlebar-outer-wrapper,
 #philosophy .parallax-section,
 #concept .parallax-section,
 #concept #overview,

@@ -9,30 +9,32 @@
             target = jQuery(element),
             self = this;
 
-        target.find(':submit').on('click', function() {
-            event.preventDefault()
-            var obj = {};
-            target.find('input, textarea').each(function(key, input) {
-                var name = jQuery(input).attr('name'),
-                    val = jQuery(input).val();
-                if (name)
-                    obj[name] = val;
-                else if (jQuery(input).attr('type') !== 'submit')
-                    obj['unnamed' + key] = val;
-            });
-            var form = fb;
-            obj['_time'] = new Date().toString();
-            form.push(obj, function(err) {
-                if (!err)
-                    target.addClass("submited");
-                else
-                    target.addClass("error");
-
-                if (options.callback) {
-                    options.callback(err);
-                }
-            });
+        target.on('submit', function() {
+            event.preventDefault();
         });
+
+        var obj = {};
+        target.find('input.data, textarea.data').each(function(key, input) {
+            var name = jQuery(input).attr('name'),
+                val = jQuery(input).val();
+            if (name)
+                obj[name] = val;
+            else if (jQuery(input).attr('type') !== 'submit')
+                obj['unnamed' + key] = val;
+        });
+        var form = fb;
+        obj['_time'] = new Date().toString();
+        form.push(obj, function(err) {
+            if (!err)
+                target.addClass("submitted");
+            else
+                target.addClass("error");
+
+            if (options.callback) {
+                options.callback(err);
+            }
+        });
+
     };
 
     // add the plugin to the jQuery.fn object

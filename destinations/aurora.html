@@ -41,17 +41,18 @@
     <!--[if IE 8]><link href="assets/css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
     
     <!-- JavaScript -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="../assets/js/jquery.modernizr.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.modernizr.js"></script>
 
-    <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
     <link rel="stylesheet" href="../assets/contactable/contactable.css" type="text/css" />
 
 
     <!-- Mapbox -->
-    <script src='http://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
-    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
+    <script src="http://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js"></script>
+    <link href="http://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css" rel='stylesheet' />
     <link rel="stylesheet" href="../assets/css/leaflet.fullscreen.css" />
     <script src="../assets/js/Leaflet.fullscreen.js"></script>
     <script src="../assets/js/leaflet-hash.js"></script>
@@ -78,22 +79,22 @@
         <div class="contactable-holder">
             <p>
                 <label for="contactable-name">Name</label>
-                <input id="contactable-name" class="contactable-contact contactable-validate" name="name" />
+                <input id="contactable-name" class="data contactable-contact contactable-validate" name="name" />
             </p>
             <p>
                 <label for="contactable-email">Email</label>
-                <input id="contactable-email" class="contactable-contact contactable-validate" name="email" /></p>
+                <input id="contactable-email" class="data contactable-contact contactable-validate" name="email" /></p>
             <p>
                 <label for="contactable-startdate">Start Date</label>
-                <input id="contactable-startdate" name="startdate" class="contactable-validate dates" type="text" /></p><p><label for="enddate">End Date</label>
-                <input id="contactable-enddate" name="enddate" class="contactable-validate dates" type="text" /></p>
+                <input id="contactable-startdate" name="startdate" class="data contactable-validate dates" type="text" /></p><p><label for="enddate">End Date</label>
+                <input id="contactable-enddate" name="enddate" class="data contactable-validate dates" type="text" /></p>
             <p>
                 <label for="contactable-message">Message</label>
-                <input id="contactable-enddate" name="page" class="contactable-validate dates" type="hidden" value="aurora.html" />
-                <textarea id="contactable-message" name="message" class="contactable-message contactable-validate" rows="4" cols="30" ></textarea>
+                <input id="contactable-enddate" name="page" class="data contactable-validate dates" type="hidden" value="aurora.html" />
+                <textarea id="contactable-message" name="message" class="data contactable-message contactable-validate" rows="4" cols="30" ></textarea>
             </p>
 
-            <p><input class="contactable-submit submit" type="submit" value="Submit"/></p>
+            <p><input type="submit" class="contactable-submit submit" value="Submit"/></p>
         </div>
     </form>
 
@@ -602,32 +603,56 @@
     <script src="../assets/js/fireform.js"></script>
 
     <script>
-      jQuery(function(){        
-        jQuery("#contactable-contactForm").fireform({
-            fb : 'https://wlc.firebaseio.com', 
-            callback: function(err){
-                console.log('Form submitted with '+err+' errors');
-            }
+
+        jQuery(function(){ 
+
+            jQuery("#contactable-contactForm").validate({
+                rules: {
+                    name: "required",
+                    startdate: "required",
+                    enddate: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                },
+                errorPlacement: function(error,element) {
+                    return true;
+                },
+                submitHandler: function(form) {
+                    jQuery("#contactable-contactForm").fireform({
+                        fb : 'https://wlc.firebaseio.com', 
+                        callback: function(err){
+                            jQuery('#my-contact-div, .widget-container, header').removeClass('contact-open').addClass('contact-closed');
+                            jQuery('#contactable-contactForm').animate({"marginRight": "-=300px"}, "4000");
+                            jQuery("#contactable-inner").animate({"marginRight": "-=297px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
+                            jQuery('#contactable-overlay').css({display: 'none'});
+                            jQuery("#contactable-contactForm input, #contactable-contactForm textarea").val("");
+                        }
+                    });
+                }
+            });
+
+            
+
+            // Toggle the form visibility
+            jQuery('body').on('click', '#my-contact-div.contact-closed #contactable-inner, header.contact-closed #contact-top, .widget-container.contact-closed #book-now', function() {
+                jQuery('#my-contact-div,  .widget-container, header').addClass('contact-open').removeClass('contact-closed');
+                jQuery('#contactable-overlay').css({display: 'block'});
+                jQuery("#contactable-inner").animate({"marginRight": "-=5px"}, "2000"); 
+                jQuery('#contactable-contactForm').animate({"marginRight": "-=0px"}, "2000");
+                jQuery("#contactable-inner").animate({"marginRight": "+=297px"}, "4000"); 
+                jQuery('#contactable-contactForm').animate({"marginRight": "+=300px"}, "4000"); 
+            });
+
+            jQuery('body').on('click', '#my-contact-div.contact-open #contactable-inner, header.contact-open #contact-top, .widget-container.contact-open #book-now', function() {
+                jQuery('#my-contact-div, .widget-container, header').removeClass('contact-open').addClass('contact-closed');
+                jQuery('#contactable-contactForm').animate({"marginRight": "-=300px"}, "4000");
+                jQuery("#contactable-inner").animate({"marginRight": "-=297px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
+                jQuery('#contactable-overlay').css({display: 'none'});
+            });
+
         });
-
-        // Toggle the form visibility
-        jQuery('body').on('click', '#my-contact-div.contact-closed #contactable-inner, header.contact-closed #contact-top, .widget-container.contact-closed #book-now', function() {
-            jQuery('#my-contact-div,  .widget-container, header').addClass('contact-open').removeClass('contact-closed');
-            jQuery('#contactable-overlay').css({display: 'block'});
-            jQuery("#contactable-inner").animate({"marginRight": "-=5px"}, "2000"); 
-            jQuery('#contactable-contactForm').animate({"marginRight": "-=0px"}, "2000");
-            jQuery("#contactable-inner").animate({"marginRight": "+=297px"}, "4000"); 
-            jQuery('#contactable-contactForm').animate({"marginRight": "+=300px"}, "4000"); 
-        });
-
-        jQuery('body').on('click', '#my-contact-div.contact-open #contactable-inner, header.contact-open #contact-top, .widget-container.contact-open #book-now', function() {
-            jQuery('#my-contact-div, .widget-container, header').removeClass('contact-open').addClass('contact-closed');
-            jQuery('#contactable-contactForm').animate({"marginRight": "-=300px"}, "4000");
-            jQuery("#contactable-inner").animate({"marginRight": "-=297px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
-            jQuery('#contactable-overlay').css({display: 'none'});
-        });;
-
-      });
     </script>
     
     <script src="../assets/js/ddsmoothmenu.js"></script>
@@ -643,11 +668,7 @@
     <script src="../assets/js/layerslider.transitions.js"></script>
     <script src="../assets/js/layerslider.kreaturamedia.jquery.js"></script>
     
-    <script type='text/javascript'>
-    /* <![CDATA[ */
-    //var FS = {"animation":"fade","pauseOnHover":"true","controlNav":"true","directionNav":"false","animationDuration":"500","slideshowSpeed":"5000","pauseOnAction":"false"};
-    /* ]]> */
-    </script>
+
     <script src="../assets/js/nav.js"></script>
 
     <script>
