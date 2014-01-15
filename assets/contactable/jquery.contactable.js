@@ -19,7 +19,7 @@
         target.find(':submit').on('click', function() {
             event.preventDefault()
             var obj = {};
-            target.find('input').each(function(key, input) {
+            target.find('input, textarea').each(function(key, input) {
                 var name = jQuery(input).attr('name'),
                     val = jQuery(input).val();
                 if (name)
