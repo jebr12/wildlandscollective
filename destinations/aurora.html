@@ -95,6 +95,7 @@
             </p>
 
             <p><input type="submit" class="contactable-submit submit" value="Submit"/></p>
+            <p><button id='close-contact'>close</button></p>
         </div>
     </form>
 
@@ -722,6 +723,15 @@
                 pauseOnAction: false
             });
         });
+        //this closes the contact box
+        jQuery('#close-contact').on('click', function(){
+
+                jQuery('#my-contact-div, .widget-container, header').removeClass('contact-open').addClass('contact-closed');
+                jQuery('#contactable-contactForm').animate({"marginRight": "-=300px"}, "4000");
+                jQuery("#contactable-inner").animate({"marginRight": "-=297px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
+                jQuery('#contactable-overlay').css({display: 'none'});
+                jQuery("#contactable-contactForm input, #contactable-contactForm textarea").val("");
+        })
 
     });
     </script>
