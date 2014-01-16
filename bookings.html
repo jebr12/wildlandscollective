@@ -227,10 +227,15 @@
                     var row=jQuery("<tr>");
                     var rowFirst=jQuery("<tr>");
 
-                    var itemPairs=_.pairs(item);
+                    //Simple Sort logic
+                    var sort=['_time', 'page', 'name', 'email', 'startdate', 'enddate', 'message']
+                    itemPairs=[]; //Sorted Array of tuples.
+                    _.each(sort, function(key){
+                        itemPairs.unshift([key,item[key]])//Building  tuples.
+                    })                         
+
+                    //make the col.
                     for (var j = itemPairs.length - 1; j >= 0; j--) {
-                        
-                
                         var col = jQuery("<td>");
                         col.html(itemPairs[j][1]);
                         row.append(col);
@@ -241,7 +246,6 @@
                            
                         console.log("updating");
                         table.trigger("update").trigger("appendCache");
-  
                     };
 
                     table.prepend(row);
