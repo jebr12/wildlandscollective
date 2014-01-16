@@ -185,6 +185,8 @@
 </div><!-- END .body-outer-wrapper -->
     
     <script src="./assets/js/fireform.js"></script>
+    <script src="./assets/js/underscore.js"></script>
+
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
 
 
@@ -225,13 +227,16 @@
                     var row=jQuery("<tr>");
                     var rowFirst=jQuery("<tr>");
 
-                    for (var j in item) {
+                    var itemPairs=_.pairs(item);
+                    for (var j = itemPairs.length - 1; j >= 0; j--) {
+                        
+                
                         var col = jQuery("<td>");
-                        col.html(item[j]);
+                        col.html(itemPairs[j][1]);
                         row.append(col);
 
                         var colFirst = jQuery("<th>");
-                        colFirst.html(j);
+                        colFirst.html(itemPairs[j][0]);
                         rowFirst.append(colFirst);
                            
                         console.log("updating");
