@@ -1,0 +1,537 @@
+/* colors & fonts */
+
+/*
+
+references for values:
+
+text-align - http://www.w3schools.com/cssref/pr_text_text-align.asp
+text-transform - http://www.w3schools.com/cssref/pr_text_text-transform.asp
+font-family - http://www.w3schools.com/cssref/pr_font_font-family.asp
+font-size - http://www.w3schools.com/cssref/pr_font_font-size.asp
+font-style (for italics) - http://www.w3schools.com/cssref/pr_font_font-style.asp
+font-weight (for bold) - http://www.w3schools.com/cssref/pr_font_weight.asp
+letter-spacing - http://www.w3schools.com/cssref/pr_text_letter-spacing.asp
+
+on colors in particular:
+color (for text color) - http://www.w3schools.com/cssref/pr_text_color.asp
+use http://www.colorpicker.com/ to find a hex code for color; hex codes are 6 digits
+hex codes can collapse to 3 digits for codes that look like this: 111111, 222222, 333333 = 111, 222, 333 (these are all values for shades of gray)
+black is 000, white is fff
+shades of gray range from each number 1-9 then move into letters until reaching f:
+111, 222, 333, 444, 555, 666, 777, 888, 999, aaa, bbb, ccc, ddd, eee
+where 111 is almost black, eee is pale gray.
+remember the # at the beginning of the code!
+
+on background colors:
+background - http://www.w3schools.com/cssref/css3_pr_background.asp
+background property rgba values = (red,green,blue,alpha transparency)
+use http://www.colorpicker.com/ to find rgb values of your chosen color
+lower numbers for rgb are darker/more saturated, higher values are lighter, maxing out at 255
+full red is (255,0,0,1); full green: (0,255,0,1); full blue: (0,0,255,1);
+alpha ranges from 0 (transparent) to 1 (opaque); semi-transparency is 0.5, 0.6, 0.7 etc
+
+*/
+
+
+
+/* global header and footer colors */
+.header-outer-wrapper {
+	background: rgba(0,0,0,1);
+}
+
+#footer {
+	background: rgba(0,0,0,1);
+}
+
+#mc_embed_signup input.email {
+	background: #555;
+	color: #eee;
+}
+
+
+
+/* concept & philosophy colors and fonts */
+
+.global-section {
+	text-align: center;
+}
+
+.page-body {
+	background: rgba(0,0,0,0.45);
+	text-align: left;
+	font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif;
+	font-size: 16px;
+}
+
+.background-black {
+	background: rgba(0,0,0,.85);
+}
+
+.background-white {
+	background: rgba(255,255,255,.90);
+}
+
+.page-body p,
+.page-body ol,
+.page-body ul {
+	color: #ccc;
+}
+
+.page-body h1,
+.page-body h2,
+.page-body h3,
+.page-body h4 {
+	color: #fff;
+}
+
+.parallax-section .parallax-title {
+	color: #fff !important;
+	font-size: 25px;
+	font-weight: 100;
+	line-height: 38px;
+	font-style: italic;
+	text-transform: uppercase;
+	font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif !important;
+	letter-spacing: 0;
+}
+
+.parallax-section .parallax-body {
+	color: #ffd500;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+
+/* changing background color to opaque for mobile */
+
+@media screen and (max-width: 767px) {
+
+	.page-body,
+	.page-body.centered,
+	.page-body.float-right,
+	.page-body.float-left {
+		background: #eee;
+	}
+
+	.page-body h1, 
+	.page-body h2, 
+	.page-body h3, 
+	.page-body h4 {
+		color: #000;
+	}
+
+	.page-body p, 
+	.page-body ol, 
+	.page-body ul {
+		color: #444;
+	}
+
+}
+
+
+/* destinations & thoughts landing pages colors & fonts */
+/* use #thoughts and #destinations to make diff changes to each page eg #thoughts .titlebar-title */
+
+.titlebar-title {
+	background: rgba(0, 0, 0, 0.75);
+}
+
+.cpt-desc-wrapper {
+	background: rgba(0,0,0,0.75);
+}
+
+.cpt-title {
+	text-transform: uppercase;
+	font-size: 15px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.cpt-title a {
+	color: #fff !important;
+}
+
+.cpt-desc {
+	font-size: 12px;
+	font-weight: bold;
+	font-style: italic;
+	text-transform: uppercase;
+	color: #aaa !important;
+	text-align: center;
+	line-height: 14px;
+}
+
+
+
+
+
+/* thoughts single pages colors & fonts (aka ".blog"); same as info subnav pages colors & fonts aka ".text" */
+
+.text .titlebar-title, 
+.blog .titlebar-title h1 {
+	color: #ffd400;
+	font-size: 26px;
+	line-height: 30px;
+}
+
+.text .titlebar-title .titlebar-desc, 
+.blog .titlebar-title .titlebar-desc {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: bold;
+}
+
+/* regular text */
+.text-content {
+	font-family: 'Georgia Regular', Georgia, Constantia, 'Lucida Bright', 'DejaVu Serif', serif;
+	font-size: 16px;
+	line-height: 30px;
+	color: rgb(51, 51, 51);
+}
+
+/* quote */
+.six.columns.b0 strong {
+	color: #000;
+	font-size: 26px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+/* destinations single pages colors & fonts */
+
+/* top left titlebar */
+/* WARNING! this is also the thoughts page titlebar text, to create different styles for each page type use:
+.book-now .titlebar-title h1 for destinations pages
+.text .titlebar-title h1 for info subnav pages
+.blog .titlebar-title h1 for thoughts pages */
+.titlebar-title h1 {
+	font-size: 29px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: -0.7px;
+}
+
+.titlebar-title .titlebar-decs {
+	color: #d2d2d2;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+/* lower titlebar */
+/* WARNING! this is also the destionations landing page titlebar background, to create different styles for each page type use:
+#destinations .page-title-wrapper for destinations landing
+.book-now .page-title-wrapper for destinations pages
+.text .page-title-wrapper for info subnav pages
+.blog .page-title-wrapper for thoughts pages */
+.page-title-wrapper {
+	background: rgba(0,0,0,.75);
+}
+
+.page-title-wrapper .page-title {
+	color: #fff;
+}
+
+/* left-hand tab content */
+.tab-content-wrapper,
+.tab-content-wrapper p,
+.tab-content-wrapper ol,
+.tab-content-wrapper ul {
+	font-size: 13px;
+	line-height: 22px;
+	color: #666;
+}
+
+/* activity icons background */
+.activity-icons {
+	background: #333;
+}
+
+/* price/book now area beneath activity icons */
+.right-sidebar-wrapper .widget-container {
+	background: #444;
+}
+
+.sidebar .widgettitle span {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.sidebar .price {
+	font-size: 32px !important;
+	font-weight: 700 !important;
+	color: #f0d40f !important;
+}
+
+/* text beneath price and book now button */
+.right-sidebar-wrapper strong {
+	font-size: 13px;
+	line-height: 22px;
+	color: #666;
+	font-weight: bold;
+}
+
+
+
+/* background images */
+
+/*
+
+Each property is defined like this:
+background: <--color hex code--> url(<--insert url here-->) <--repeating--> <--left position--> <--top position-->;
+
+references for values:
+color hex code - http://www.w3schools.com/html/html_colors.asp
+url - paste in the url of the image where the dot (.) indicates the WildlandsCollective root folder.
+repeating - http://www.w3schools.com/cssref/pr_background-repeat.asp
+left position & top position - http://www.w3schools.com/cssref/pr_background-position.asp
+
+*/
+
+
+/* concept */
+
+#concept #overview {
+	background: #111 url('../images/concept/big-intro.jpg') no-repeat center center;
+}
+
+#concept #why-wildlands {
+	background: #111 url('../images/concept/big-page1.jpg') no-repeat center center;
+}
+
+#concept #why-community {
+	background: #111 url('../images/concept/big-page2.jpg') no-repeat center center;
+}
+
+#concept #why-lodging {
+	background: #111 url('../images/concept/big-page3.jpg') no-repeat center center;
+}
+
+#concept #faq {
+	background: #111 url('../images/concept/big-outro.jpg') no-repeat center center;
+}
+
+#concept .parallax-section-1 {
+	background: #111 url('../images/concept/parallax1.jpg') no-repeat center center;
+}
+#concept .parallax-section-2 {
+	background: #111 url('../images/concept/parallax2.jpg') no-repeat center center;
+}
+#concept .parallax-section-3 {
+	background: #111 url('../images/concept/parallax3.jpg') no-repeat center center;
+}
+#concept .parallax-section-4 {
+	background: #111 url('../images/concept/parallax4.jpg') no-repeat center center;
+}
+
+
+/* philosophy */
+
+#philosophy #mission-statement {
+	background: #111 url('../images/philosophy/big-intro.jpg') no-repeat center center;
+}
+
+#philosophy #manifesto {
+	background: #111 url('../images/philosophy/big-page1.jpg') no-repeat center center;
+}
+
+#philosophy #who-you-are {
+	background: #111 url('../images/philosophy/big-page2.jpg') no-repeat center center;
+}
+
+#philosophy #why-wild {
+	background: #111 url('../images/philosophy/big-page3.jpg') no-repeat center center;
+}
+
+#philosophy #sustainability {
+	background: #111 url('../images/philosophy/big-outro.jpg') no-repeat center center;
+}
+
+#philosophy .parallax-section-1 {
+	background: #111 url('../images/philosophy/parallax1.jpg') no-repeat center center;
+}
+
+#philosophy .parallax-section-2 {
+	background: #111 url('../images/philosophy/parallax2.jpg') no-repeat center center;
+}
+
+#philosophy .parallax-section-3 {
+	background: #111 url('../images/philosophy/parallax3.jpg') no-repeat center center;
+}
+
+#philosophy .parallax-section-4 {
+	background: #111 url('../images/philosophy/parallax4.jpg') no-repeat center center;
+}
+
+
+/* thoughts */
+
+#thoughts-header-image {
+	background: #000 url('../images/thoughts/banner.jpg') no-repeat center center;
+}
+
+
+/* thoughts single pages */
+
+#aurora .titlebar-outer-wrapper {
+	background: #000 url('http://auroraarktika.files.wordpress.com/2013/09/img_7875_header.jpg') no-repeat center bottom;
+}
+
+#estancia-cristina .titlebar-outer-wrapper {
+	background: #000 url('http://auroraarktika.files.wordpress.com/2013/09/img_7875_header.jpg') no-repeat center bottom;
+}
+
+#single-destination .titlebar-outer-wrapper {
+	background: #000 url('http://concordia-expeditions.com/wp-content/uploads/2013/03/IMG_1083.jpg') no-repeat center bottom;
+}
+
+
+/* destinations */
+
+#destinations-header-image {
+	background: #000 url('../images/destinations/banner.jpg') no-repeat center center;
+}
+
+
+/* destinations single pages */
+
+#example-blog .titlebar-outer-wrapper {
+	background: #000 url('http://www.adventure-journal.com/wp-content/uploads/2013/07/gervasutti-1030x690.jpg') no-repeat center bottom;
+}
+
+#motorcycle-diaries .titlebar-outer-wrapper {
+	background: #000 url('http://www.adventure-journal.com/wp-content/uploads/2013/07/gervasutti-1030x690.jpg') no-repeat center bottom;
+}
+
+#post-07 .titlebar-outer-wrapper {
+	background:#000 url('../images/thoughts/wild-furnishings-banner.jpg') no-repeat center bottom;
+}
+
+#single-blog .titlebar-outer-wrapper {
+	background: #000 url('http://blog.theclymb.com/wp-content/uploads/2013/10/nobodys_river17.jpg') no-repeat center bottom;
+}
+
+#thoughts-template .titlebar-outer-wrapper {
+	background: #000 url('../images/thoughts/wild-furnishings-banner.jpg') no-repeat center bottom;
+}
+
+#wild-furnishings .titlebar-outer-wrapper {
+	background:#000 url('../images/thoughts/wild-furnishings-banner.jpg') no-repeat center bottom;	
+}
+
+
+/* bookings */
+
+#bookings .titlebar-outer-wrapper {
+	background: #000 url('../home/placeholders/backgrounds/home01.jpg') no-repeat center top;
+}
+
+
+
+/*--------------------------------------------------------------
+END CUSTOMIZABLE CSS! begin pre-set background sizing css!
+---------------------------------------------------------------*/
+
+#bookings.logged-in .titlebar-outer-wrapper,
+#thoughts-header-image,
+#destinations-header-image,
+#concept .global-section,
+#philosophy .global-section {
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+ 	background-size:  100% auto;	
+}
+
+#bookings.login-screen .titlebar-outer-wrapper,
+#philosophy .parallax-section,
+#concept .parallax-section,
+#concept #overview,
+#concept #why-wildlands,
+#concept #why-community,
+#concept #why-lodging,
+#concept #faq,
+#philosophy #mission-statement,
+#philosophy #manifesto,
+#philosophy #who-you-are,
+#philosophy #why-wild,
+#philosophy #sustainability {
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;	
+	background-size: cover;
+}
+
+.blog .titlebar-outer-wrapper,
+.book-now .titlebar-outer-wrapper {
+	background-size: 100% auto !important;
+}
+
+#philosophy .parallax-section,
+#concept .parallax-section {
+	background-attachment: fixed !important;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	#thoughts-header-image,
+	#destinations-header-image {
+		background-position: center center;
+	}
+
+	.blog .titlebar-outer-wrapper,
+	.book-now .titlebar-outer-wrapper,
+	#thoughts-header-image,
+	#destinations-header-image,
+	#philosophy .parallax-section,
+	#concept .parallax-section {
+		background-size: cover;	
+	}
+
+
+}
+
+@media only screen and (max-width: 767px) {
+
+	#concept #overview,
+	#concept #why-wildlands,
+	#concept #why-community,
+	#concept #why-lodging,
+	#concept #faq,
+	#philosophy #mission-statement,
+	#philosophy #manifesto,
+	#philosophy #who-you-are,
+	#philosophy #why-wild,
+	#philosophy #sustainability {
+		background-color: #eee;
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: 100% auto;
+	}
+
+	#concept #overview,
+	#philosophy #mission-statement {
+		background-position: left 102px;
+	}
+
+	#thoughts-header-image,
+	#destinations-header-image {
+		background-position: center -147px;
+		background-size: auto;
+	}
+
+	.blog .titlebar-outer-wrapper,
+	.book-now .titlebar-outer-wrapper,
+	#thoughts-header-image,
+	#destinations-header-image,
+	#philosophy .parallax-section,
+	#concept .parallax-section {
+		background-attachment: scroll !important;
+		background-position: center center !important;
+		background-size: cover !important;	
+	}
+
+}

@@ -394,20 +394,18 @@ jQuery(document).ready(function(){
                 jQuery(".cpt-filters li:first a").addClass("selected");
             }
 
-            var screenWidth = jQuery("document").width();
+           // jQuery(".cpt-items").isotope({filter: hashOptions});
 
-            if (screenWidth > 767) {
-                jQuery(".cpt-items").isotope({filter: hashOptions});
-            }
+           var filtershow = ".cpt-item" + hashOptions;
+           jQuery(filtershow).removeClass("hidden");
+           jQuery(".cpt-item").not(filtershow).addClass("hidden");
+
         }
 
     }).trigger("hashchange");
 
     //isotope
-    var screenWidth = jQuery("document").width();
-    if (screenWidth > 767) {
-        jQuery(".cpt-items").imagesLoaded(run_isotope);
-    }
+    //jQuery(".cpt-items").imagesLoaded(run_isotope);
 
     // Flexslider
     FS.pauseOnHover = (FS.pauseOnHover === 'true')? true: false;
@@ -430,18 +428,17 @@ jQuery(document).ready(function(){
     // Browser Resize Event
 
     jQuery(window).resize(function() {
+
         jQuery('.thumb-control-wrapper').each(function(i,el){
             
              var new_overlay_w = jQuery(el).prev('img:first').width() - 20;
              var new_overlay_h = jQuery(el).prev('img:first').height() - 20;
              
              jQuery(el).css({'width':new_overlay_w,'height':new_overlay_h});
+
          });
 
-        var screenWidth = jQuery("document").width();
-        if (screenWidth > 767) {
-            jQuery(".cpt-items").imagesLoaded(run_isotope);
-        }
+        //jQuery(".cpt-items").isotope('reloadItems').imagesLoaded(run_isotope);
         
         //isotope
         //jQuery(".cpt-items").imagesLoaded(run_isotope); /// don't need 

@@ -1,0 +1,125 @@
+
+#side-chat {
+    color:#FFFFFF;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    background-color:#212121;
+    cursor:pointer;
+    height:112px;
+    margin-left: 0;
+    *margin-left: 0;
+    *margin-right:-8px; 
+    overflow:hidden;
+    position:absolute;
+    *position:absolute;
+    text-indent:-100000px;
+    top:50%;
+    margin-top:-56px;
+    *margin-top:-56px;
+    width:44px;
+    background-image: url('../contactable/images/feedback.png');
+    right: 100%;
+    left: auto;
+    margin-right: -8px;
+}
+
+/* revised */
+
+#side-chat {
+    width: 39px;
+    margin-right: -3px;
+    *margin-right:-3px; 
+}
+ 
+#olark-box-wrapper {
+    position: fixed;
+    z-index:100000;
+    width: 250px;
+    top: auto;
+    bottom: 60px;
+    left: auto;
+    right: -250px;
+    margin-top: -150px;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+@media only screen and (max-width: 767px) {
+
+    #olark-box-wrapper {
+        display: none;
+    }
+
+}
+ 
+#olark-box-wrapper.chatbox-open {
+    left: auto;
+    right: 0;
+}
+ 
+  #olark-box-wrapper.chatbox-closed {
+    left: auto;
+    right: -250px;
+  }
+ 
+  #habla_window_div {
+    margin: 0 !important;
+  }
+
+  /*.habla_panel_border.hbl_pal_main_bg {
+    background: #212121 !important;
+    color: #fff !important;
+  }
+
+  .olrk-available .habla_panel_border.hbl_pal_main_bg {
+    background: #fff !important;
+    color: #212121;
+  }
+
+  .habla_panel_border.hbl_pal_main_bg textarea {
+    background: #fff !important;
+    color: #000 !important;
+  }*/
+
+    #habla_window_div.habla_window_div_position_inline .habla_panel_border {
+        border-top: 3px solid #999 !important;
+        border-bottom: 3px solid #999 !important;
+    }
+
+    #habla_window_div #habla_expanded_div {
+        border-left: 3px solid #999 !important;
+        border-right: 0 !important;
+    }
+
+    #habla_window_div #habla_topbar_div {
+        display: none !important;
+    }
+
+
+#habla_window_div button, #habla_window_div input[type=submit],
+    #habla_window_div #habla_name_input, #habla_window_div #habla_offline_email_input, #habla_window_div #habla_offline_body_input, #habla_window_div #habla_pre_chat_name_input, #habla_window_div #habla_pre_chat_email_input, #habla_window_div #habla_pre_chat_phone_input, #habla_window_div #habla_offline_phone_input, #habla_window_div #habla_pre_chat_phone_input {
+        -moz-border-radius: 0 !important;
+        -webkit-border-radius: 0 !important;
+        border-radius: 0 !important;
+    }
+
+#olark-box-wrapper #habla_window_div button, #olark-box-wrapper #habla_window_div input[type=submit] {
+    background-color: #fed42d;
+    border: 1px solid rgba(0,0,0,.5) !important;
+    color: #000 !important;
+    font-size: 13px;
+    font-family: 'Roboto',Arial,sans-serif;
+    line-height: 1;
+    font-weight: bold;
+    padding: 7px 4px 8px 4px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #000;
+    text-transform: uppercase;  
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+}

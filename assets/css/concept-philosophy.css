@@ -1,0 +1,404 @@
+
+/* concept and philosophy subnav */
+
+#subnav {
+	position: fixed;
+	top: 50%;
+	left: 20px;
+	z-index: 100;
+}
+
+#subnav ol li {
+	margin-bottom: 18px;
+	position: relative;
+}
+
+#subnav ol li span.dot {
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+	background: #fff;
+	z-index: 100;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	width: 10px;
+	height: 10px;
+}
+
+#subnav ol li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	overflow: visible;
+}
+
+#subnav ol li a:hover {
+	color: #f0d40f; 
+	font-weight: bold;	
+}
+
+#subnav span.desc {
+	display: none;
+	z-index: 99;
+	padding: 0 10px 0 30px;
+	width: 150px;
+	position: absolute;
+	background: rgba(0,0,0,0.8);
+	text-transform: uppercase;
+	left: -10px;
+	top: -10px;
+	line-height: 30px;
+	height: 30px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+#subnav li:hover span.desc {
+	display: block;
+}
+
+#subnav ol li.selected-subnav span.dot {
+	background: #f0d40f;
+}
+
+
+
+/** 
+-------------------------
+* Grid system
+------------------------- */
+.parallax-section,
+.container-section {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.parallax-section:before,
+.parallax-section:after,
+.container-section:before,
+.container-section:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.parallax-section:after,
+.container-section:after {
+  clear: both;
+}
+
+/** 
+-------------------------
+* Skeleton
+------------------------- */
+/** Global Section
+------------------------- */
+.global-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  min-height: 100%;
+}
+.global-section .section-header {
+  margin-bottom: 50px;
+}
+.global-section .section-header .section-header-title,
+.global-section .section-header-text .section-header-title {
+  margin-bottom: 15px;
+}
+.global-section .section-header .section-header-body-lead,
+.global-section .section-header-text .section-header-body-lead {
+  padding: 55px;
+}
+.global-section .section-header .nav-pills-centered,
+.global-section .section-header-text .nav-pills-centered {
+  margin-top: 30px;
+}
+@media screen and (max-width: 480px) {
+  .global-section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media screen and (min-width: 959px) {
+	
+	#concept .body-outer-wrapper,
+	#philosophy .body-outer-wrapper {
+		padding-top: 54px;
+	}
+
+	#concept,
+	#philosophy,
+	.parallax-section,
+	.container-section {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+	}
+
+	.parallax-section,
+	.container-section {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	#concept .parallax-section,
+	#philosophy .parallax-section {
+		display: table;
+	}
+
+	.parallax-section h2 {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.parallax-section {
+		height: 50%;
+	}
+
+	.global-section.page-1 {
+		top: 0;
+	}
+
+	.parallax-section-1 {
+		top: 100%;
+	}
+
+	.global-section.page-2 {
+		top: 150%;
+	}
+
+	.parallax-section-2 {
+		top: 250%;
+	}
+
+	.global-section.page-3 {
+		top: 300%;
+	}
+
+	.parallax-section-3 {
+		top: 400%;
+	}
+
+	.global-section.page-4 {
+		top: 450%;
+	}
+
+	.parallax-section-4 {
+		top: 550%;
+	}
+
+	.global-section.page-5 {
+		top: 600%;
+	}
+
+	#concept #footer, #philosophy #footer {
+		margin-top: 0;
+		position: absolute;
+		top: 700%;
+	}
+
+	.page-body{
+	  top: 90px;
+	 }
+
+}
+
+
+
+
+/** Parallax Section
+------------------------- */
+
+
+.parallax-section .parallax-title {
+	margin-bottom: 0px;
+}
+
+#philosophy .parallax-section,
+#concept .parallax-section {
+	padding: 0 130px;
+	text-align: center;
+	box-shadow:0 -10px 10px -10px #000000;
+}
+
+
+.intro-title{
+  display: block;
+  float: left;
+  width: 693px;
+  height: 489px;
+  margin-left: 70px;
+  text-align: left;
+  position: absolute;
+  left: 50%;
+  margin-left: -346px;
+  margin-top: 50px;
+}
+.page-body.float-right,
+.float-right{
+  margin-right: 70px;
+  margin-left: none;
+  float: right;
+}
+.page-body.centered,
+.centered{
+  float: none;
+  left: 50%;
+  margin-left: -375px;
+}
+.page-body{
+  display: block;
+  float: left;
+  width: 780px;
+  height: auto;
+  margin-left: 70px;
+  position: relative;
+  padding: 39px;
+}
+
+
+.page-body ol {
+	list-style: decimal;
+}
+
+.page-body ul {
+	list-style: disc;
+	margin-left: 30px;
+}
+
+
+.width-small{
+    /*width: 780px !important;*/
+}
+
+
+.global-section,
+.parallax-section,
+.about-section,
+.outro-section,
+.intro-section,
+.portfolio-section,
+.services-section,
+.page-body {
+	max-width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.page-body.width-extra-small {
+	width: 600px;	
+}
+
+.page-body.width-small {
+	width: 780px;
+}
+
+
+#concept #footer,
+#philosophy #footer {
+	margin-top: 0;
+}
+
+/* background images on concept & philosophy */
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.outro-section,
+	#page3,
+	.intro-section,
+	.portfolio-section,
+	.services-section,
+	.about-section {
+		min-height: 1024px;
+	}
+	#overview,
+	#mission-statement {
+		padding-top: 240px;
+	}
+	.page-body,
+	.page-body.float-right,
+	.page-body.centered,
+	.page-body.width-small,
+	.page-body.width-extra-small {
+		width: 500px;
+		float: none;
+		margin: 0 auto;
+		left: auto;
+		right: auto;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.parallax-section {
+		padding: 45px 65px;
+	}
+
+	#concept #overview,
+	#concept #why-wildlands,
+	#concept #why-community,
+	#concept #why-lodging,
+	#concept #faq,
+	#philosophy #mission-statement,
+	#philosophy #manifesto,
+	#philosophy #who-you-are,
+	#philosophy #why-wild,
+	#philosophy #sustainability {
+		padding: 0;
+	}
+
+	#concept #overview,
+	#philosophy #mission-statement {
+		padding-top: 113px;
+	}
+
+
+	.page-body,
+	.page-body.centered,
+	.page-body.float-right,
+	.page-body.float-left {
+		margin: 225px 0 0 0;
+		left: 0;
+	}
+
+	.global-section .section-header {
+		margin-bottom: 0;
+	}
+
+	#philosophy .parallax-section, 
+	#concept .parallax-section {
+		box-shadow: none;
+	}
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+	.page-body,
+	.page-body.float-right,
+	.page-body.centered,
+	.page-body.width-small,
+	.page-body.width-extra-small {
+		width: 100%;
+		float: none;
+		left: auto;
+		right: auto;
+		padding: 30px 60px 40px 60px;
+		margin: 65% 0 0 0;
+	}
+
+}
+
+.page-body h1 {
+	text-align: center;
+}
