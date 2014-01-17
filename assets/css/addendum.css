@@ -995,6 +995,15 @@ form#contactable-contactForm textarea {
 		padding: 20px 60px;
 	}
 
+	.page-wrapper.columns.b0 {
+		padding: 20px;
+	}
+
+	.cpt-detail, 
+	.cpt-detail-thoughts {
+		bottom: 0;
+	}
+
 	.page-body {
 		padding: 20px 60px 40px 60px;
 	}
