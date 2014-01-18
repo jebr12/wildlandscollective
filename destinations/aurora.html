@@ -93,7 +93,7 @@
                 <input id="contactable-enddate" name="enddate" class="data contactable-validate dates" type="text" /></p>
             <p>
                 <label for="contactable-message">Message</label>
-                <input id="contactable-enddate" name="page" class="data contactable-validate dates" type="hidden" value="aurora.html" />
+                <input id="contactable-page" name="page" class="data contactable-validate dates" type="hidden" value="" />
                 <textarea id="contactable-message" name="message" class="data contactable-message contactable-validate" rows="4" cols="30" ></textarea>
             </p>
 
@@ -735,6 +735,7 @@
             jQuery('#contactable-overlay').css({display: 'none'});
             jQuery("#contactable-contactForm input.data, #contactable-contactForm textarea").val("");
         })
+        jQuery('#contactable-page').val(window.location.href);
 
     });
     </script>
