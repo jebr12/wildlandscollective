@@ -26,7 +26,7 @@
     ========================================================================= -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300' rel='stylesheet' type='text/css'>    
     <link rel="stylesheet" href="../assets/css/layerslider.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/jquery-datepicker.css">
     <link rel="stylesheet" href="../assets/css/flexslider.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
@@ -34,20 +34,23 @@
     <link rel="stylesheet" href="../assets/css/prettyPhoto.css">
     <link rel="stylesheet" href="../assets/css/woocommerce-modify.css">
 
-    <link rel="stylesheet" href="../addendum.css">
-    <link rel="stylesheet" href="../customizable.css">
+    <link rel="stylesheet" href="../assets/css/addendum.css">
+    <link rel="stylesheet" href="../assets/css/customizable.css">
 
     <!-- Browser Specical File-->
     <!--[if IE 8]><link href="assets/css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
     
     <!-- JavaScript -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="../assets/js/jquery.modernizr.js"></script>
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/jquery.modernizr.js"></script>
 
     <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-
     <link rel="stylesheet" href="../assets/contactable/contactable.css" type="text/css" />
+
+    <!-- IE Alert -->
+    <script src="../assets/js/iealert.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/iealert/style.css" />
 
 
     <!-- Mapbox -->
@@ -86,16 +89,18 @@
                 <input id="contactable-email" class="data contactable-contact contactable-validate" name="email" /></p>
             <p>
                 <label for="contactable-startdate">Start Date</label>
-                <input id="contactable-startdate" name="startdate" class="data contactable-validate dates" type="text" /></p><p><label for="enddate">End Date</label>
+                <input id="contactable-startdate" name="startdate" class="data contactable-validate dates" type="text" /></p>
+                <p><label for="enddate">End Date</label>
                 <input id="contactable-enddate" name="enddate" class="data contactable-validate dates" type="text" /></p>
             <p>
                 <label for="contactable-message">Message</label>
-                <input id="contactable-enddate" name="page" class="data contactable-validate dates" type="hidden" value="chacabuco.html" />
+                <input id="contactable-enddate" name="page" class="data contactable-validate dates" type="hidden" value="estancia-cristina.html" />
+                <input id="contactable-page" name="page" class="data dates" type="hidden" value="aurora.html" value='' />
                 <textarea id="contactable-message" name="message" class="data contactable-message contactable-validate" rows="4" cols="30" ></textarea>
             </p>
 
             <p><input type="submit" class="contactable-submit submit" value="Submit"/></p>
-            <a style="color:white; position: absolute; top: 5px;left: 10px;" id="close-contact">close</a>
+            <div id="close-contact">close</div>
         </div>
     </form>
 
@@ -187,8 +192,8 @@
                 <div class="row">
                     <div class="twelve columns b0">
                         <div class="titlebar-title top-titlebar">
-                            <h1>Chilean Patagonia</h1>
-                            <div class="titlebar-decs">Valle Chacabuco, Aisen</div>
+                            <h1>TEST TEST TEST ESTANCIA CRISTINA.HTML</h1>
+                            <div class="titlebar-decs">Westfjords, Hornstrandir Nature Reserve</div>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -207,7 +212,7 @@
                                 <div class="twelve columns b0">
                                     <div class="page-title-wrapper">
                                         <!--HEADLINE-->
-                                        <h1 class="page-title left">Elegance in the heart of the future Patagonia National Park</h1>
+                                        <h1 class="page-title left">Arctic Sailing and Backcountry Skiing in the Comfort of Aurora Arktika</h1>
                                         <div class="page-title-alt right">
                                         </div>
                                         <div class="clear"></div>
@@ -219,86 +224,30 @@
 
                                 <div class="sidebar right-sidebar-wrapper four columns">
 
-                                    <ul class="activity-icons">
-                                            <!--<li>
-                                                <img src="../assets/images/activity-surfing.png" alt="Surfing" />
-                                                <p>Surfing</p>
-                                            </li>-->
-                                            <li>
-                                                <img src="../assets/images/activity-hiking.png" alt="Hiking" />
-                                                <p>Hiking</p>
-                                            </li>
-                                            <!--<li>
-                                                <img src="../assets/images/activity-hiking.png" alt="Hiking" />
-                                                <p>Hiking</p>
-                                            </li>
-                                            <li>
-                                                <img src="../assets/images/activity-kayaking.png" alt="Kayaking" />
-                                                <p>Kayaking</p>
-                                            </li>
-                                            <li>
-                                                <img src="../assets/images/activity-horse-riding.png" alt="Horse Riding" />
-                                                <p>Horse Riding</p>
-                                            </li>
-                                            <li>
-                                                <img src="../assets/images/activity-biking.png" alt="Biking" />
-                                                <p>Biking</p>
-                                            </li>
-                                            <li>
-                                                <img src="../assets/images/activity-skiing.png" alt="Skiing" />
-                                                <p>Skiing</p>
-                                            </li>-->
-                                            <li>
-                                                <img src="../assets/images/activity-fishing.png" alt="Fishing" />
-                                                <p>Fishing</p>
-                                            </li>
-                                            <!--<li>
-                                                <img src="../assets/images/activity-swimming.png" alt="Swimming" />
-                                                <p>Swimming</p>
-                                            </li>
-                                            <li>
-                                                <img src="../assets/images/activity-scuba-snorkel.png" alt="Scuba/Snorkel" />
-                                                <p>Scuba/Snorkel</p>
-                                            </li>
-                                            <li>
-                                                <img src="../assets/images/activity-sailing.png" alt="Sailing" />
-                                                <p>Sailing</p>
-                                            </li>
-                                            <li>
-                                                <img src="../assets/images/activity-wildlife.png" alt="Wildlife" />
-                                                <p>Wildlife</p>
-                                            </li>-->
-                                            <li>
-                                                <img src="../assets/images/activity-wildlife.png" alt="Wildlife" />
-                                                <p>Wildlife</p>
-                                            </li>
-
-                                        </ul>
                                     
                                     <div class="widget-container contact-closed" id="widget-ID-name">
-                                        <h3 class="widgettitle">Chilean Patagonia<br/><span>The Lodge at Valle Chacabuco</span><br/><span class="price">$250/night (suggested donation)</span></h3>
-
-                                        <p class="widget-description"><button class="button" id="book-now">BOOK NOW</button></p>
-
+                                        <h3 class="widgettitle">Iceland<br/><span>Aurora Arktika Expedition Yacht</span><br/><span class="price">$300/night</span></h3>
+                                        <p class="widget-description"><button class="button" style="color:#111 !important;" id="book-now">BOOK NOW</button></p>
+                                        <div id="share-buttons">
+                                          <!-- Facebook -->
+                                          <a href="http://www.facebook.com/sharer.php?u=http://www.wildlandscollective.com" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook"></a>
+                                          <!-- Twitter -->
+                                          <a href="http://twitter.com/share?url=http://www.wildlandscollective.com" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"></a>
+                                          <!-- LinkedIn -->
+                                          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.wildlandscollective.com" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn"></a>
+                                          <!-- Email -->
+                                          <a href="mailto:?Subject=Wildlands Collective&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 http://www.wildlandscollective.com"><img src="http://www.simplesharebuttons.com/images/somacro/email.png" alt="Email"></a>
+                                          </div>
 
 
                                     </div>
 
                                     <!--Destination Summary -->
 
-                                   <strong>Situated in the soon-to-be-opened Patagonia National Park, which has the potential to rival Torres del Paine for its remote wilderness beauty, this lodge is big news in Patagonia. Not only is the former estancia one of the largest grasslands-recovery projects in the world—thanks to Conservacion Patagonica, the land trust founded by American philanthropist Kris Tompkins—but the hiking, wildlife, and infrastructure are first-class. The six-room, pitched-roof stone building was inspired by Ahwahnee Lodge in Yosemite and sits in the foothills of the southern Andes. With dark wood walls, cream sofas, and multiple fireplaces, it's ranch elegance at its finest. Plus it's sustainable, with fresh greenhouse vegetables and solar energy. Outside, the park is full of guanacos, endangered huemul deer, flamingos, and pumas: a far cry from the overgrazed estancia Chacabuco was when Tompkins took over in 2006. Lodge guests can get a jump on exploring the more than 600,000 wild, surrounding acres; .</strong>
+                                   <strong>Iceland’s West Fjords region is one of the country’s most remote areas and offers endless outdoor pursuits in its mountains, sheltered fjords and bays. Aurora´s favourite area in the West Fjords is the Hornstrandir Nature Reserve, with its rich history and unspoilt landscapes. The area is virtually inaccessible. There are no roads in the nature reserve—the only way to venture there is by boat. Due to its remote location it is very possible to stay there for days without meeting a single soul. Doing so, you will discover the essence of remote Iceland. The fjords are deep and dramatic, marine and aviary life abound, and an abundance of silence and unexplored landscapes abound for the curious and adventurous explorer.</strong>
                                             <br/><br/>
 
-                                   <div id="share-buttons">
-                                      <!-- Facebook -->
-                                      <a href="http://www.facebook.com/sharer.php?u=http://www.wildlandscollective.com" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook"></a>
-                                      <!-- Twitter -->
-                                      <a href="http://twitter.com/share?url=http://www.wildlandscollective.com" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"></a>
-                                      <!-- LinkedIn -->
-                                      <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.wildlandscollective.com" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn"></a>
-                                      <!-- Email -->
-                                      <a href="mailto:?Subject=Wildlands Collective&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 http://www.wildlandscollective.com"><img src="http://www.simplesharebuttons.com/images/somacro/email.png" alt="Email"></a>
-                                    </div>
+                                   
                                     
                                 </div>
 
@@ -310,6 +259,7 @@
 
 
                                             <div class="flexslider">
+                                            
                                                 <ul class="slides">
                                                     <li><a rel="prettyPhoto" title="" href="../destinations/chacabuco/1.jpg"><img src="../destinations/chacabuco/1.jpg" alt=""></a></li>
                                                     <li><a rel="prettyPhoto" title="" href="../destinations/chacabuco/2.jpg"><img src="../destinations/chacabuco/2.jpg" alt=""></a></li>
@@ -318,11 +268,6 @@
                                                     <li><a rel="prettyPhoto" title="" href="../destinations/chacabuco/5.jpg"><img src="../destinations/chacabuco/5.jpg" alt=""></a></li>
                                                     <li><a rel="prettyPhoto" title="" href="../destinations/chacabuco/6.jpg"><img src="../destinations/chacabuco/6.jpg" alt=""></a></li>
                                                     <li><a rel="prettyPhoto" title="" href="../destinations/chacabuco/7.jpg"><img src="../destinations/chacabuco/7.jpg" alt=""></a></li>
-                                                    <li><a rel="prettyPhoto" title="" href="../destinations/chacabuco/8.jpg"><img src="../destinations/chacabuco/8.jpg" alt=""></a></li>
-                                                    <li><a rel="prettyPhoto" title="" href="../destinations/chacabuco/9.jpg"><img src="../destinations/chacabuco/9.jpg" alt=""></a></li>
-                                                    <li><a rel="prettyPhoto" title="" href="../destinations/chacabuco/10.jpg"><img src="../destinations/chacabuco/10.jpg" alt=""></a></li>
-                                                    <li><a rel="prettyPhoto" title="" href="../destinations/chacabuco/11.jpg"><img src="../destinations/chacabuco/11.jpg" alt=""></a></li>
-                                                    <li><a rel="prettyPhoto" title="" href="../destinations/chacabuco/12.jpg"><img src="../destinations/chacabuco/12.jpg" alt=""></a></li>
                                                     
                                                 </ul>
                                             </div>
@@ -344,23 +289,18 @@
                                             <div class="tab-content-wrapper">
                                                 <!-- OVERVIEW -->
                                                 <div class="tab-content active" tab-id="tab1">
-                                                    <p>Named one of Chile’s best 12 hotels by Outside Magazine, the Lodge at Valle Chacabuco combines classic design, luxurious accommodations and unparalleled access to the future Patagonia National Park. Completed in 2008, the six-bedroom stone-and-wood Lodge takes inspiration from historic hotels such as Yosemite’s Ahwahnee and Yellowstone’s Old Faithful Lodge, but offers guests a more intimate and personal experience. 
+                                                    <p>This trip is a true Arctic Expedition to the beautiful Hornstrandir Nature Reserve in the West Fjords of Iceland—only a few miles from the Arctic Circle. 
                                                     <br/><br/>
-                                                    Designed and decorated in the style of historic Patagonian estancias, the Lodge epitomizes classic, rustic elegance. With handcrafted and largely antique furniture, original photography, and careful detail work, each room has a unique theme drawn from its surroundings. Classic and refined, this beautiful stone lodge was modeled on English architecture in southern Argentina. Patterned tiles, handsome wood and large photographic nature prints foster a warm ambience. There are just six guest rooms, mostly doubles with some bunks for families. 
+                                                   We focus on backcountry skiing between the remote fjords, anchoring in a different harbour each night. Many of the mountains and ridges have never been skied before and our guides are always looking for nice first descents. There is a diversity of   slope grades,  and we will plan our routes to fit people of all backcountry touring abilities and interests. Most people use AT (randonnée) or Telemark skis, but snowboards, cross-country skis or snowshoes can be used as well. While we usually spend about 6-8 hours in the mountains each day, for those who prefer shorter days, individuals can simply ski down to the anchored boat when they so choose. 
                                                     <br/><br/>
-                                                    The Lodge faces towards Mount Tamanguito, the peak behind the main park headquarters. A central living and dining room provides a space for guest to gather at mealtimes and at night. The full bar, wood fireplace and numerous couches allow guests to relax at the end of days, while an entertainment system and large screen offer a chance to view documentaries on the park and Patagonia, as well as other films. From time to time, Conservacion Patagonica staff and visiting experts will give presentations on their work.
+                                                    While the season is primetime for skiing, we will still carry a few kayaks on the yacht for those eager or interested in taking a break from skiing and doing some kayaking as well (please enquire about the kayaks).
                                                     <br/><br/>
-                                                    We serve breakfast and dinner here, and provide picnic lunches so that guests can explore the park during the day. The breakfast buffet includes toast, eggs, yogurt, cereal, fresh fruit, ham, cheese, jam, honey, juice, coffee and tea. Picnics feature assorted sandwiches, fruit, cookies, and juices. Dinners vary depending on seasonal availability, but generally include an appetizer, salad, main course, and dessert. On occasion, we’ll hold traditional Patagonian asados (barbeques) for all guests and staff. We’re happy to accommodate special eating concerns if you let us know ahead of time.
-                                                    <br/><br/>
-                                                   As an eco-lodge, the facility minimizes its impact with energy-efficient construction and design, locally quarried stone, recycled wood, and solar panels. We grow many of our own vegetables in greenhouses located just behind the Lodge. All of our meat is grassfed and raised locally.
-                                                   <br></br>
-                                                   Conservacion Patagonica operates The Lodge at Valle Chacabuco as part of our effort to create the future Patagonia National Park. Conservation Patagonia, the non-profit organisation set up by Kris Tompkins, already controls around 200,000 acres of grassland and forest in the Chacabuco Valley, where the lodge is situated. This acreage abuts two existing reserves, Jeinimeni and Tamango, and the plan is to join them to the Tompkins' land, creating a park of 650,000 acres, about one and a half times the size of Torres del Paine National Park, the best-known and most visited park in Patagonia. The acclaimed eco-lodge is the only fixed accommodation within the existing acreage (though numerous campgrounds are available). 
+                                                    The expedition yacht "Aurora Arktika" is our movable ‘backcountry hut’ and awaits us at the end of every day with gourmet meals, warm and comfortable bunks, and friendly conversation.<br/><br/>
 
-
-                                                   Dates of availability: October 15th through April 15th. CLOSED April through October.
-
-
-                                                </p>
+                                                    <strong>SAILING YACHT - AURORA ARKTIKA</strong><br>
+                                                    The sailboat is a 60 foot sloop built by Colvic Craft in the UK in 1996. She was designed by David Pedrick for the Clipper Round the World Race and has been raced around the world four times. Aurora’s previous owner, Clipper Ventures Plc (based in Gosport, UK), was founded by the legendary sailor, Sir Robin Knox-Johnston, who in 1969 became,the first person to singlehandedly sail around the world non-stop. Sir Robin was in Ísafjörður and on the yacht (then named Antiope Clipper) in the summer of 2005, together with Sir Chris Bonington and other friends, en route to Greenland. Over some chicken curry and beer on-board, we decided to fulfill an old dream and buy the yacht!<br></br>
+                                                    Accommodation is seamanlike — simple and utilitarian — but the vessel is very sturdy and spacious. There are ten single berths, one of which can be turned into a double - accomodating up to a total of 11 guests. Sleeping bags are required for this expedition.<br></br>
+                                                    The yacht has good heaters, hot and cold water, good galley and spacious communal areas, two heads (toilets) and one shower.  There is 220V electricity to charge batteries and other electronic devices. The vessel was initially fitted out for 15 crew, but can now accommodate 12 people—2 crew and 10 guests. The boat is equipped according to strict Icelandic regulations in regards to emergency equipment.</p>
                                                 </div>
 
                                                 <!--Itinerary -->
@@ -384,21 +324,13 @@
 
                                                 </div>
                                                 <div class="tab-content" tab-id="tab3">
-                                                    <div class="flex-container">
-                                                        <iframe src="http://player.vimeo.com/video/54756268?byline=0&amp;portrait=0&amp;color=999999" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></br>
-                                                    </div>
+                                                    <p><iframe src="http://player.vimeo.com/video/54756268?byline=0&amp;portrait=0&amp;color=999999" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></br>
 
-                                                    <div class="flex-container">
-                                                        <iframe src="http://player.vimeo.com/video/52360909?byline=0&amp;portrait=0" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><br>
-                                                    </div>
+                                                    <iframe src="http://player.vimeo.com/video/52360909?byline=0&amp;portrait=0" width="560" height="315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><br>
 
-                                                    <div class="flex-container">
-                                                        <iframe width="624" height="351" src="https://www.facebook.com/video/embed?video_id=482837315468" frameborder="0" style="max-width: 100%;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><br>
-                                                    </div>
+                                                    <iframe width="625" height"315" src="https://www.facebook.com/video/embed?video_id=482837315468\" width=\"800\" height=\"600\" frameborder=\"0\"></iframe><br>
 
-                                                    <div class="flex-container">
-                                                        <iframe width="560" height="315" src="http://www.youtube.com/embed/_sDvsQAT5x8" frameborder="0" allowfullscreen></iframe>
-                                                    </div>
+                                                    <iframe width="560" height="315" src="http://www.youtube.com/embed/_sDvsQAT5x8" frameborder="0" allowfullscreen></iframe></p>
                                                 </div>
 
                                                 <!--Activities -->
@@ -429,12 +361,7 @@
                                                 <!--Map -->
 
                                                 <div class="tab-content" tab-id="tab5">
-    
-                                                        <div class="flex-container">
-                                                            <div id="map">
-                                                            </div>
-                                                        </div>
-
+                                                    <p><div><iframe width="640" height="480" frameborder="0" src="http://www.bing.com/maps/embed/viewer.aspx?v=3&cp=66.265989~-22.686793&lvl=9&w=640&h=480&sty=h&typ=d&pp=&ps=&dir=0&mkt=en-au&src=SHELL&form=BMEMJS"></iframe><div style="margin: 12px 0 0 0;"><a target="_blank" href="http://www.bing.com/maps/?cp=66.265989~-22.686793&sty=h&lvl=9&sp=&mm_embed=map">View Larger Map</a></div></div></p>
                                                 </div>
 
                                                 <!--Reviews -->
@@ -541,7 +468,7 @@
 
                                 </div> <!-- END .content-wrapper -->
                                  
-
+                                
                                 <div class="clear"></div>
                             </div> <!-- END .row -->
 
@@ -610,7 +537,7 @@
 </div><!-- END .body-outer-wrapper -->
 	
 
-    <!-- Javascript -->
+<!-- Javascript -->
     <script src="../assets/js/fireform.js"></script>
 
     <script>
@@ -638,7 +565,7 @@
                             jQuery('#contactable-contactForm').animate({"marginRight": "-=300px"}, "4000");
                             jQuery("#contactable-inner").animate({"marginRight": "-=297px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
                             jQuery('#contactable-overlay').css({display: 'none'});
-                            jQuery("#contactable-contactForm input, #contactable-contactForm textarea").val("");
+                            jQuery("#contactable-contactForm input.data, #contactable-contactForm textarea").val("");
                         }
                     });
                 }
@@ -733,19 +660,31 @@
                 pauseOnAction: false
             });
         });
+        
         //this closes the contact box
         jQuery('#close-contact').on('click', function(){
-
-                jQuery('#my-contact-div, .widget-container, header').removeClass('contact-open').addClass('contact-closed');
-                jQuery('#contactable-contactForm').animate({"marginRight": "-=300px"}, "4000");
-                jQuery("#contactable-inner").animate({"marginRight": "-=297px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
-                jQuery('#contactable-overlay').css({display: 'none'});
+            jQuery('#my-contact-div, .widget-container, header').removeClass('contact-open').addClass('contact-closed');
+            jQuery('#contactable-contactForm').animate({"marginRight": "-=300px"}, "4000");
+            jQuery("#contactable-inner").animate({"marginRight": "-=297px"}, "4000").animate({"marginRight": "+=5px"}, "2000"); 
+            jQuery('#contactable-overlay').css({display: 'none'});
+            jQuery("#contactable-contactForm input.data, #contactable-contactForm textarea").val("");
         })
 
     });
+    jQuery('#contactable-page').val(window.location.href);
+
+
     </script>
     <script src="../assets/js/shortcodes.js"></script>
-    <!--<script src="../assets/js/custom.js"></script>-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+      ga('create', 'UA-47366406-1', 'wildlandscollective.com');
+      ga('send', 'pageview');
+
+    </script>
 </body>
 </html>
