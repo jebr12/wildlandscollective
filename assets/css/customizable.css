@@ -372,34 +372,7 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 	background: #000 url('../images/thoughts/banner.jpg') no-repeat center center;
 }
 
-#chacabuco .titlebar-outer-wrapper {
-	background: #000 url('../../destinations/images/chacabuco.jpg') no-repeat center bottom;
-}
-
-
 /* thoughts single pages */
-
-#aurora .titlebar-outer-wrapper {
-	background: #000 url('http://auroraarktika.files.wordpress.com/2013/09/img_7875_header.jpg') no-repeat center bottom;
-}
-
-#estancia-cristina .titlebar-outer-wrapper {
-	background: #000 url('http://auroraarktika.files.wordpress.com/2013/09/img_7875_header.jpg') no-repeat center bottom;
-}
-
-#single-destination .titlebar-outer-wrapper {
-	background: #000 url('http://concordia-expeditions.com/wp-content/uploads/2013/03/IMG_1083.jpg') no-repeat center bottom;
-}
-
-
-/* destinations */
-
-#destinations-header-image {
-	background: #000 url('../images/destinations/banner.jpg') no-repeat center center;
-}
-
-
-/* destinations single pages */
 
 #example-blog .titlebar-outer-wrapper {
 	background: #000 url('http://www.adventure-journal.com/wp-content/uploads/2013/07/gervasutti-1030x690.jpg') no-repeat center bottom;
@@ -426,13 +399,35 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 }
 
 
+/* destinations */
+
+#destinations-header-image {
+	background: #000 url('../images/destinations/banner.jpg') no-repeat center center;
+}
+
+/* destinations single pages */
+
+#aurora .titlebar-outer-wrapper {
+	background: #000 url('http://auroraarktika.files.wordpress.com/2013/09/img_7875_header.jpg') no-repeat center bottom;
+}
+
+#chacabuco .titlebar-outer-wrapper {
+	background: #000 url('../images/destinations/chacabuco.jpg') no-repeat center bottom;
+}
+
+#estancia-cristina .titlebar-outer-wrapper {
+	background: #000 url('http://auroraarktika.files.wordpress.com/2013/09/img_7875_header.jpg') no-repeat center bottom;
+}
+
+#single-destination .titlebar-outer-wrapper {
+	background: #000 url('http://concordia-expeditions.com/wp-content/uploads/2013/03/IMG_1083.jpg') no-repeat center bottom;
+}
+
 /* bookings */
 
 #bookings .titlebar-outer-wrapper {
 	background: #000 url('../home/placeholders/backgrounds/home01.jpg') no-repeat center top;
 }
-
-
 
 /*--------------------------------------------------------------
 END CUSTOMIZABLE CSS! begin pre-set background sizing css!
