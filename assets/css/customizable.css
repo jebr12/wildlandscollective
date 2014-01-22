@@ -372,6 +372,10 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 	background: #000 url('../images/thoughts/banner.jpg') no-repeat center center;
 }
 
+#chacabuco .titlebar-outer-wrapper {
+	background: #000 url('../../destinations/images/chacabuco.jpg') no-repeat center bottom;
+}
+
 
 /* thoughts single pages */
 

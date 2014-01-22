@@ -1,0 +1,263 @@
+/* background images */
+
+/*
+
+Each property is defined like this:
+background: <--color hex code--> url(<--insert url here-->) <--repeating--> <--left position--> <--top position-->;
+
+references for values:
+color hex code - http://www.w3schools.com/html/html_colors.asp
+url - paste in the url of the image where the dot (.) indicates the WildlandsCollective root folder.
+repeating - http://www.w3schools.com/cssref/pr_background-repeat.asp
+left position & top position - http://www.w3schools.com/cssref/pr_background-position.asp
+
+*/
+
+/* concept */
+
+#concept #overview {
+	background: #111 url('./info/concept/images/big-intro.jpg') no-repeat center center;
+}
+
+#concept #why-wildlands {
+	background: #111 url('./info/concept/images/big-page1.jpg') no-repeat center center;
+}
+
+#concept #why-community {
+	background: #111 url('./info/concept/images/big-page2.jpg') no-repeat center center;
+}
+
+#concept #why-lodging {
+	background: #111 url('./info/concept/images/big-page3.jpg') no-repeat center center;
+}
+
+#concept #faq {
+	background: #111 url('./info/concept/images/big-outro.jpg') no-repeat center center;
+}
+
+#concept .parallax-section-1 {
+	background: #111 url('./info/concept/images/parallax1.jpg') no-repeat center center;
+}
+#concept .parallax-section-2 {
+	background: #111 url('./info/concept/images/parallax2.jpg') no-repeat center center;
+}
+#concept .parallax-section-3 {
+	background: #111 url('./info/concept/images/parallax3.jpg') no-repeat center center;
+}
+#concept .parallax-section-4 {
+	background: #111 url('./info/concept/images/parallax4.jpg') no-repeat center center;
+}
+
+
+/* philosophy */
+
+#philosophy #mission-statement {
+	background: #111 url('./info/philosophy/images/big-intro.jpg') no-repeat center center;
+}
+
+#philosophy #manifesto {
+	background: #111 url('./info/philosophy/images/big-page1.jpg') no-repeat center center;
+}
+
+#philosophy #who-you-are {
+	background: #111 url('./info/philosophy/images/big-page2.jpg') no-repeat center center;
+}
+
+#philosophy #why-wild {
+	background: #111 url('./info/philosophy/images/big-page3.jpg') no-repeat center center;
+}
+
+#philosophy #sustainability {
+	background: #111 url('./info/philosophy/images/big-outro.jpg') no-repeat center center;
+}
+
+#philosophy .parallax-section-1 {
+	background: #111 url('./info/philosophy/images/parallax1.jpg') no-repeat center center;
+}
+
+#philosophy .parallax-section-2 {
+	background: #111 url('./info/philosophy/images/parallax2.jpg') no-repeat center center;
+}
+
+#philosophy .parallax-section-3 {
+	background: #111 url('./info/philosophy/images/parallax3.jpg') no-repeat center center;
+}
+
+#philosophy .parallax-section-4 {
+	background: #111 url('./info/philosophy/images/parallax4.jpg') no-repeat center center;
+}
+
+
+/* thoughts */
+
+#thoughts-header-image {
+	background: #000 url('thoughts/images/banner.jpg') no-repeat center center;
+}
+
+
+/* destinations single pages */
+
+#aurora .titlebar-outer-wrapper {
+	background: #000 url('http://auroraarktika.files.wordpress.com/2013/09/img_7875_header.jpg') no-repeat center bottom;
+}
+
+#chacabuco .titlebar-outer-wrapper {
+	background: #000 url('./destinations/images/chacabuco.jpg') no-repeat center bottom;
+}
+
+#estancia-cristina .titlebar-outer-wrapper {
+	background: #000 url('http://auroraarktika.files.wordpress.com/2013/09/img_7875_header.jpg') no-repeat center bottom;
+}
+
+#single-destination .titlebar-outer-wrapper {
+	background: #000 url('http://concordia-expeditions.com/wp-content/uploads/2013/03/IMG_1083.jpg') no-repeat center bottom;
+}
+
+
+/* destinations */
+
+#destinations-header-image {
+	background: #000 url('./destinations/images/banner.jpg') no-repeat center center;
+}
+
+
+/* thoughts single pages */
+
+#example-blog .titlebar-outer-wrapper {
+	background: #000 url('http://www.adventure-journal.com/wp-content/uploads/2013/07/gervasutti-1030x690.jpg') no-repeat center bottom;
+}
+
+#motorcycle-diaries .titlebar-outer-wrapper {
+	background: #000 url('http://www.adventure-journal.com/wp-content/uploads/2013/07/gervasutti-1030x690.jpg') no-repeat center bottom;
+}
+
+#post-07 .titlebar-outer-wrapper {
+	background:#000 url('./thoughts/images/wild-furnishings-banner.jpg') no-repeat center bottom;
+}
+
+#single-blog .titlebar-outer-wrapper {
+	background: #000 url('http://blog.theclymb.com/wp-content/uploads/2013/10/nobodys_river17.jpg') no-repeat center bottom;
+}
+
+#thoughts-template .titlebar-outer-wrapper {
+	background: #000 url('./thoughts/images/wild-furnishings-banner.jpg') no-repeat center bottom;
+}
+
+#wild-furnishings .titlebar-outer-wrapper {
+	background:#000 url('./thoughts/images/wild-furnishings-banner.jpg') no-repeat center bottom;	
+}
+
+
+/* bookings */
+
+#bookings .titlebar-outer-wrapper {
+	background: #000 url('assets/home/placeholders/backgrounds/home01.jpg') no-repeat center top;
+}
+
+
+
+/*--------------------------------------------------------------
+END CUSTOMIZABLE CSS! begin pre-set background sizing css!
+---------------------------------------------------------------*/
+
+#bookings.logged-in .titlebar-outer-wrapper,
+#thoughts-header-image,
+#destinations-header-image,
+#concept .global-section,
+#philosophy .global-section {
+	-o-background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+ 	background-size:  100% auto;	
+}
+
+#bookings.login-screen .titlebar-outer-wrapper,
+#philosophy .parallax-section,
+#concept .parallax-section,
+#concept #overview,
+#concept #why-wildlands,
+#concept #why-community,
+#concept #why-lodging,
+#concept #faq,
+#philosophy #mission-statement,
+#philosophy #manifesto,
+#philosophy #who-you-are,
+#philosophy #why-wild,
+#philosophy #sustainability {
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;	
+	background-size: cover;
+}
+
+.blog .titlebar-outer-wrapper,
+.book-now .titlebar-outer-wrapper {
+	background-size: 100% auto !important;
+}
+
+#philosophy .parallax-section,
+#concept .parallax-section {
+	background-attachment: fixed !important;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	#thoughts-header-image,
+	#destinations-header-image {
+		background-position: center center;
+	}
+
+	.blog .titlebar-outer-wrapper,
+	.book-now .titlebar-outer-wrapper,
+	#thoughts-header-image,
+	#destinations-header-image,
+	#philosophy .parallax-section,
+	#concept .parallax-section {
+		background-size: cover;	
+	}
+
+
+}
+
+@media only screen and (max-width: 767px) {
+
+	#concept #overview,
+	#concept #why-wildlands,
+	#concept #why-community,
+	#concept #why-lodging,
+	#concept #faq,
+	#philosophy #mission-statement,
+	#philosophy #manifesto,
+	#philosophy #who-you-are,
+	#philosophy #why-wild,
+	#philosophy #sustainability {
+		background-color: #eee;
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: 100% auto;
+	}
+
+	#concept #overview,
+	#philosophy #mission-statement {
+		background-position: left 102px;
+	}
+
+	#thoughts-header-image,
+	#destinations-header-image {
+		background-position: center -147px;
+		background-size: auto;
+	}
+
+	.blog .titlebar-outer-wrapper,
+	.book-now .titlebar-outer-wrapper,
+	#thoughts-header-image,
+	#destinations-header-image,
+	#philosophy .parallax-section,
+	#concept .parallax-section {
+		background-attachment: scroll !important;
+		background-position: center center !important;
+		background-size: cover !important;	
+	}
+
+}
