@@ -227,7 +227,7 @@ alpha ranges from 0 (transparent) to 1 (opaque); semi-transparency is 0.5, 0.6, 
 .text .page-title-wrapper for info subnav pages
 .blog .page-title-wrapper for thoughts pages */
 .page-title-wrapper {
-	background: rgba(0,0,0,.75);
+	background: rgba(0,0,0,.5);
 }
 
 .page-title-wrapper .page-title {
