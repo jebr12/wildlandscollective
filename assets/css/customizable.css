@@ -408,7 +408,7 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 /* destinations single pages */
 
 #aurora .titlebar-outer-wrapper {
-	background: #000 url('http://auroraarktika.files.wordpress.com/2013/09/img_7875_header.jpg') no-repeat center bottom;
+	background: #000 url('../images/destinations/aurora.jpg') no-repeat center bottom;
 }
 
 #chacabuco .titlebar-outer-wrapper {
