@@ -136,6 +136,14 @@ alpha ranges from 0 (transparent) to 1 (opaque); semi-transparency is 0.5, 0.6, 
 	background: rgba(0, 0, 0, 0.75);
 }
 
+#aurora .titlebar-title {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+#chacabuco .titlebar-title {
+	background: rgba(0, 0, 0, 0.5);
+}
+
 .cpt-desc-wrapper {
 	background: rgba(0,0,0,0.75);
 }
