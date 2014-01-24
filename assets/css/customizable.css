@@ -250,7 +250,7 @@ alpha ranges from 0 (transparent) to 1 (opaque); semi-transparency is 0.5, 0.6, 
 
 /* activity icons background */
 .activity-icons {
-	background: #333;
+	background: #222;
 }
 
 /* price/book now area beneath activity icons */
@@ -298,7 +298,7 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 /* concept */
 
 #concept #overview {
-	background: #111 url('../images/concept/big-intro.jpg') no-repeat center center;
+	background: #111 url('../images/concept/big-intro.jpg') no-repeat center top;
 }
 
 #concept #why-wildlands {
@@ -338,7 +338,7 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 }
 
 #philosophy #manifesto {
-	background: #111 url('../images/philosophy/big-page1.jpg') no-repeat center center;
+	background: #111 url('../images/philosophy/big-page1.jpg') no-repeat center top;
 }
 
 #philosophy #who-you-are {
