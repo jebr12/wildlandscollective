@@ -230,6 +230,10 @@ alpha ranges from 0 (transparent) to 1 (opaque); semi-transparency is 0.5, 0.6, 
 	background: rgba(0,0,0,.5);
 }
 
+.book-now .page-title-wrapper {
+	background: rgba(0,0,0,.5);
+}
+
 .page-title-wrapper .page-title {
 	color: #fff;
 }
