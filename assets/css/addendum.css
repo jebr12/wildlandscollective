@@ -26,7 +26,7 @@
 
 .primary-nav ul li.current-menu-item span.concept,
 .primary-nav ul li.current-menu-item span.philosophy {
-	color: #f0d40f !important;
+	color: #fed42d !important;
 	font-weight: bold !important;
 }
 
@@ -72,7 +72,7 @@
 }
 
 #footer a:hover { 
-	color: #f0d40f; 
+	color: #fed42d; 
 }
 
 #footer p { 
@@ -418,7 +418,7 @@ input[type="reset"], input[type="submit"], input[type="button"], button,
 .woocommerce a.button, 
 .woocommerce button.button,
 button.button{
-	background: #f0d40f;
+	background: #fed42d;
 }
 
 #bookings #login-form .button,
@@ -453,16 +453,16 @@ input[type="reset"]:hover, input[type="submit"]:hover, input[type="button"]:hove
 .woocommerce a.button:hover, 
 .woocommerce button.button:hover,
 button.button:hover {
-	background-color: #76b347;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #76b347), color-stop(100%, #5e9e2e));
-    background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
-    background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);
-    background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);
-    background-image: -o-linear-gradient(top, #76b347, #5e9e2e);
-    background-image: linear-gradient(top, #76b347, #5e9e2e);
-    -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
-    -moz-box-shadow: inset 0 1px 0 0 #8dbf67;
-    box-shadow: inset 0 1px 0 0 #8dbf67;
+	background-color: #ffbf00;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffbf00), color-stop(100%, #ffaa00));
+    background-image: -webkit-linear-gradient(top, #ffbf00, #ffaa00);
+    background-image: -moz-linear-gradient(top, #ffbf00, #ffaa00);
+    background-image: -ms-linear-gradient(top, #ffbf00, #ffaa00);
+    background-image: -o-linear-gradient(top, #ffbf00, #ffaa00);
+    background-image: linear-gradient(top, #76b347, #ffaa00);
+    -webkit-box-shadow: inset 0 1px 0 0 #ffcc33;
+    -moz-box-shadow: inset 0 1px 0 0 #ffcc33;
+    box-shadow: inset 0 1px 0 0 #ffcc33;
     cursor: pointer;
 }
 
