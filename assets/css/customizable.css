@@ -144,6 +144,10 @@ alpha ranges from 0 (transparent) to 1 (opaque); semi-transparency is 0.5, 0.6, 
 	background: rgba(0, 0, 0, 0.5);
 }
 
+#caribou .titlebar-title {
+	background: rgba(0, 0, 0, 0.4);
+}
+
 .cpt-desc-wrapper {
 	background: rgba(0,0,0,0.75);
 }
@@ -178,7 +182,7 @@ alpha ranges from 0 (transparent) to 1 (opaque); semi-transparency is 0.5, 0.6, 
 .text .titlebar-title, 
 .blog .titlebar-title h1 {
 	color: #ffd400;
-	font-size: 26px;
+	font-size: 46px;
 	line-height: 30px;
 }
 
