@@ -182,7 +182,7 @@ alpha ranges from 0 (transparent) to 1 (opaque); semi-transparency is 0.5, 0.6, 
 .text .titlebar-title, 
 .blog .titlebar-title h1 {
 	color: #ffd400;
-	font-size: 46px;
+	font-size: 26px;
 	line-height: 30px;
 }
 
@@ -414,6 +414,9 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 	background:#000 url('../images/thoughts/wild-furnishings-banner.jpg') no-repeat center bottom;	
 }
 
+#caribou .titlebar-outer-wrapper {
+	background:#000 url('../images/thoughts/caribou-banner.jpg') no-repeat center bottom;	
+}
 
 /* destinations */
 
