@@ -341,32 +341,7 @@ Author : http://www.smooththemes.com
 		.upcoming-events span{color:#a5a5a5;font-size: 11.5px;}
 
 		/* Post Type Filter : Room, Gallery ; */
-		.blog-date-thoughts{
-			display: block;
-			width: 73px;
-			height: 73px;
-			background: url('../placeholders/thoughts/date-bg.png') top left no-repeat;
-			position: absolute;
-			top: 0px;
-			right: 0px;
-			z-index: 999;
-		}
-		.blog-date-thoughts > .date{
-			display: block;
-			position: absolute;
-			top: 6px;
-			right: 3px;
-			color: #fff;
-			font-size: 27px;
-		}
-		.blog-date-thoughts > .month{
-			display: block;
-			position: absolute;
-			top: 22px;
-			right: 5px;
-			color: #aaa;
-			font-size: 11px;
-		}
+		
 		.cpt-detail{
 			background: rgba(0,0,0,.75);
 			position: absolute;
