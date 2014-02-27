@@ -415,7 +415,7 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 }
 
 #caribou .titlebar-outer-wrapper {
-	background:#000 url('../imgages/thoughts/caribou-banner.jpg') no-repeat center bottom;	
+	background:#000 url('../thoughts/images/caribou-banner.jpg') no-repeat center bottom;	
 }
 
 /* destinations */
@@ -427,11 +427,11 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 /* destinations single pages */
 
 #aurora .titlebar-outer-wrapper {
-	background: #000 url('../images/destinations/aurora.jpg') no-repeat center -0px fixed; bottom;
+	background: #000 url('../images/destinations/aurora.jpg') no-repeat center fixed; bottom;
 }
 
 #chacabuco .titlebar-outer-wrapper {
-	background: #000 url('../images/destinations/chacabuco.jpg') no-repeat center -0px fixed; bottom;
+	background: #000 url('../images/destinations/chacabuco.jpg') no-repeat center fixed; bottom;
 }
 
 #estancia-cristina .titlebar-outer-wrapper {
