@@ -255,7 +255,7 @@
 .centered{
   float: none;
   left: 50%;
-  margin-left: -375px;
+  margin-left: -480px;
 }
 .page-body{
   display: block;
@@ -302,7 +302,7 @@
 }
 
 .page-body.width-small {
-	width: 780px;
+	width: 960px;
 }
 
 
