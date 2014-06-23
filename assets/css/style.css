@@ -271,7 +271,8 @@ Author : http://www.smooththemes.com
 	.header-outer-wrapper{background: rgba(0,0,0,1); box-shadow:0 5px 5px rgba(0, 0, 0, 0.1);-webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);position: relative;z-index: 100;width: 100%;}
 
 	.header-outer-wrapper h1{margin-bottom:0px;}
-	.logo-wrapper{padding-bottom:4px;}
+	.logo-wrapper{ padding: 20px; background: #000; }
+		.logo-wrapper img { display: block; width: 75px; }
 	
 	.header-right,.header-right .btn{font-family: 'Roboto',Arial,sans-serif;text-transform: uppercase;}
 	.header-right .btn{background-image:url('../images/icon-date.png');background-position: 16px 10px;background-repeat: no-repeat;}
@@ -427,7 +428,7 @@ Author : http://www.smooththemes.com
 			.go-gallery{width: 40px;height: 40px;text-indent: -9999px;background: url('../images/thumb-gallery.png') no-repeat center #BCA474;display: inline-block;}
 			.go-detail:hover,.go-gallery:hover{background-color: #202020;}
 		
-		.builder-title-wrapper.has_filter .cpt-filters{position: absolute;right:15px;top:-64px;}
+		/*.builder-title-wrapper.has_filter .cpt-filters{position: absolute;right:15px;top:-64px;}*/
 		.cpt-filters{margin-bottom:0px;}
 		.cpt-filters li{display: inline-block;float:left;}
 		.cpt-filters li a{font-size: 13px;font-family: 'Roboto',Arial,sans-serif;text-transform: uppercase;background: url('../images/doted-divider.png') no-repeat left center;padding-left:13px;padding-right:13px;}
@@ -505,7 +506,9 @@ Author : http://www.smooththemes.com
 			
 
 	/* Page Title */
-		.page-title-wrapper{padding:6px;margin-top:-4px;margin-bottom:30px;background:rgba(0,0,0,.75);height:30px;}
+		.page-title-wrapper{padding:6px;margin-top:-4px;margin-bottom:30px;
+			/*background:rgba(0,0,0,.75); */
+			height:30px;}
 		.page-title-wrapper .page-title{margin-bottom:0px;text-transform: uppercase;letter-spacing: -0.5px;}
 		.page-title-alt .btn{padding:6px 13px;margin-top:-13px;}
 		
