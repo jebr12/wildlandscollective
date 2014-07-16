@@ -312,7 +312,7 @@ Author : http://www.smooththemes.com
 	----------------------------------------------------------------------------------------*/
 	
 	/* */
-	.main-outer-wrapper{max-width: 1038px;background: #fff;margin:0 auto;padding-top:30px;position: relative;z-index:10;}
+	.main-outer-wrapper{max-width: 1038px;background: #fff;margin:0 auto;padding-top:20px;position: relative;z-index:10;}
 		.main-outer-wrapper.has-slider{margin-top:-100px;}
 		.main-outer-wrapper.has-titlebar{margin-top:-65px;}
 		.main-outer-wrapper.no-overlap{margin-top:0px;}
