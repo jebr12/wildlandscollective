@@ -434,6 +434,10 @@ left position & top position - http://www.w3schools.com/cssref/pr_background-pos
 	background:#000 url('../thoughts/images/caribou-banner.jpg') no-repeat center bottom;	
 }
 
+#cory .titlebar-outer-wrapper {
+	background:#000 url('../thoughts/images/cory-banner.jpg') no-repeat center bottom;	
+}
+
 /* destinations */
 
 #destinations-header-image {
